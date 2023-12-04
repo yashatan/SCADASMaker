@@ -1,0 +1,196 @@
+﻿<Window x:Class="DiagramDesigner.View.AnimationDetailWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DiagramDesigner.View"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="AnimationDetailWindow"
+        Height="450"
+        Width="350">
+    <Grid>
+        <Grid Width="auto">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="300"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <!--Title-->
+            <Grid Grid.Row="0"
+                  Height="40"
+                  Background="Blue">
+                <TextBlock Text="Animation Detail"
+                           Foreground="White"
+                           FontSize="30"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"></TextBlock>
+            </Grid>
+            <Grid Grid.Row="1">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Height="40">
+                        <TextBlock Text="Animation Name:"
+                                   FontSize="15"
+                                   Margin="20 0 0 0"
+                                   VerticalAlignment="Bottom"></TextBlock>
+                        <TextBox materialDesign:HintAssist.Hint="Name"
+                                 x:Name="txtName"
+                                 FontSize="15"
+                                 Margin="10 0 0 0"
+                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Height="40">
+                        <TextBlock Text="Tag:"
+                                   FontSize="15"
+                                   Margin="20 0 0 0"
+                                   VerticalAlignment="Bottom"></TextBlock>
+                        <TextBox materialDesign:HintAssist.Hint="Tag"
+                                 x:Name="txtTag"
+                                 FontSize="15"
+                                 Margin="10 0 0 0"
+                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Height="40">
+                        <TextBlock Text="Range:"
+                                   FontSize="15"
+                                   Margin="20 0 0 0"
+                                   VerticalAlignment="Bottom"></TextBlock>
+                        <TextBox materialDesign:HintAssist.Hint="Min"
+                                 x:Name="txtTagMinValue"
+                                 FontSize="15"
+                                 Margin="10 0 0 0"
+                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                        <TextBox materialDesign:HintAssist.Hint="Max"
+                                 x:Name="txtTagMaxValue"
+                                 FontSize="15"
+                                 Margin="10 0 0 0"
+                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Height="40">
+                        <TextBlock Text="Property:"
+                                   FontSize="15"
+                                   Margin="20 0 0 0"
+                                   VerticalAlignment="Bottom"></TextBlock>
+                        <ComboBox materialDesign:HintAssist.Hint="Property"
+                                  materialDesign:HintAssist.HintOpacity=".26"
+                                  materialDesign:HintAssist.Foreground="Gray"
+                                  materialDesign:TextFieldAssist.UnderlineBrush="#FF832424"
+                                  BorderBrush="Gray"
+                                  x:Name="cbbProperty"
+                                  Width="auto"
+                                  Margin="10 10 0 0"
+                                SelectionChanged="cbbProperty_SelectionChanged"
+                                  FontSize="15"
+                                  IsEditable="True"
+                                 ></ComboBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Height="40"
+                                x:Name="VisibleGroup"
+                                Visibility="Collapsed"
+                                >
+                        <TextBlock Text="Visible:"
+                                   FontSize="15"
+                                   Margin="20 0 0 0"
+                                   VerticalAlignment="Bottom"></TextBlock>
+                        <ComboBox materialDesign:HintAssist.Hint="Bool"
+                                  materialDesign:HintAssist.HintOpacity=".26"
+                                  materialDesign:HintAssist.Foreground="Gray"
+                                  materialDesign:TextFieldAssist.UnderlineBrush="#FF832424"
+                                  BorderBrush="Gray"
+                                  x:Name="cbbBool"
+                                  Width="100"
+                                  Margin="10 10 0 0"
+                                  FontSize="15"
+                                  IsEditable="True"
+                                 ></ComboBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Height="40"
+                                x:Name="ValueGroup"
+                                Visibility="Collapsed">
+                        <TextBlock Text="Value:"
+                                   FontSize="15"
+                                   Margin="20 0 0 0"
+                                   VerticalAlignment="Bottom"></TextBlock>
+                        <TextBox materialDesign:HintAssist.Hint="value"
+                                 x:Name="txtIntValue"
+                                 FontSize="15"
+                                 Margin="10 0 0 0"
+                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Height="40"
+                                x:Name="ColorGroup"
+                                Visibility="Collapsed">
+                        <TextBlock Text="Color:"
+                                   FontSize="15"
+                                   Margin="20 0 0 0"
+                                   VerticalAlignment="Bottom"></TextBlock>
+                        <TextBox materialDesign:HintAssist.Hint="R"
+                                 x:Name="txtColorR"
+                                 LostFocus="txtColor_LostFocus"
+                                 FontSize="15"
+                                 Margin="10 0 0 0"
+                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                        <TextBox materialDesign:HintAssist.Hint="G"
+                                 x:Name="txtColorG"
+                                 LostFocus="txtColor_LostFocus"
+                                 FontSize="15"
+                                 Margin="10 0 0 0"
+                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                        <TextBox materialDesign:HintAssist.Hint="B"
+                                 x:Name="txtColorB"
+                                 LostFocus="txtColor_LostFocus"
+                                 FontSize="15"
+                                 Margin="10 0 0 0"
+                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Height="40"
+                                x:Name="StringGroup"
+                                Visibility="Collapsed">
+                        <TextBlock Text="Value:"
+                                   FontSize="15"
+                                   Margin="20 0 0 0"
+                                   VerticalAlignment="Bottom"></TextBlock>
+                        <TextBox materialDesign:HintAssist.Hint="Your string"
+                                 x:Name="txtStringvalue"
+                                 LostFocus="txtColor_LostFocus"
+                                 FontSize="15"
+                                 Margin="10 0 0 0"
+                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="2">
+                <StackPanel Orientation="Horizontal"
+                           Margin="20 0 0 0">
+                    <Button Height="40"
+                            Width="100"
+                            Background="Silver"
+                            BorderBrush="Silver"
+                            Foreground="Black"
+                            Content="Cancel"
+                            Click="CloseButton_Click"
+                            x:Name="CloseButton"
+                         ></Button>
+                    <Button Height="40"
+                            Width="100"
+                            Foreground="Black"
+                            Background="Silver"
+                            BorderBrush="Silver"
+                            Content="Apply"
+                            Margin="80 0 0 0"
+                            Click="ApplyButton_Click"
+                            x:Name="ApplyButton"
+                            ></Button>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
