@@ -1,0 +1,179 @@
+﻿<Window x:Class="SCADACreator.View.ConnectDeviceDetailWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SCADACreator.View"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="ConnectDeviceDetailWindow"
+        WindowStartupLocation="CenterScreen"
+        Height="450"
+        Width="350">
+    <Grid>
+        <Grid Width="auto">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="300"></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <!--Title-->
+            <Grid Grid.Row="0"
+                  Height="40"
+                  Background="Blue">
+                <TextBlock Text="Device Detail"
+                           Foreground="White"
+                           FontSize="30"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"></TextBlock>
+            </Grid>
+            <Grid Grid.Row="1">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Height="40">
+                        <TextBlock Text="Device Name:"
+                                   FontSize="15"
+                                   Margin="20 0 0 0"
+                                   VerticalAlignment="Bottom"></TextBlock>
+                        <TextBox materialDesign:HintAssist.Hint="Name"
+                                 x:Name="txtName"
+                                 FontSize="15"
+                                 Margin="10 0 0 0"
+                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Height="40">
+                        <TextBlock Text="Connection type:"
+                                   FontSize="15"
+                                   Margin="20 0 0 0"
+                                   VerticalAlignment="Bottom"></TextBlock>
+                        <ComboBox materialDesign:HintAssist.Hint="Type"
+                                  materialDesign:HintAssist.HintOpacity=".26"
+                                  materialDesign:HintAssist.Foreground="Gray"
+                                  materialDesign:TextFieldAssist.UnderlineBrush="#FF832424"
+                                  BorderBrush="Gray"
+                                  x:Name="cbbConnectionType"
+                                  Width="100"
+                                  Margin="10 10 0 0"
+                                  SelectionChanged="cbbConnectionType_SelectionChanged"
+                                  FontSize="15"
+                                  IsEditable="True"></ComboBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Height="40">
+                        <TextBlock Text="Destination:"
+                                   FontSize="15"
+                                   Margin="20 0 0 0"
+                                   VerticalAlignment="Bottom"></TextBlock>
+                        <TextBox 
+                                 x:Name="txtDestination"
+                                 FontSize="15"
+                                 MinWidth="150"
+                                 Margin="10 0 0 0"
+                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    </StackPanel>
+                    <StackPanel x:Name="S7Group"
+                                Visibility="Collapsed"
+                                Margin="0 0 0 0">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Model:"
+                                       FontSize="15"
+                                       Margin="20 0 0 0"
+                                       VerticalAlignment="Bottom"></TextBlock>
+                            <TextBox x:Name="txtS7Model"
+                                     FontSize="15"
+                                     MinWidth="100"
+                                     Margin="10 0 0 0"
+                                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Slot:"
+                                       FontSize="15"
+                                       Margin="20 0 0 0"
+                                       VerticalAlignment="Bottom"></TextBlock>
+                            <TextBox x:Name="txtS7Slot"
+                                     FontSize="15"
+                                     MinWidth="50"
+                                     Margin="10 0 0 0"
+                                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Rack:"
+                                       FontSize="15"
+                                       Margin="20 0 0 0"
+                                       VerticalAlignment="Bottom"></TextBlock>
+                            <TextBox x:Name="txtS7Rack"
+                                     FontSize="15"
+                                     MinWidth="50"
+                                     Margin="10 0 0 0"
+                                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel x:Name="OPCUAGroup"
+                                Visibility="Collapsed"
+                                Margin="0 10 0 0">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="User:"
+                                       FontSize="15"
+                                       Margin="20 0 0 0"
+                                       VerticalAlignment="Bottom"></TextBlock>
+                            <TextBox x:Name="txtOPCUAUsername"
+                                     FontSize="15"
+                                     MinWidth="100"
+                                     Margin="10 0 0 0"
+                                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Password:"
+                                       FontSize="15"
+                                       Margin="20 0 0 0"
+                                       VerticalAlignment="Bottom"></TextBlock>
+                            <TextBox x:Name="txtOPCUAPassword"
+                                     FontSize="15"
+                                     MinWidth="100"
+                                     Margin="10 0 0 0"
+                                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel x:Name="ModbusGroup"
+                                Visibility="Collapsed"
+                                Margin="0 10 0 0">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Port:"
+                                       FontSize="15"
+                                       Margin="20 0 0 0"
+                                       VerticalAlignment="Bottom"></TextBlock>
+                            <TextBox x:Name="txtModbusPort"
+                                     FontSize="15"
+                                     MinWidth="100"
+                                     Margin="10 0 0 0"
+                                     Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="2">
+                <StackPanel Orientation="Horizontal"
+                            Margin="20 0 0 0">
+                    <Button Height="40"
+                            Width="100"
+                            Background="Silver"
+                            BorderBrush="Silver"
+                            Foreground="Black"
+                            Content="Cancel"
+                            Click="CloseButton_Click"
+                            x:Name="CloseButton"></Button>
+                    <Button Height="40"
+                            Width="100"
+                            Foreground="Black"
+                            Background="Silver"
+                            BorderBrush="Silver"
+                            Content="Apply"
+                            Margin="80 0 0 0"
+                            Click="ApplyButton_Click"
+                            x:Name="ApplyButton"></Button>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

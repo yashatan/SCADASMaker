@@ -1,0 +1,169 @@
+﻿<Window x:Class="SCADACreator.View.DeviceListWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:SCADACreator.View"
+        mc:Ignorable="d"
+        Height="450"
+        Width="350"
+        Background="White"
+        WindowStartupLocation="CenterScreen"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="DeviceListWindow">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="300"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <!--Title-->
+        <Grid Grid.Row="0"
+              Height="40"
+              Background="Blue">
+            <TextBlock Text="Devices List"
+                       Foreground="White"
+                       FontSize="30"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"></TextBlock>
+        </Grid>
+        <Grid Grid.Row="1">
+            <ListView HorizontalContentAlignment="Stretch"
+                      ScrollViewer.VerticalScrollBarVisibility="Visible"
+                      x:Name="DeviceList"
+                      ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                      ScrollViewer.CanContentScroll="False">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <materialDesign:Card Cursor="Hand"
+                                             Height="35"
+                                             Margin="0 10 0 0">
+                            <StackPanel Height="20"
+                                        Orientation="Horizontal">
+                                <TextBlock Text="{Binding Name}"
+                                           Width="200"
+                                           HorizontalAlignment="Left"
+                                           TextTrimming="CharacterEllipsis"
+                                           TextWrapping="NoWrap"
+                                           Margin="20 0 0 0"></TextBlock>
+                                <!--Detail button-->
+                                <Button Margin="40 0 0 0"
+                                        HorizontalAlignment="Right"
+                                        BorderBrush="Transparent"
+                                        Click="DetailButton_Click"
+                                        ToolTip="Chi tiết"
+                                        Background="Transparent">
+                                    <materialDesign:PackIcon Kind="DotsVertical"
+                                                             Height="21"
+                                                             Width="20"></materialDesign:PackIcon>
+                                    <!--No blue Background when mouse hover-->
+                                    <Button.Style>
+                                        <Style TargetType="Button">
+                                            <Setter Property="Template">
+                                                <Setter.Value>
+                                                    <ControlTemplate TargetType="Button">
+                                                        <Grid Background="{TemplateBinding Background}">
+                                                            <ContentPresenter HorizontalAlignment="Center"
+                                                                              VerticalAlignment="Center" />
+                                                        </Grid>
+                                                    </ControlTemplate>
+                                                </Setter.Value>
+                                            </Setter>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Self}}"
+                                                             Value="True">
+                                                    <Setter Property="Foreground"
+                                                            Value="Blue" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Button.Style>
+                                </Button>
+                                <!--Delete Button-->
+                                <Button Margin="0 0 20 0"
+                                        Grid.Column="2"
+                                        HorizontalAlignment="Right"
+                                        Click="DeleteButton_Click"
+                                        BorderBrush="Transparent"
+                                        ToolTip="Xoá"
+                                        Background="Transparent">
+                                    <materialDesign:PackIcon Kind="DeleteCircle"
+                                                             Height="20"
+                                                             Width="20"></materialDesign:PackIcon>
+                                    <!--No blue Background when mouse hover-->
+                                    <Button.Style>
+                                        <Style TargetType="Button">
+                                            <Setter Property="Template">
+                                                <Setter.Value>
+                                                    <ControlTemplate TargetType="Button">
+                                                        <Grid Background="{TemplateBinding Background}">
+                                                            <ContentPresenter HorizontalAlignment="Center"
+                                                                              VerticalAlignment="Center" />
+                                                        </Grid>
+                                                    </ControlTemplate>
+                                                </Setter.Value>
+                                            </Setter>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Self}}"
+                                                             Value="True">
+                                                    <Setter Property="Foreground"
+                                                            Value="Blue" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Button.Style>
+                                </Button>
+                            </StackPanel>
+                        </materialDesign:Card>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="{x:Type ListViewItem}">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver"
+                                     Value="true">
+                                <Setter Property="IsSelected"
+                                        Value="True" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </ListView.ItemContainerStyle>
+            </ListView>
+        </Grid>
+        <StackPanel Grid.Row="2"
+                    Margin="20 0 20 10"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Right">
+            <Button Grid.Column="2"
+                    HorizontalAlignment="Right"
+                    BorderBrush="Transparent"
+                    Cursor="Hand"
+                    Click="AddButton_Click"
+                    Background="Transparent">
+                <materialDesign:PackIcon Kind="PlusCircle"
+                                         Foreground="Black"
+                                         Height="30"
+                                         HorizontalAlignment="Center"
+                                         Cursor="Hand"
+                                         Width="30"></materialDesign:PackIcon>
+                <!--No blue Background when mouse hover-->
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Button">
+                                    <Grid Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center"
+                                                          VerticalAlignment="Center" />
+                                    </Grid>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <TextBlock Text="Add"
+                       FontSize="15"></TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>

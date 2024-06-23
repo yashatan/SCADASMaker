@@ -1,0 +1,188 @@
+﻿<Window x:Class="SCADACreator.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:s="clr-namespace:SCADACreator"
+        xmlns:sv="clr-namespace:SCADACreator.View"
+        WindowStartupLocation="CenterScreen"
+        Title="Mobile SCADA Creator"
+        FontFamily="SegoeUI"
+        Height="900"
+        Width="1420">
+    <DockPanel Margin="0">
+        <ToolBar Height="35"
+                 DockPanel.Dock="Top">
+            <!--<Button ToolTip="New"
+                    Margin="8,0,3,0"
+                    Click="OnClickNew">
+                <TextBlock Foreground="Red">
+                        asdfasdf</TextBlock>
+            </Button>
+            <Button ToolTip="Rotate Right 90°"
+                    Margin="8,0,3,0"
+                    Click="OnClickRotateRight">
+                <Button.Content>
+                    <Image Stretch="Uniform"
+                           Source="Images/rotateRight.png" />
+                </Button.Content>
+            </Button>
+            <Button ToolTip="Rotate Left 90°"
+                    Margin="8,0,3,0"
+                    Click="OnClickRotateLeft">
+                <Button.Content>
+                    <Image Stretch="Uniform"
+                           Source="Images/rotateLeft.png" />
+                </Button.Content>
+            </Button>
+            <TextBlock>
+                asdfsdf
+            </TextBlock>
+            <Button Background="Red">
+                
+            </Button>-->
+            <Image Source="Images/rotateLeft.png"
+                   MouseDown="OnClickRotateLeft"
+                   >
+                
+            </Image>
+        </ToolBar>
+
+        <Grid Margin="0,5,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="400"/>
+                <ColumnDefinition />
+                <ColumnDefinition Width="350" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1"
+                  Background="Silver">
+
+            </Grid>
+            <Image HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="20, 10, 0 ,0"
+                   Height="808"
+                   Stretch="Fill"
+                   Width="417"
+                   Grid.Column="1"
+                   Source="Images/PhoneFrameCut.png"></Image>
+            <Border Margin="36,24,0,0"
+                    Grid.Column="1"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    BorderBrush="LightGray"
+                    ClipToBounds="True"
+                    CornerRadius="50"                  
+                    Height="780"
+                    Width="384"
+                    Background="White"
+                    BorderThickness="1">
+
+                <Grid >
+
+                    <ScrollViewer Name="DesignerScrollViewer"
+                                  Background="Transparent"  
+                                  HorizontalScrollBarVisibility="Hidden"
+                                  VerticalScrollBarVisibility="Hidden">
+                        <s:DesignerCanvas x:Name="MyDesignerCanvas"
+                                          MinHeight="720"
+                                          MinWidth="320"
+                                          AllowDrop="True"
+                                          Background="Transparent">
+                        </s:DesignerCanvas>
+                    </ScrollViewer>
+
+                </Grid>
+            </Border>
+            <s:ZoomBox Width="200"
+                       Grid.Column="1"
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Top"
+                       ScrollViewer="{Binding ElementName=DesignerScrollViewer}"
+                       Margin="20,25,10,0" />
+            <Border Grid.Column="2"
+                    BorderBrush="LightGray"
+
+                    BorderThickness="1">
+                <ScrollViewer>
+                    <StackPanel>
+                        <Expander IsExpanded="True"
+                                  Header="Symbols"
+                                  Margin="0,1,0,0"
+                                  Content="{StaticResource SymbolStencils}" />
+                        <!--<Expander IsExpanded="False"
+                                  Header="Flow Chart"
+                                  Margin="0,1,0,0"
+                                  Content="{StaticResource FlowChartSymbols}" />-->
+                        <Expander IsExpanded="False"
+                                  Header="Basic Control"
+                                  Margin="0,1,0,0"
+                                  Content="{StaticResource BasicControl}" />
+                        <Expander Header="Basic Shapes"
+                                  Margin="0,1,0,0"
+                                  Content="{StaticResource BasicShapesStencils}" />
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <Button Height="40"
+                                    Width="120"
+                                    Background="Silver"
+                                    BorderBrush="Silver"
+                                    Foreground="Black"
+                                    Content="Quick Create"
+                                    x:Name="AddControButton"
+                                    Click="AddControButton_Click"></Button>
+
+                            <Button Height="40"
+                                    Width="150"
+                                    Foreground="Black"
+                                    Background="Silver"
+                                    BorderBrush="Silver"
+                                    Content="Send Bluetooth"
+                                    Margin="20 0 0 0"
+                                    x:Name="OpenViewControButton"
+                                    Click="OpenViewControButton_Click"></Button>
+                        </StackPanel>
+                        <Button Height="40"
+                                Width="120"
+                                Margin="0 20 0 0"
+                                Background="Silver"
+                                BorderBrush="Silver"
+                                Foreground="Black"
+                                Content="ViewDevice"
+                                x:Name="ViewDeviceButton"
+                                Click="ViewDeviceButton_Click"></Button>
+                    </StackPanel>
+                </ScrollViewer>
+
+            </Border>
+            <Border Grid.Column="0"
+                    BorderBrush="LightGray"
+                    BorderThickness="1">
+                <ScrollViewer>
+                    <StackPanel>
+                        <Expander IsExpanded="True"
+                                  Header="Properties"
+                                  Margin="0,1,0,0">
+                            <Frame x:Name="PropertyFrame"
+                                   Background="White"
+                                   NavigationUIVisibility="Hidden"></Frame>
+                        </Expander>
+                        <Expander IsExpanded="False"
+                                  Header="Animations"
+                                  Margin="0,1,0,0">
+                            <Frame x:Name="AnimationFrame"
+                                   Background="White"
+                                   NavigationUIVisibility="Hidden"></Frame>
+                        </Expander>
+                        <Expander Header="Event"
+                                  Margin="0,1,0,0">
+                            <Frame x:Name="ItemEventFrame"
+                                   Background="White"
+                                   NavigationUIVisibility="Hidden"></Frame>
+                        </Expander>
+                    </StackPanel>
+                </ScrollViewer>
+            </Border>
+        </Grid>
+
+            
+
+    </DockPanel>
+</Window>
