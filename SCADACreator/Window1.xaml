@@ -148,6 +148,15 @@
                                 Content="ViewDevice"
                                 x:Name="ViewDeviceButton"
                                 Click="ViewDeviceButton_Click"></Button>
+                        <Button Height="40"
+                                Width="120"
+                                Margin="0 20 0 0"
+                                Background="Silver"
+                                BorderBrush="Silver"
+                                Foreground="Black"
+                                Content="ViewTag"
+                                x:Name="ViewTagListButton"
+                                Click="ViewTagListButton_Click"></Button>
                     </StackPanel>
                 </ScrollViewer>
 

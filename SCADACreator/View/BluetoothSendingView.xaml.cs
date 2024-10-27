@@ -16,6 +16,9 @@ using System.Threading;
 using System.Windows.Controls.Primitives;
 using System.Threading.Tasks;
 using System.Security.AccessControl;
+using Microsoft.Win32;
+using SCADACreator.Model;
+using System.Text.Json.Serialization;
 
 namespace SCADACreator
 {
@@ -26,18 +29,16 @@ namespace SCADACreator
     {
         private BluetoothDeviceInfo[] devices;
         private UIElement[] canvasControl;
-        private string jsonControlData;
+        List<ControlData> controlDatas;
         public BluetoothSendingView()
         {
             InitializeComponent();
-            //this.Loaded += ControlPropertyView_Loaded;
             this.ContentRendered += ControlPropertyView_Loaded;
         }
 
         private async void ControlPropertyView_Loaded(object sender, EventArgs e)
         {
-            jsonControlData = ConvertToJasonString(canvasControl); // Convert controls to json string
-            await FindDevicesAsync();
+            //await FindDevicesAsync();
             txtblockLoading.Visibility = Visibility.Hidden;
             Loadingcircle.Visibility = Visibility.Hidden;
             DeviceListBox.ItemsSource = devices;
@@ -52,20 +53,20 @@ namespace SCADACreator
         }
         private async void btnSend_Clicked(object sender, EventArgs e)
         {
-            if (this.DeviceListBox.SelectedItems.Count == 0)
-            {
-                MessageBox.Show("Please select a device");
-                return;
-            }
-            if (this.txtFileName.Text == string.Empty)
-            {
-                MessageBox.Show("Please enter a file name");
-                return;
-            }
-            var fileName = txtFileName.Text + ".json";
-            SaveFile(fileName, jsonControlData);
-            await sendfile(fileName, (DeviceListBox.SelectedItem as BluetoothDeviceInfo));
-            MessageBox.Show("Send file succesfully");
+            //if (this.DeviceListBox.SelectedItems.Count == 0)
+            //{
+            //    MessageBox.Show("Please select a device");
+            //    return;
+            //}
+            //if (this.txtFileName.Text == string.Empty)
+            //{
+            //    MessageBox.Show("Please enter a file name");
+            //    return;
+            //}
+            //var fileName = txtFileName.Text + ".json";
+            //SaveFile(fileName, jsonControlData);
+            //await sendfile(fileName, (DeviceListBox.SelectedItem as BluetoothDeviceInfo));
+            //MessageBox.Show("Send file succesfully");
         }
 
         private async Task sendfile(string filename, BluetoothDeviceInfo device)
@@ -82,24 +83,17 @@ namespace SCADACreator
             });
         }
 
-        private string ConvertToJasonString(UIElement[] controls)
+        private void GenerateControlDataFromCanvas(DesignerCanvas designerCanvas)
         {
-            //var children = canvasToEncode.Children.Cast<UIElement>().ToArray();
-            List<ControlData> controlDatas = new List<ControlData>();
-            // designerCanvas
-            foreach (SCADAItem item in controls)
+            canvasControl = designerCanvas.Children.Cast<UIElement>().ToArray();
+            controlDatas = new List<ControlData>();
+            foreach (SCADAItem item in canvasControl)
             {
 
                 ControlData controldata = ControlDataEncoder.Convert(item);
                 controlDatas.Add(controldata);
 
             }
-            var options = new JsonSerializerOptions
-            {
-                NumberHandling = System.Text.Json.Serialization.JsonNumberHandling.AllowNamedFloatingPointLiterals
-            };
-            string jsonString = JsonSerializer.Serialize(controlDatas, options);//seriallize thành chuỗi json
-            return jsonString;
         }
 
         private async Task FindDevicesAsync()
@@ -115,8 +109,7 @@ namespace SCADACreator
         public BluetoothSendingView(DesignerCanvas designerCanvas)
         {
             InitializeComponent();
-            canvasControl = designerCanvas.Children.Cast<UIElement>().ToArray();
-
+            GenerateControlDataFromCanvas(designerCanvas); // Convert controls to json string
             this.ContentRendered += ControlPropertyView_Loaded;
         }
         
@@ -124,6 +117,31 @@ namespace SCADACreator
         private void ListBox_Selected(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void btnGenStationFile_Clicked(object sender, RoutedEventArgs e)
+        {
+
+            var options = new JsonSerializerOptions
+            {
+                NumberHandling = System.Text.Json.Serialization.JsonNumberHandling.AllowNamedFloatingPointLiterals,
+                ReferenceHandler = ReferenceHandler.IgnoreCycles,
+                WriteIndented = true
+            };
+
+            SCADAStationConfiguration mSCADAStationConfiguration= new SCADAStationConfiguration();
+            mSCADAStationConfiguration.SetConnectDevices(DataProvider.Instance.DB.ConnectDevices.ToList());
+            mSCADAStationConfiguration.SetTagInfos(DataProvider.Instance.DB.TagInfoes.ToList());
+            mSCADAStationConfiguration.SetControlDatas(controlDatas);
+
+            string jsonSCADAStationConfiguration = JsonSerializer.Serialize(mSCADAStationConfiguration, options);//seriallize thành chuỗi json
+
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.FileName = "untitled";
+            saveFileDialog.Filter = "JsonString (*.json)|*.json";
+            saveFileDialog.ShowDialog();
+            Console.WriteLine(saveFileDialog.FileName);
+            SaveFile(saveFileDialog.FileName + ".json", jsonSCADAStationConfiguration);
         }
     }
 }

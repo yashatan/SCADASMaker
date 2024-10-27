@@ -83,3 +83,8 @@ D:\CaoHoc\DeCuongLuanVan\DiagramDesignerPart2\SCADACreator\obj\Debug\SCADACreato
 D:\CaoHoc\DeCuongLuanVan\DiagramDesignerPart2\SCADACreator\obj\Debug\SCADACreator.pdb
 D:\CaoHoc\DeCuongLuanVan\DiagramDesignerPart2\SCADACreator\obj\Debug\View\TagInfo\TagInfoDetailWindow.g.cs
 D:\CaoHoc\DeCuongLuanVan\DiagramDesignerPart2\SCADACreator\obj\Debug\View\TagInfo\TagInfoDetailWindow.baml
+D:\CaoHoc\DeCuongLuanVan\DiagramDesignerPart2\SCADACreator\obj\Debug\SCADACreator_Content.g.cs
+D:\CaoHoc\DeCuongLuanVan\DiagramDesignerPart2\SCADACreator\bin\Debug\EntityFramework.dll
+D:\CaoHoc\DeCuongLuanVan\DiagramDesignerPart2\SCADACreator\bin\Debug\EntityFramework.SqlServer.dll
+D:\CaoHoc\DeCuongLuanVan\DiagramDesignerPart2\SCADACreator\bin\Debug\EntityFramework.xml
+D:\CaoHoc\DeCuongLuanVan\DiagramDesignerPart2\SCADACreator\bin\Debug\EntityFramework.SqlServer.xml

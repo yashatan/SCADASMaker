@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SCADACreator.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,7 +25,7 @@ namespace SCADACreator.View
         private AnimationSense animation;
         List<string> animationProperties = new List<string>() { "Visibility", "BackgroundColor", "Height", "Width", "Text" };
         List<string> visibleList = new List<string>() { "False", "True" };
-        List<TagInfo> tagInfo = DummyData.tagInfos;
+        List<TagInfo> tagsList = DataProvider.Instance.DB.TagInfoes.ToList();
         string currentProperty;
         private event EventHandler _ApplyEvent;//event handle when confirm button clicked
         public event EventHandler ApplyEvent
@@ -49,7 +50,7 @@ namespace SCADACreator.View
             this.animation = animation;
             this.cbbProperty.ItemsSource = animationProperties;
             this.cbbBool.ItemsSource = visibleList;
-            this.cbbTag.ItemsSource = tagInfo;
+            this.cbbTag.ItemsSource = tagsList;
             UpdateAnimationData();
         }
 

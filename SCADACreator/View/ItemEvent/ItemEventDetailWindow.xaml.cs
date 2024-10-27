@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SCADACreator.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
@@ -25,7 +26,7 @@ namespace SCADACreator.View
         private ItemEvent itemevent;
         List<string> eventTypes = new List<string>() { "Click", "Press", "Release" };
         List<string> actionTypes = new List<string>() { "Set", "Reset" };
-        List<TagInfo> tagInfo = DummyData.tagInfos;
+        List<TagInfo> tagsList = DataProvider.Instance.DB.TagInfoes.ToList();
         private event EventHandler _ApplyEvent;//event handle when confirm button clicked
         public event EventHandler ApplyEvent
         {
@@ -49,7 +50,7 @@ namespace SCADACreator.View
             this.itemevent = itemevent;
             this.cbbEventType.ItemsSource = eventTypes;
             this.cbbActionType.ItemsSource = actionTypes;
-            this.cbbTag.ItemsSource = tagInfo;
+            this.cbbTag.ItemsSource = tagsList;
             UpdateItemEventData();
         }
 

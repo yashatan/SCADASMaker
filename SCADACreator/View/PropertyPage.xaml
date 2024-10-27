@@ -188,12 +188,18 @@
                                FontSize="15"
                                Margin="20 0 0 0"
                                VerticalAlignment="Bottom"></TextBlock>
-                    <TextBox materialDesign:HintAssist.Hint="PLC Tag"
-                             x:Name="txtTagConnection"
-                             LostFocus="txtTagConnection_LostFocus"
-                             FontSize="15"
-                             Margin="10 0 0 0"
-                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    <ComboBox materialDesign:HintAssist.Hint="Tag"
+                              materialDesign:HintAssist.HintOpacity=".26"
+                              materialDesign:HintAssist.Foreground="Gray"
+                              materialDesign:TextFieldAssist.UnderlineBrush="#FF832424"
+                              BorderBrush="Gray"
+                              x:Name="cbbTag"
+                              DisplayMemberPath="Name"
+                              IsEditable="False"
+                              MinWidth="130"
+                              Margin="10 10 0 0"
+                              FontSize="15"
+                              SelectionChanged="cbbTag_SelectionChanged"></ComboBox>
                 </StackPanel>
             </StackPanel>
 

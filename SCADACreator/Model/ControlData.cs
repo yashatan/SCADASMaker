@@ -23,7 +23,7 @@ namespace SCADACreator
         public ColorRGB Fill { get; set; }
         public List<AnimationSense> animationSenses { get; set; }
         public List<ItemEvent> ItemEvents { get; set; }
-        public string TagConnection { get; set; }
+        public TagInfo TagConnection { get; set; }
         public ControlData()
         {
             

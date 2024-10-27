@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SCADACreator_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ConnectDevice">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="ConnectionType" Type="int" />
+    <Property Name="Destination" Type="nvarchar" MaxLength="100" />
+    <Property Name="S7PLCType" Type="nvarchar" MaxLength="100" />
+    <Property Name="S7PLCSlot" Type="int" />
+    <Property Name="S7PLCRack" Type="int" />
+    <Property Name="ModbusPort" Type="int" />
+    <Property Name="OPCUAUserName" Type="nvarchar" MaxLength="100" />
+    <Property Name="OPCUAUserPassword" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TagInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="MemoryAddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="DeviceAttach" Type="int" Nullable="false" />
+    <Property Name="Type" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <Association Name="FK__TagInfo__DeviceA__4CA06362">
+    <End Role="ConnectDevice" Type="Self.ConnectDevice" Multiplicity="1" />
+    <End Role="TagInfo" Type="Self.TagInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ConnectDevice">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TagInfo">
+        <PropertyRef Name="DeviceAttach" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SCADACreator_DBModelStoreContainer">
+    <EntitySet Name="ConnectDevice" EntityType="Self.ConnectDevice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TagInfo" EntityType="Self.TagInfo" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__TagInfo__DeviceA__4CA06362" Association="Self.FK__TagInfo__DeviceA__4CA06362">
+      <End Role="ConnectDevice" EntitySet="ConnectDevice" />
+      <End Role="TagInfo" EntitySet="TagInfo" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

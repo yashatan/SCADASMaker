@@ -14,6 +14,7 @@ using SCADACreator.Utility;
 using SCADACreator.View;
 using InTheHand.Net;
 using InTheHand.Net.Bluetooth;
+using SCADACreator.Model;
 using InTheHand.Net.Sockets;
 
 namespace SCADACreator
@@ -93,16 +94,16 @@ namespace SCADACreator
             Item1.Content = imageMotor1;
             setItemsize(Item1, imageMotor1);
             AnimationSense animation1 = new AnimationSense();
-            animation1.Name = "textanmiationList1";
-            //animation1.Tag = "DB1.DBX2.4";
+            animation1.Name = "testanmiationList1";
+            animation1.Tag = DataProvider.Instance.DB.TagInfoes.Where(x => x.MemoryAddress == "DB1.DBX2.4").SingleOrDefault();
             animation1.Tagvaluemax = 0;
             animation1.Tagvaluemin = 0;
             animation1.PropertyNeedChange = AnimationSense.PropertyType.emIsVisible;
             animation1.PropertyBoolValueWhenTagInRange = false;
 
             AnimationSense animation1_2 = new AnimationSense();
-            //animation1_2.Tagname = "DB1.DBX2.4";
-            animation1_2.Name = "textanmiationList1_2";
+            animation1_2.Tag = DataProvider.Instance.DB.TagInfoes.Where(x => x.MemoryAddress == "DB1.DBX2.4").SingleOrDefault();
+            animation1_2.Name = "testanmiationList1_2";
             animation1_2.Tagvaluemax = 1;
             animation1_2.Tagvaluemin = 1;
             animation1_2.PropertyNeedChange = AnimationSense.PropertyType.emIsVisible;
@@ -123,14 +124,14 @@ namespace SCADACreator
             setItemsize(Item2, imageMotor2);
             AnimationSense animation2 = new AnimationSense();
             animation2.Name = "testanmiationList2";
-            //animation2.Tagname = "DB1.DBX2.4";
+            animation2.Tag = DataProvider.Instance.DB.TagInfoes.Where(x => x.MemoryAddress == "DB1.DBX2.4").SingleOrDefault();
             animation2.Tagvaluemax = 0;
             animation2.Tagvaluemin = 0;
             animation2.PropertyNeedChange = AnimationSense.PropertyType.emIsVisible;
             animation2.PropertyBoolValueWhenTagInRange = true;
             AnimationSense animation2_2 = new AnimationSense();
             animation2_2.Name = "testanmiationList2_2";
-            //animation2_2.Tagname = "DB1.DBX2.4";
+            animation2_2.Tag = DataProvider.Instance.DB.TagInfoes.Where(x => x.MemoryAddress == "DB1.DBX2.4").SingleOrDefault();
             animation2_2.Tagvaluemax = 1;
             animation2_2.Tagvaluemin = 1;
             animation2_2.PropertyNeedChange = AnimationSense.PropertyType.emIsVisible;
@@ -150,14 +151,14 @@ namespace SCADACreator
             setItemsize(Item3, imageMotor3);
             AnimationSense animation3 = new AnimationSense();
             animation3.Name = "testanmiationList3";
-            //animation3.Tagname = "DB2.DBX2.4";
+            animation3.Tag = DataProvider.Instance.DB.TagInfoes.Where(x => x.Name == "Motor_2_Status").SingleOrDefault();
             animation3.Tagvaluemax = 0;
             animation3.Tagvaluemin = 0;
             animation3.PropertyNeedChange = AnimationSense.PropertyType.emIsVisible;
             animation3.PropertyBoolValueWhenTagInRange = false;
             AnimationSense animation3_2 = new AnimationSense();
-            //animation3_2.Tagname = "DB2.DBX2.4";
-            animation3.Name = "testanmiationList3_2";
+            animation3_2.Tag = DataProvider.Instance.DB.TagInfoes.Where(x => x.Name == "Motor_2_Status").SingleOrDefault();
+            animation3_2.Name = "testanmiationList3_2";
             animation3_2.Tagvaluemax = 1;
             animation3_2.Tagvaluemin = 1;
             animation3_2.PropertyNeedChange = AnimationSense.PropertyType.emIsVisible;
@@ -176,15 +177,15 @@ namespace SCADACreator
             Item4.Content = imageMotor4;
             setItemsize(Item4, imageMotor4);
             AnimationSense animation4 = new AnimationSense();
-            //animation4.Tagname = "DB2.DBX2.4";
+            animation4.Tag = DataProvider.Instance.DB.TagInfoes.Where(x => x.Name == "Motor_2_Status").SingleOrDefault();
             animation4.Name = "testanmiationList4";
             animation4.Tagvaluemax = 0;
             animation4.Tagvaluemin = 0;
             animation4.PropertyNeedChange = AnimationSense.PropertyType.emIsVisible;
             animation4.PropertyBoolValueWhenTagInRange = true;
             AnimationSense animation4_2 = new AnimationSense();
-            //animation4_2.Tagname = "DB2.DBX2.4";
-            animation4.Name = "testanmiationList4_2";
+            animation4_2.Tag = DataProvider.Instance.DB.TagInfoes.Where(x => x.Name == "Motor_2_Status").SingleOrDefault();
+            animation4_2.Name = "testanmiationList4_2";
             animation4_2.Tagvaluemax = 1;
             animation4_2.Tagvaluemin = 1;
             animation4_2.PropertyNeedChange = AnimationSense.PropertyType.emIsVisible;
@@ -205,7 +206,7 @@ namespace SCADACreator
             Item5.Height = 60;
 
             Item5.Content = label1;
-            Item5.TagConnection = "MW100";
+            Item5.TagConnection = DataProvider.Instance.DB.TagInfoes.Where(x => x.Name == "Level_value").SingleOrDefault();
             //setItemsize(Item4, imageMotor4);
             Canvas.SetLeft(Item5, 150);
             Canvas.SetTop(Item5, 180);
@@ -224,13 +225,13 @@ namespace SCADACreator
             Item6.Content = button1;
             setItemsize(Item6, button1);
             ItemEvent item1event1 = new ItemEvent();
-            //item1event1.TagName = "DB1.DBX2.0";
+            item1event1.Tag = DataProvider.Instance.DB.TagInfoes.Where(x => x.Name == "Motor_1_Start").SingleOrDefault();
             item1event1.Name = "Event 1";
             item1event1.ActionType = ItemEvent.ItemActiontype.emSetbit;
             item1event1.EventType = ItemEvent.ItemEventType.emPress;
 
             ItemEvent item1event2 = new ItemEvent();
-            //item1event2.TagName = "DB1.DBX2.0";
+            item1event2.Tag = DataProvider.Instance.DB.TagInfoes.Where(x => x.Name == "Motor_1_Start").SingleOrDefault();
             item1event2.Name = "Event 2";
             item1event2.ActionType = ItemEvent.ItemActiontype.emResetBit;
             item1event2.EventType = ItemEvent.ItemEventType.emRelease;
@@ -251,13 +252,13 @@ namespace SCADACreator
             Item7.Content = button2;
             setItemsize(Item7, button2);
             ItemEvent item2event1 = new ItemEvent();
-            //item2event1.TagName = "DB1.DBX2.1";
+            item2event1.Tag = DataProvider.Instance.DB.TagInfoes.Where(x => x.Name == "Motor_1_Stop").SingleOrDefault();
             item2event1.Name = "Event 1";
             item2event1.ActionType = ItemEvent.ItemActiontype.emSetbit;
             item2event1.EventType = ItemEvent.ItemEventType.emPress;
 
             ItemEvent item2event2 = new ItemEvent();
-            //item2event2.TagName = "DB1.DBX2.1";
+            item2event2.Tag = DataProvider.Instance.DB.TagInfoes.Where(x => x.Name == "Motor_1_Stop").SingleOrDefault();
             item2event2.Name = "Event 2";
             item2event2.ActionType = ItemEvent.ItemActiontype.emResetBit;
             item2event2.EventType = ItemEvent.ItemEventType.emRelease;
@@ -278,13 +279,13 @@ namespace SCADACreator
             Item8.Content = button3;
             setItemsize(Item8, button3);
             ItemEvent item3event1 = new ItemEvent();
-            //item3event1.TagName = "DB2.DBX2.0";
+            item3event1.Tag = DataProvider.Instance.DB.TagInfoes.Where(x => x.Name == "Motor_2_Start").SingleOrDefault();
             item3event1.Name = "Event 1";
             item3event1.ActionType = ItemEvent.ItemActiontype.emSetbit;
             item3event1.EventType = ItemEvent.ItemEventType.emPress;
 
             ItemEvent item3event2 = new ItemEvent();
-            //item3event2.TagName = "DB2.DBX2.0";
+            item3event2.Tag = DataProvider.Instance.DB.TagInfoes.Where(x => x.Name == "Motor_2_Start").SingleOrDefault();
             item3event2.Name = "Event 2";
             item3event2.ActionType = ItemEvent.ItemActiontype.emResetBit;
             item3event2.EventType = ItemEvent.ItemEventType.emRelease;
@@ -305,13 +306,13 @@ namespace SCADACreator
             Item9.Content = button4;
             setItemsize(Item9, button2);
             ItemEvent item4event1 = new ItemEvent();
-            //item4event1.TagName = "DB2.DBX2.1";
+            item4event1.Tag = DataProvider.Instance.DB.TagInfoes.Where(x => x.Name == "Motor_2_Stop").SingleOrDefault();
             item4event1.Name = "Event 1";
             item4event1.ActionType = ItemEvent.ItemActiontype.emSetbit;
             item4event1.EventType = ItemEvent.ItemEventType.emPress;
 
             ItemEvent item4event2 = new ItemEvent();
-            //item4event2.TagName = "DB2.DBX2.1";
+            item4event2.Tag = DataProvider.Instance.DB.TagInfoes.Where(x => x.Name == "Motor_2_Stop").SingleOrDefault();
             item4event2.Name = "Event 2";
             item4event2.ActionType = ItemEvent.ItemActiontype.emResetBit;
             item4event2.EventType = ItemEvent.ItemEventType.emRelease;
@@ -405,9 +406,15 @@ namespace SCADACreator
 
         private void ViewDeviceButton_Click(object sender, RoutedEventArgs e)
         {
-            //DeviceListWindow devicewindow = new DeviceListWindow();
-            TagListWindow devicewindow = new TagListWindow();
-            devicewindow.ShowDialog();
+            DeviceListWindow devicewindow = new DeviceListWindow();
+
+            devicewindow.Show();
+        }
+
+        private void ViewTagListButton_Click(object sender, RoutedEventArgs e)
+        {
+            TagListWindow Tagwindow = new TagListWindow();
+            Tagwindow.Show();
         }
     }
 }

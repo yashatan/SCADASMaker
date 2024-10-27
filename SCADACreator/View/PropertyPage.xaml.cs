@@ -1,4 +1,5 @@
-﻿using SCADACreator.Utility;
+﻿using SCADACreator.Model;
+using SCADACreator.Utility;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.Eventing.Reader;
@@ -26,9 +27,11 @@ namespace SCADACreator.View
     {
         DesignerItem currentItem { get; set; }
         FrameworkElement content { get; set; }
+        List<TagInfo> tagsList = DataProvider.Instance.DB.TagInfoes.ToList();
         public PropertyPage()
         {
             InitializeComponent();
+            cbbTag.ItemsSource = tagsList;
         }
 
         public void SetCurrentItem(DesignerItem item)
@@ -55,7 +58,7 @@ namespace SCADACreator.View
             if (content.GetType() == typeof(TextBox))
             {
                 ConnectionGroup.Visibility = Visibility.Visible;
-                txtTagConnection.Text = (currentItem as SCADAItem).TagConnection;
+                cbbTag.SelectedItem = (currentItem as SCADAItem).TagConnection;
             }
             else
             {
@@ -313,9 +316,10 @@ namespace SCADACreator.View
             (content as Shape).Fill = new SolidColorBrush(Color.FromRgb((byte)newColor.R, (byte)newColor.G, (byte)newColor.B));
         }
 
-        private void txtTagConnection_LostFocus(object sender, RoutedEventArgs e)
-        {         
-            (currentItem as SCADAItem).TagConnection = txtTagConnection.Text;
+
+        private void cbbTag_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            (currentItem as SCADAItem).TagConnection = (cbbTag.SelectedItem as TagInfo);
         }
     }
 }

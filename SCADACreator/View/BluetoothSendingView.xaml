@@ -83,6 +83,14 @@
                     Margin="0 100 0 0"
                     IsEnabled="False"
                     Click="btnSend_Clicked">Send</Button>
+            <Button Width="100"
+                    x:Name="btnGenStationFile"
+                    Height="30"
+                    Grid.Column="1"
+                    Background="Blue"
+                    Margin="0 200 0 0"
+                    IsEnabled="True"
+                    Click="btnGenStationFile_Clicked">Generate</Button>
         </Grid>
     </Grid>
 </Window>

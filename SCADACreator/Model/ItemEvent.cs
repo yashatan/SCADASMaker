@@ -39,7 +39,7 @@ namespace SCADACreator
 
         public ItemEventType EventType { get => eventType; set => eventType = value; }
         public ItemActiontype ActionType { get; set; }
-        public TagInfo Tag { get; set; }
+        public virtual TagInfo Tag { get; set; }
 
     }
 }

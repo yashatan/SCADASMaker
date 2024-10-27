@@ -95,6 +95,7 @@
                                      FontSize="15"
                                      MinWidth="50"
                                      Margin="10 0 0 0"
+                                     PreviewTextInput="NumberValidationTextBox"
                                      Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
@@ -106,6 +107,7 @@
                                      FontSize="15"
                                      MinWidth="50"
                                      Margin="10 0 0 0"
+                                     PreviewTextInput="NumberValidationTextBox"
                                      Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
                         </StackPanel>
                     </StackPanel>

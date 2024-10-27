@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SCADACreator.Model;
+using SCADACreator.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static SCADACreator.View.ConnectDeviceDetailWindow;
 
 namespace SCADACreator.View
 {
@@ -21,15 +24,16 @@ namespace SCADACreator.View
     public partial class DeviceListWindow : Window
     {
         private ConnectDevice newDeviceInfo;
-
+        private List<ConnectDevice> devicesList;
         public DeviceListWindow()
         {
             InitializeComponent();
-            DummyData a = new DummyData();
-            DeviceList.ItemsSource = DummyData.connectDevices;
+            devicesList = new List<ConnectDevice>(DataProvider.Instance.DB.ConnectDevices.ToList());
+
+            DeviceList.ItemsSource = devicesList;
             DeviceList.Items.Refresh();
         }
-        
+
         private void DetailButton_Click(object sender, RoutedEventArgs e)
         {
             var device = DeviceList.SelectedItem as ConnectDevice;
@@ -38,15 +42,25 @@ namespace SCADACreator.View
             connectDeviceDetail.ShowDialog();
         }
 
-        private void ConnectDeviceDetailWindow_ApplyEventEdit(object sender, EventArgs e)
+        private void ConnectDeviceDetailWindow_ApplyEventEdit(object sender, ConnectDeviceEventArgs e)
         {
+             var device = e.connectDevice as ConnectDevice;
+
+            var deviceDB = DataProvider.Instance.DB.ConnectDevices.Where(x => x.Id == device.Id).SingleOrDefault();
+
+            deviceDB = device;
+            DataProvider.Instance.DB.SaveChanges();
+
             DeviceList.Items.Refresh();
         }
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
             var connectDevice = DeviceList.SelectedItem as ConnectDevice;
-            DummyData.connectDevices.Remove(connectDevice);
+            var chosenDevice = DataProvider.Instance.DB.ConnectDevices.Where(x => x.Id == connectDevice.Id).SingleOrDefault();
+            DataProvider.Instance.DB.ConnectDevices.Remove(chosenDevice);
+            DataProvider.Instance.DB.SaveChanges();
+            devicesList.Remove(connectDevice);
             DeviceList.Items.Refresh();
         }
 
@@ -60,9 +74,11 @@ namespace SCADACreator.View
 
         private void ConnectDeviceDetailWindow_ApplyEventNew(object sender, EventArgs e)
         {
-            DummyData.connectDevices.Add(newDeviceInfo);
+            DataProvider.Instance.DB.ConnectDevices.Add(newDeviceInfo);
+            DataProvider.Instance.DB.SaveChanges();
+            devicesList.Add(newDeviceInfo);
             DeviceList.Items.Refresh();
-            
+
         }
     }
 }

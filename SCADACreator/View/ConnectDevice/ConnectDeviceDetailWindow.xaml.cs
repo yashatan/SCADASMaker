@@ -1,8 +1,10 @@
-﻿using System;
+﻿using SCADACreator.Utility;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -22,8 +24,8 @@ namespace SCADACreator.View
     {
         private ConnectDevice deviceinfo;
         List<string> connectionTypes = new List<string>() { "S7", "ModbusTCP", "OPCUA" };
-        private event EventHandler _ApplyEvent;//event handle when confirm button clicked
-        public event EventHandler ApplyEvent
+        private event EventHandler<ConnectDeviceEventArgs> _ApplyEvent;//event handle when confirm button clicked
+        public event EventHandler<ConnectDeviceEventArgs> ApplyEvent
         {
             add
             {
@@ -57,8 +59,8 @@ namespace SCADACreator.View
             txtS7Slot.Text = deviceinfo.S7PLCSlot.ToString();
 
             txtModbusPort.Text = deviceinfo.ModbusPort.ToString();
-            txtOPCUAPassword.Text = deviceinfo.OPCUAUserPassword.ToString();
-            txtOPCUAUsername.Text = deviceinfo.OPCUAUserName.ToString();
+            //txtOPCUAPassword.Text = deviceinfo.OPCUAUserPassword.ToString();
+            //txtOPCUAUsername.Text = deviceinfo.OPCUAUserName.ToString();
         }
 
         private void cbbConnectionType_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -90,18 +92,18 @@ namespace SCADACreator.View
             deviceinfo.Name = txtName.Text;
             deviceinfo.Destination = txtDestination.Text;
 
-            deviceinfo.ConnectionType = (ConnectDevice.ConnnectionType)cbbConnectionType.SelectedIndex;
+            deviceinfo.ConnectionType = (int)cbbConnectionType.SelectedIndex;
             switch (deviceinfo.ConnectionType)
             {
-                case ConnectDevice.ConnnectionType.emS7:
+                case (int)EnumDefinition.emConnectionType.emS7:
                     deviceinfo.S7PLCSlot = Int32.Parse(txtS7Slot.Text);
                     deviceinfo.S7PLCRack = Int32.Parse(txtS7Rack.Text);
                     deviceinfo.S7PLCType = txtS7Model.Text;
                     break;
-                case ConnectDevice.ConnnectionType.emTCP:
+                case (int)EnumDefinition.emConnectionType.emTCP:
                     deviceinfo.ModbusPort = Int32.Parse(txtModbusPort.Text);
                     break;
-                case ConnectDevice.ConnnectionType.emOPCUA:
+                case (int)EnumDefinition.emConnectionType.emOPCUA:
                     deviceinfo.OPCUAUserName = txtOPCUAUsername.Text;
                     deviceinfo.OPCUAUserPassword = txtOPCUAPassword.Text;
                     break;
@@ -109,14 +111,33 @@ namespace SCADACreator.View
             }
             if (_ApplyEvent != null)
             {
-                _ApplyEvent(this, new EventArgs());
+                _ApplyEvent(this, new ConnectDeviceEventArgs(deviceinfo));
+
             }
             this.Close();
         }
 
+
+
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+
+        private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        public class ConnectDeviceEventArgs : EventArgs
+        {
+            public ConnectDevice connectDevice { get; set; }
+            public ConnectDeviceEventArgs(ConnectDevice _connectDevice)
+            {
+                connectDevice = _connectDevice;
+            }
         }
     }
 }

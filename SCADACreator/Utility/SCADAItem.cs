@@ -6,6 +6,7 @@ using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using SCADACreator.Model;
 
 namespace SCADACreator.Utility
 {
@@ -28,7 +29,7 @@ namespace SCADACreator.Utility
         }
 
 
-        public string TagConnection;
+        public virtual TagInfo TagConnection { get; set; }
        // ArrayList arlist1 = new ArrayList();
         public SCADAItem()
         {
