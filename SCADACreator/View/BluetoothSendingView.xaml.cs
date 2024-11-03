@@ -53,23 +53,23 @@ namespace SCADACreator
         {
             File.WriteAllText(filePath, controldata);//Save Json string to file
         }
-        private async void btnSend_Clicked(object sender, EventArgs e)
-        {
-            //if (this.DeviceListBox.SelectedItems.Count == 0)
-            //{
-            //    MessageBox.Show("Please select a device");
-            //    return;
-            //}
-            //if (this.txtFileName.Text == string.Empty)
-            //{
-            //    MessageBox.Show("Please enter a file name");
-            //    return;
-            //}
-            //var fileName = txtFileName.Text + ".json";
-            //SaveFile(fileName, jsonControlData);
-            //await sendfile(fileName, (DeviceListBox.SelectedItem as BluetoothDeviceInfo));
-            //MessageBox.Show("Send file succesfully");
-        }
+        //private async void btnSend_Clicked(object sender, EventArgs e)
+        //{
+        //    //if (this.DeviceListBox.SelectedItems.Count == 0)
+        //    //{
+        //    //    MessageBox.Show("Please select a device");
+        //    //    return;
+        //    //}
+        //    //if (this.txtFileName.Text == string.Empty)
+        //    //{
+        //    //    MessageBox.Show("Please enter a file name");
+        //    //    return;
+        //    //}
+        //    //var fileName = txtFileName.Text + ".json";
+        //    //SaveFile(fileName, jsonControlData);
+        //    //await sendfile(fileName, (DeviceListBox.SelectedItem as BluetoothDeviceInfo));
+        //    //MessageBox.Show("Send file succesfully");
+        //}
 
         private async Task sendfile(string filename, BluetoothDeviceInfo device)
         {
@@ -133,7 +133,7 @@ namespace SCADACreator
 
             SCADAStationConfiguration mSCADAStationConfiguration= new SCADAStationConfiguration();
             mSCADAStationConfiguration.SetConnectDevices(DataProvider.Instance.DB.ConnectDevices.ToList());
-            mSCADAStationConfiguration.SetTagInfos(DataProvider.Instance.DB.TagInfoes.ToList());
+            mSCADAStationConfiguration.SetTagInfos(SCADADataProvider.Instance.TagInfos);
             mSCADAStationConfiguration.SetControlDatas(controlDatas);
 
             string jsonSCADAStationConfiguration = JsonSerializer.Serialize(mSCADAStationConfiguration, options);//seriallize thành chuỗi json
@@ -156,8 +156,8 @@ namespace SCADACreator
             };
 
             SCADAStationConfiguration mSCADAStationConfiguration = new SCADAStationConfiguration();
-            mSCADAStationConfiguration.SetConnectDevices(DataProvider.Instance.DB.ConnectDevices.ToList());
-            mSCADAStationConfiguration.SetTagInfos(DataProvider.Instance.DB.TagInfoes.ToList());
+            mSCADAStationConfiguration.SetConnectDevices(SCADADataProvider.Instance.ConnectDevices);
+            mSCADAStationConfiguration.SetTagInfos(SCADADataProvider.Instance.TagInfos);
             mSCADAStationConfiguration.SetControlDatas(controlDatas);
 
             string jsonSCADAStationConfiguration = JsonSerializer.Serialize(mSCADAStationConfiguration, options);//seriallize thành chuỗi json

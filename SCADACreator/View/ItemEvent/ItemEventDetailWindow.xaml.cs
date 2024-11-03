@@ -26,7 +26,7 @@ namespace SCADACreator.View
         private ItemEvent itemevent;
         List<string> eventTypes = new List<string>() { "Click", "Press", "Release" };
         List<string> actionTypes = new List<string>() { "Set", "Reset" };
-        List<TagInfo> tagsList = DataProvider.Instance.DB.TagInfoes.ToList();
+        List<TagInfo> tagsList = SCADADataProvider.Instance.TagInfos;
         private event EventHandler _ApplyEvent;//event handle when confirm button clicked
         public event EventHandler ApplyEvent
         {
@@ -58,6 +58,7 @@ namespace SCADACreator.View
         {
             txtName.Text = itemevent.Name;
             cbbTag.SelectedItem = itemevent.Tag;
+            cbbTag.Text = itemevent.Tag.Name;
             cbbEventType.SelectedIndex = (int)itemevent.EventType;
             cbbActionType.SelectedIndex = (int)itemevent.ActionType;
         }

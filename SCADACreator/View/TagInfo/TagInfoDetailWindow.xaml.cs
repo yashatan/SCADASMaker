@@ -22,7 +22,7 @@ namespace SCADACreator.View
     public partial class TagInfoDetailWindow : Window
     {
         private TagInfo currentTag;
-        List<ConnectDevice> deviceAttach = DataProvider.Instance.DB.ConnectDevices.ToList();
+        List<ConnectDevice> deviceAttachs = SCADADataProvider.Instance.ConnectDevices;
         private event EventHandler<TagInfoEventArgs> _ApplyEvent;//event handle when confirm button clicked
         public event EventHandler<TagInfoEventArgs> ApplyEvent
         {
@@ -38,13 +38,13 @@ namespace SCADACreator.View
         public TagInfoDetailWindow()
         {
             InitializeComponent();
-            this.cbbDeviceAttach.ItemsSource = deviceAttach;
+            this.cbbDeviceAttach.ItemsSource = deviceAttachs;
         }
 
         public TagInfoDetailWindow(TagInfo tagInfo)
         {
             InitializeComponent();
-            this.cbbDeviceAttach.ItemsSource = deviceAttach;
+            this.cbbDeviceAttach.ItemsSource = deviceAttachs;
             currentTag = tagInfo;
             UpdateData();
         }
@@ -53,7 +53,13 @@ namespace SCADACreator.View
         {
             txtName.Text = currentTag.Name;
             txtAddress.Text = currentTag.MemoryAddress;
-            cbbDeviceAttach.SelectedItem = currentTag.ConnectDevice;
+            if(currentTag.ConnectDevice != null)
+            {
+                cbbDeviceAttach.SelectedItem = currentTag.ConnectDevice;
+                cbbDeviceAttach.Text = currentTag.ConnectDevice.Name;
+            }
+
+            cbbDeviceAttach.Items.Refresh();
         }
 
         private void cbbDeviceAttach_SelectionChanged(object sender, SelectionChangedEventArgs e)

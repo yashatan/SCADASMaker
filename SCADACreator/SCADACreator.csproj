@@ -145,6 +145,7 @@
       <DependentUpon>ModelData.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\DataProvider.cs" />
+    <Compile Include="Model\ProjectInformation.cs" />
     <Compile Include="Model\SCADAStationConfiguration.cs" />
     <Compile Include="TagInfo.cs">
       <DependentUpon>ModelData.tt</DependentUpon>
@@ -220,8 +221,8 @@
     <Compile Include="View\TagInfo\TagListWindow.xaml.cs">
       <DependentUpon>TagListWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Window1.xaml.cs">
-      <DependentUpon>Window1.xaml</DependentUpon>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="ItemMoveResizeClass\ZoomBox.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -360,7 +361,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Window1.xaml">
+    <Page Include="MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -11,7 +11,7 @@ namespace SCADACreator
     {
         private DesignerItem designerItem;
         private DesignerCanvas designerCanvas;
-        private Window1 window;
+        private MainWindow window;
 
         public MoveThumb()
         {
@@ -26,7 +26,7 @@ namespace SCADACreator
             if (this.designerItem != null)
             {
                 this.designerCanvas = VisualTreeHelper.GetParent(this.designerItem) as DesignerCanvas;
-                this.window = AdvancedFindParent.FindAncestor<Window1>(this.designerCanvas);
+                this.window = AdvancedFindParent.FindAncestor<MainWindow>(this.designerCanvas);
             }
         }
 

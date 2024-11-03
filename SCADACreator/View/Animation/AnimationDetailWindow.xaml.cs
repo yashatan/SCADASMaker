@@ -25,7 +25,7 @@ namespace SCADACreator.View
         private AnimationSense animation;
         List<string> animationProperties = new List<string>() { "Visibility", "BackgroundColor", "Height", "Width", "Text" };
         List<string> visibleList = new List<string>() { "False", "True" };
-        List<TagInfo> tagsList = DataProvider.Instance.DB.TagInfoes.ToList();
+        List<TagInfo> tagsList = SCADADataProvider.Instance.TagInfos;
         string currentProperty;
         private event EventHandler _ApplyEvent;//event handle when confirm button clicked
         public event EventHandler ApplyEvent
@@ -58,6 +58,7 @@ namespace SCADACreator.View
         {
             txtName.Text = animation.Name;
             cbbTag.SelectedItem = animation.Tag;
+            cbbTag.Text = animation.Tag.Name;
             txtTagMaxValue.Text = animation.Tagvaluemax.ToString();
             txtTagMinValue.Text = animation.Tagvaluemin.ToString();
             this.cbbProperty.SelectedIndex = (int)animation.PropertyNeedChange;

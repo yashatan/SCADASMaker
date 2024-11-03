@@ -82,7 +82,7 @@
                     Background="Blue"
                     Margin="0 30 0 0"
                     IsEnabled="False"
-                    Click="btnSend_Clicked">Send</Button>
+                    >Send</Button>
             <Button Width="100"
                     x:Name="btnGenStationFile"
                     Height="30"

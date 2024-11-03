@@ -27,7 +27,7 @@ namespace SCADACreator.View
     {
         DesignerItem currentItem { get; set; }
         FrameworkElement content { get; set; }
-        List<TagInfo> tagsList = DataProvider.Instance.DB.TagInfoes.ToList();
+        List<TagInfo> tagsList = SCADADataProvider.Instance.TagInfos;
         public PropertyPage()
         {
             InitializeComponent();
@@ -59,6 +59,9 @@ namespace SCADACreator.View
             {
                 ConnectionGroup.Visibility = Visibility.Visible;
                 cbbTag.SelectedItem = (currentItem as SCADAItem).TagConnection;
+                cbbTag.Text = (currentItem as SCADAItem).TagConnection.Name;
+                cbbTag.Items.Refresh();
+
             }
             else
             {

@@ -25,7 +25,7 @@ namespace SCADACreator
     public class DesignerCanvas : Canvas
     {
         private Point? dragStartPoint = null;
-        private Window1 _window;
+        private MainWindow _window;
         public DesignerCanvas()
         {
             Focusable = true;
@@ -36,7 +36,7 @@ namespace SCADACreator
         {
             Focus();
             Loaded -= OnCanvasGraphLoaded;
-            _window = AdvancedFindParent.FindAncestor<Window1>(this);
+            _window = AdvancedFindParent.FindAncestor<MainWindow>(this);
         }
 
         public IEnumerable<DesignerItem> SelectedItems

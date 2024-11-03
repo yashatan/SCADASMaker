@@ -26,7 +26,7 @@ namespace SCADACreator.View
         public TagListWindow()
         {
             InitializeComponent();
-            tagsList = DataProvider.Instance.DB.TagInfoes.ToList();
+            tagsList = SCADADataProvider.Instance.TagInfos;
             TagList.ItemsSource = tagsList;
             TagList.Items.Refresh();
         }
@@ -41,19 +41,13 @@ namespace SCADACreator.View
 
         private void TagInfoDetail_ApplyEventEdit(object sender, TagInfoEventArgs e)
         {
-            var tagInfo = TagList.SelectedItem as TagInfo;
-            var chosenTag = DataProvider.Instance.DB.TagInfoes.Where(x => x.Id == e.TagInfo.Id).SingleOrDefault();
-            chosenTag = e.TagInfo;
-            DataProvider.Instance.DB.SaveChanges();
             TagList.Items.Refresh();
         }
 
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
             var taginfo = TagList.SelectedItem as TagInfo;
-            var chosenTag = DataProvider.Instance.DB.TagInfoes.Where(x => x.Id == taginfo.Id).SingleOrDefault();
-            DataProvider.Instance.DB.TagInfoes.Remove(chosenTag);
-            DataProvider.Instance.DB.SaveChanges();
+            var chosenTag = SCADADataProvider.Instance.TagInfos.Where(x => x.Id == taginfo.Id).SingleOrDefault();
             tagsList.Remove(taginfo);
             TagList.Items.Refresh();
         }
@@ -68,9 +62,7 @@ namespace SCADACreator.View
 
         private void TagInfoDetail_ApplyEventNew(object sender, EventArgs e)
         {
-            DataProvider.Instance.DB.TagInfoes.Add(newTagInfo);
-            DataProvider.Instance.DB.SaveChanges();
-            tagsList.Add(newTagInfo);
+            SCADADataProvider.Instance.AddTagInfo(newTagInfo);
             TagList.Items.Refresh();
         }
     }

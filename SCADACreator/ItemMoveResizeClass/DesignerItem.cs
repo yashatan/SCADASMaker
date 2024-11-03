@@ -58,7 +58,7 @@ namespace SCADACreator
             this.Focus();
             DesignerCanvas designer = VisualTreeHelper.GetParent(this) as DesignerCanvas;
 
-            Window1 window = AdvancedFindParent.FindAncestor<Window1>(designer);
+            MainWindow window = AdvancedFindParent.FindAncestor<MainWindow>(designer);
 
             if (designer != null && window != null)
             {

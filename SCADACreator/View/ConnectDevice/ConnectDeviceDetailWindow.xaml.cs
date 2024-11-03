@@ -52,7 +52,10 @@ namespace SCADACreator.View
         private void UpdateConnectData()
         {
             txtName.Text = deviceinfo.Name;
-            this.cbbConnectionType.SelectedIndex = (int)deviceinfo.ConnectionType;
+            if (deviceinfo.ConnectionType != null)
+            {
+                this.cbbConnectionType.SelectedIndex = (int)deviceinfo.ConnectionType;
+            }
             txtDestination.Text = deviceinfo.Destination;
             txtS7Model.Text = deviceinfo.S7PLCType;
             txtS7Rack.Text = deviceinfo.S7PLCRack.ToString();

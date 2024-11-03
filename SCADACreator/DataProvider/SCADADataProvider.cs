@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,7 +15,8 @@ namespace SCADACreator
         public List<TagInfo> TagInfos; 
         public List<ConnectDevice> ConnectDevices; 
         private static SCADADataProvider instance;
-
+        private int nextTagID;
+        private int nextDeviceID;
         // Private constructor to prevent instantiation
         private SCADADataProvider()
         {
@@ -34,5 +36,42 @@ namespace SCADACreator
                 return instance;
             }
         }
+
+        public void AddListTagInfos(List<TagInfo> tags)
+        {
+            TagInfos.AddRange(tags);
+            nextTagID = TagInfos.Max(m => m.Id) +1;
+        }
+
+        public void AddListConnectDevices(List<ConnectDevice> connectDevices)
+        {
+            ConnectDevices.AddRange(connectDevices);
+            nextDeviceID = ConnectDevices.Max(m => m.Id) + 1;
+        }
+
+        public void AddTagInfo(TagInfo tagInfo)
+        {
+            if (tagInfo != null)
+            {
+                tagInfo.Id = nextTagID;
+                nextTagID++;
+                TagInfos.Add(tagInfo);
+            }
+
+        }
+        public void AddConnectDevice(ConnectDevice connectDevice)
+        {
+            connectDevice.Id = nextDeviceID;
+            nextDeviceID++;
+            ConnectDevices.Add(connectDevice);
+        }
+
+        public void Clear()
+        {
+            TagInfos.Clear();
+            ConnectDevices.Clear();
+        }
     }
+
+
 }
