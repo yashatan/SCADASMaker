@@ -8,10 +8,17 @@ using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Markup;
+using System.Text.Json;
 using System.Windows.Media;
 using System.Windows.Shapes;
 using SCADACreator.Utility;
 using System.Xml;
+using System.Xml.Linq;
+using System.Runtime.Serialization;
+using System.Runtime.InteropServices.ComTypes;
+using System.Text.Json.Serialization;
+using System.Data.SqlTypes;
+using System.Xml.Serialization;
 
 namespace SCADACreator
 {
@@ -67,7 +74,7 @@ namespace SCADACreator
         protected override void OnKeyDown(KeyEventArgs e)
         {
             base.OnKeyDown(e);
-           // DesignerCanvas designer = VisualTreeHelper.GetParent(this) as DesignerCanvas;
+            // DesignerCanvas designer = VisualTreeHelper.GetParent(this) as DesignerCanvas;
             if (this != null)
             {
                 if (e.Key == Key.Delete)
@@ -82,9 +89,52 @@ namespace SCADACreator
 
                     foreach (var uie in list) this.Children.Remove(uie);
                 }
+                if (e.Key == Key.C && (Keyboard.Modifiers & ModifierKeys.Control) ==ModifierKeys.Control)
+                {
+                    var xmlString = SerrializeControl();
+                    Clipboard.SetText(xmlString);
+                }
+                if (e.Key == Key.X && (Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control)
+                {
+                    var xmlString = SerrializeControl();
+                    Clipboard.SetText(xmlString);
+                    var list = new List<UIElement>();
+
+                    foreach (DesignerItem uie in this.SelectedItems)
+                    {
+                        // if this element must be removed, then add it to list:  
+                        list.Add(uie);
+                    }
+
+                    foreach (var uie in list) this.Children.Remove(uie);
+                    Focus();
+                }
+                if (e.Key == Key.V && (Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control)
+                {
+                    string xmlString = Clipboard.GetText();
+                    XElement parsedElement = XElement.Parse(xmlString);
+                    DeselectAll();
+                    foreach (var itemElement in parsedElement.Elements("SCADAItem"))
+                    {
+                        SCADAItem pasteItem = new SCADAItem();
+                        FrameworkElement content = XamlReader.Parse((string)itemElement.Element("Content")) as FrameworkElement;
+                        pasteItem.Content = content;
+                        pasteItem.Width = (double)itemElement.Element("Width");
+                        pasteItem.Height = (double)itemElement.Element("Height");
+                        pasteItem.TagConnection = JsonSerializer.Deserialize<TagInfo>((string)itemElement.Element("TagConnection"));
+                        pasteItem.AnimationSenses = JsonSerializer.Deserialize<List<AnimationSense>>((string)itemElement.Element("AnimationSenses"));
+                        pasteItem.ItemEvents = JsonSerializer.Deserialize<List<ItemEvent>>((string)itemElement.Element("ItemEvents"));
+                        Canvas.SetLeft(pasteItem, (double)itemElement.Element("Left") + 10.0);
+                        Canvas.SetTop(pasteItem, (double)itemElement.Element("Top") + 10.0);
+                        pasteItem.IsSelected = true;
+                        this.Children.Add(pasteItem);
+
+                    }
+                    var xmlStringnext = SerrializeControl();
+                    Clipboard.SetText(xmlStringnext);
+                }
             }
         }
-
         protected override void OnMouseMove(MouseEventArgs e)
         {
             base.OnMouseMove(e);
@@ -172,6 +222,35 @@ namespace SCADACreator
             size.Width += 10;
             size.Height += 10;
             return size;
+        }
+
+        private string SerrializeControl()
+        {
+            var options = new JsonSerializerOptions
+            {
+                NumberHandling = System.Text.Json.Serialization.JsonNumberHandling.AllowNamedFloatingPointLiterals,
+                ReferenceHandler = ReferenceHandler.IgnoreCycles,
+                WriteIndented = true
+            };
+            XElement serializedItems = new XElement("SCADAItems",
+                 from item in this.SelectedItems
+                 let contentXaml = XamlWriter.Save(((SCADAItem)item).Content)
+                 let tagconnectionjson = JsonSerializer.Serialize(((SCADAItem)item).TagConnection, options)
+                 let animationsensejson = JsonSerializer.Serialize(((SCADAItem)item).AnimationSenses, options)
+                 let itemeventjson = JsonSerializer.Serialize(((SCADAItem)item).ItemEvents, options)
+                 select new XElement("SCADAItem",
+                             new XElement("Left", Canvas.GetLeft(item)),
+                             new XElement("Top", Canvas.GetTop(item)),
+                             new XElement("Width", item.Width),
+                             new XElement("Height", item.Height),
+                             new XElement("zIndex", Canvas.GetZIndex(item)),
+                             new XElement("Content", contentXaml),
+                             new XElement("AnimationSenses", animationsensejson),
+                             new XElement("ItemEvents", itemeventjson),
+                             new XElement("TagConnection", tagconnectionjson)
+                             )
+                  );
+            return serializedItems.ToString();
         }
     }
 }

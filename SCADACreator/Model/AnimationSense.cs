@@ -1,8 +1,10 @@
 ﻿using SCADACreator.ViewModel;
+using System;
 
 
 namespace SCADACreator
 {
+    [Serializable]
     public class AnimationSense : BaseViewModel
     {
         private TagInfo _Tag;

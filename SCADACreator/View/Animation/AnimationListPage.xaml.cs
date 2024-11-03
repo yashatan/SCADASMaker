@@ -37,7 +37,7 @@ namespace SCADACreator.View
         public void SetCurrentItem(DesignerItem item)
         {
             currentItem = (item as SCADAItem);
-            senses = currentItem.animationSenses;
+            senses = currentItem.AnimationSenses;
             AnimationList.ItemsSource = senses;
         }
 
@@ -57,7 +57,7 @@ namespace SCADACreator.View
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
             var animation = AnimationList.SelectedItem as AnimationSense;
-            currentItem.animationSenses.Remove(animation);
+            currentItem.AnimationSenses.Remove(animation);
             AnimationList.Items.Refresh();
         }
 
@@ -70,7 +70,7 @@ namespace SCADACreator.View
         }
         private void AnimationDetail_ApplyEventAddNew(object sender, EventArgs e)
         {
-            currentItem.animationSenses.Add(newAnimation);
+            currentItem.AnimationSenses.Add(newAnimation);
             AnimationList.Items.Refresh();
         }
     }

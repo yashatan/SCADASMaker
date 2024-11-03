@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
+using System.Windows.Input;
 using System.Windows.Media;
 
 namespace SCADACreator
@@ -47,6 +48,7 @@ namespace SCADACreator
                 throw new Exception("PART_ZoomSlider template is missing!");
 
             this.designerCanvas.LayoutUpdated += new EventHandler(this.DesignerCanvas_LayoutUpdated);
+            this.designerCanvas.MouseWheel += DesignerCanvas_MouseWheel;
 
             this.zoomThumb.DragDelta += new DragDeltaEventHandler(this.Thumb_DragDelta);
 
@@ -54,6 +56,23 @@ namespace SCADACreator
 
             this.scaleTransform = new ScaleTransform();
             this.designerCanvas.LayoutTransform = this.scaleTransform;
+        }
+
+        private void DesignerCanvas_MouseWheel(object sender, System.Windows.Input.MouseWheelEventArgs e)
+        {
+            if ((Keyboard.Modifiers & (ModifierKeys.Control)) != ModifierKeys.None)
+            {
+                {
+                    if (e.Delta > 0)
+                    {
+                        this.zoomSlider.Value += 10; // Tăng giá trị của Slider
+                    }
+                    else if (e.Delta < 0)
+                    {
+                        this.zoomSlider.Value -= 10; // Giảm giá trị của Slider
+                    }
+                }
+            }
         }
 
         private void ZoomSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)

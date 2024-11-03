@@ -4,11 +4,47 @@
         xmlns:s="clr-namespace:SCADACreator"
         xmlns:sv="clr-namespace:SCADACreator.View"
         WindowStartupLocation="CenterScreen"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="Mobile SCADA Creator"
         FontFamily="SegoeUI"
         Height="900"
         Width="1420">
     <DockPanel Margin="0">
+        <!--<Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+        </Grid>-->
+        <Menu IsMainMenu="True"
+              DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="New SCADA"
+                          Click="MenuItemNewSCADA_Click"/>
+                <MenuItem Header="Open"
+                          Click="MenuItemOpen_Click" />
+                <MenuItem Header="Save"
+                          Click="MenuItemSave_Click"
+                          Icon="{materialDesign:PackIcon Kind=ContentSave}"></MenuItem>
+                <MenuItem Header="Save As.." />
+                <MenuItem Header="Exit"
+                          InputGestureText="Ctrl+E"
+                          Icon="{materialDesign:PackIcon Kind=ExitToApp}" />
+                <Separator />
+
+            </MenuItem>
+            <MenuItem Header="_Edit">
+                <MenuItem Header="_Cut"
+                          Command="Cut"
+                          Icon="{materialDesign:PackIcon Kind=ContentCut}" />
+                <MenuItem Header="_Copy"
+                          Command="Copy"
+                          Icon="{materialDesign:PackIcon Kind=ContentCopy}" />
+                <MenuItem Header="_Paste"
+                          Command="Paste"
+                          Icon="{materialDesign:PackIcon Kind=ContentPaste}" />
+            </MenuItem>
+        </Menu>
         <ToolBar Height="35"
                  DockPanel.Dock="Top">
             <!--<Button ToolTip="New"

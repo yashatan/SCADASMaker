@@ -127,7 +127,8 @@
     <Compile Include="ConnectDevice.cs">
       <DependentUpon>ModelData.tt</DependentUpon>
     </Compile>
-    <Compile Include="DummyData\DummyData.cs" />
+    <Compile Include="DataProvider\DummyData.cs" />
+    <Compile Include="DataProvider\SCADADataProvider.cs" />
     <Compile Include="ModelData.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -149,6 +150,7 @@
       <DependentUpon>ModelData.tt</DependentUpon>
     </Compile>
     <Compile Include="Utility\AdvancedFindParent.cs" />
+    <Compile Include="Utility\DecimalTextBox.cs" />
     <Compile Include="Utility\EnumDefinition.cs" />
     <Compile Include="Utility\SCADAItem.cs" />
     <Compile Include="Model\AnimationSense.cs" />

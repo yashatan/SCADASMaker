@@ -19,6 +19,8 @@ using System.Security.AccessControl;
 using Microsoft.Win32;
 using SCADACreator.Model;
 using System.Text.Json.Serialization;
+using System.Diagnostics;
+using System.Reflection;
 
 namespace SCADACreator
 {
@@ -36,7 +38,7 @@ namespace SCADACreator
             this.ContentRendered += ControlPropertyView_Loaded;
         }
 
-        private async void ControlPropertyView_Loaded(object sender, EventArgs e)
+        private  void ControlPropertyView_Loaded(object sender, EventArgs e)
         {
             //await FindDevicesAsync();
             txtblockLoading.Visibility = Visibility.Hidden;
@@ -141,7 +143,34 @@ namespace SCADACreator
             saveFileDialog.Filter = "JsonString (*.json)|*.json";
             saveFileDialog.ShowDialog();
             Console.WriteLine(saveFileDialog.FileName);
-            SaveFile(saveFileDialog.FileName + ".json", jsonSCADAStationConfiguration);
+            SaveFile(saveFileDialog.FileName, jsonSCADAStationConfiguration);
+        }
+
+        private void btnStartSCADAStation_Click(object sender, RoutedEventArgs e)
+        {
+            var options = new JsonSerializerOptions
+            {
+                NumberHandling = System.Text.Json.Serialization.JsonNumberHandling.AllowNamedFloatingPointLiterals,
+                ReferenceHandler = ReferenceHandler.IgnoreCycles,
+                WriteIndented = true
+            };
+
+            SCADAStationConfiguration mSCADAStationConfiguration = new SCADAStationConfiguration();
+            mSCADAStationConfiguration.SetConnectDevices(DataProvider.Instance.DB.ConnectDevices.ToList());
+            mSCADAStationConfiguration.SetTagInfos(DataProvider.Instance.DB.TagInfoes.ToList());
+            mSCADAStationConfiguration.SetControlDatas(controlDatas);
+
+            string jsonSCADAStationConfiguration = JsonSerializer.Serialize(mSCADAStationConfiguration, options);//seriallize thành chuỗi json
+            string filename = AppDomain.CurrentDomain.BaseDirectory + "SCADAStationConfiguration.json";
+            SaveFile(filename, jsonSCADAStationConfiguration);
+            // Use ProcessStartInfo class
+            Process proc = new Process();
+            proc.StartInfo.FileName = "D:\\CaoHoc\\DeCuongLuanVan\\SCADAStationNetFrameWork\\SCADAStationNetFrameWork\\bin\\Debug\\SCADAStationNetFrameWork.exe"; //Need update
+            proc.StartInfo.UseShellExecute = true;
+            proc.StartInfo.Verb = "runas";
+            proc.StartInfo.Arguments = $"-f {filename}";
+            proc.Start();
+            //proc.WaitForExit();
         }
     }
 }

@@ -14,7 +14,7 @@ namespace SCADACreator.Utility
     {
         private List<AnimationSense> _animationSenses;
 
-        public List<AnimationSense> animationSenses
+        public List<AnimationSense> AnimationSenses
         {
             get { return _animationSenses; }
             set { _animationSenses = value; }
@@ -33,7 +33,7 @@ namespace SCADACreator.Utility
        // ArrayList arlist1 = new ArrayList();
         public SCADAItem()
         {
-            animationSenses = new List<AnimationSense>();
+            AnimationSenses = new List<AnimationSense>();
             ItemEvents = new List<ItemEvent>();
             this.Loaded += new RoutedEventHandler(this.DesignerItem_Loaded);
         }

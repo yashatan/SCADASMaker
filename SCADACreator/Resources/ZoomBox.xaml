@@ -184,7 +184,7 @@
                                         <Thumb Name="PART_ZoomThumb"
                                                Cursor="SizeAll">
                                             <Thumb.Style>
-                                                <Style TargetType="Thumb">
+                                                <Style TargetType="Thumb" >
                                                     <Setter Property="Template">
                                                         <Setter.Value>
                                                             <ControlTemplate TargetType="Thumb">
@@ -210,6 +210,8 @@
                                             VerticalAlignment="Center"
                                             HorizontalAlignment="Center"
                                             Margin="0"
+                                            Width="130"
+                                            Style="{x:Null}"
                                             Ticks="25,50,75,100,125,150,200,300,400,500"
                                             Minimum="25"
                                             Maximum="500"

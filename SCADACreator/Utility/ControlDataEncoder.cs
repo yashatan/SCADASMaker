@@ -75,7 +75,7 @@ namespace SCADACreator.Utility
                 data.FontSize = (double)content.GetType().GetProperty("FontSize").GetValue(content, null);
             }
 
-            data.animationSenses = new List<AnimationSense>(item.animationSenses);
+            data.animationSenses = new List<AnimationSense>(item.AnimationSenses);
             data.ItemEvents = new List<ItemEvent>(item.ItemEvents);
             return data;
         }

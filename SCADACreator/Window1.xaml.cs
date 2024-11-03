@@ -16,6 +16,14 @@ using InTheHand.Net;
 using InTheHand.Net.Bluetooth;
 using SCADACreator.Model;
 using InTheHand.Net.Sockets;
+using Microsoft.Win32;
+using System.IO;
+using System.Text.Json.Serialization;
+using System.Text.Json;
+using System.Xml.Linq;
+using System.Windows.Markup;
+using System.Data.SqlTypes;
+
 
 namespace SCADACreator
 {
@@ -108,8 +116,8 @@ namespace SCADACreator
             animation1_2.Tagvaluemin = 1;
             animation1_2.PropertyNeedChange = AnimationSense.PropertyType.emIsVisible;
             animation1_2.PropertyBoolValueWhenTagInRange = true;
-            Item1.animationSenses.Add(animation1);
-            Item1.animationSenses.Add(animation1_2);
+            Item1.AnimationSenses.Add(animation1);
+            Item1.AnimationSenses.Add(animation1_2);
 
             Canvas.SetLeft(Item1, 50);
             Canvas.SetTop(Item1, 50);
@@ -136,8 +144,8 @@ namespace SCADACreator
             animation2_2.Tagvaluemin = 1;
             animation2_2.PropertyNeedChange = AnimationSense.PropertyType.emIsVisible;
             animation2_2.PropertyBoolValueWhenTagInRange = false;
-            Item2.animationSenses.Add(animation2);
-            Item2.animationSenses.Add(animation2_2);
+            Item2.AnimationSenses.Add(animation2);
+            Item2.AnimationSenses.Add(animation2_2);
 
             Canvas.SetLeft(Item2, 50);
             Canvas.SetTop(Item2, 50);
@@ -163,8 +171,8 @@ namespace SCADACreator
             animation3_2.Tagvaluemin = 1;
             animation3_2.PropertyNeedChange = AnimationSense.PropertyType.emIsVisible;
             animation3_2.PropertyBoolValueWhenTagInRange = true;
-            Item3.animationSenses.Add(animation3);
-            Item3.animationSenses.Add(animation3_2);
+            Item3.AnimationSenses.Add(animation3);
+            Item3.AnimationSenses.Add(animation3_2);
 
             Canvas.SetLeft(Item3, 200);
             Canvas.SetTop(Item3, 50);
@@ -190,8 +198,8 @@ namespace SCADACreator
             animation4_2.Tagvaluemin = 1;
             animation4_2.PropertyNeedChange = AnimationSense.PropertyType.emIsVisible;
             animation4_2.PropertyBoolValueWhenTagInRange = false;
-            Item4.animationSenses.Add(animation4);
-            Item4.animationSenses.Add(animation4_2);
+            Item4.AnimationSenses.Add(animation4);
+            Item4.AnimationSenses.Add(animation4_2);
 
             Canvas.SetLeft(Item4, 200);
             Canvas.SetTop(Item4, 50);
@@ -415,6 +423,111 @@ namespace SCADACreator
         {
             TagListWindow Tagwindow = new TagListWindow();
             Tagwindow.Show();
+        }
+
+        private void MenuItemNewSCADA_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void MenuItemSave_Click(object sender, RoutedEventArgs e)
+        {
+            var savestring = SerializeAllDesignerItems();
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.FileName = "untitled";
+            saveFileDialog.Filter = "JsonString (*.json)|*.json";
+            saveFileDialog.ShowDialog();
+            File.WriteAllText(saveFileDialog.FileName, savestring);//Save Json string to file
+        }
+        private void MenuItemOpen_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Text files (*.json)|*.json|All files (*.*)|*.*";
+            if (openFileDialog.ShowDialog() == true)
+            {
+                string jsonString = File.ReadAllText(openFileDialog.FileName);
+                DeSerrializeAllDesignerItems(jsonString);
+            }
+            else
+            {
+                MessageBox.Show("Cannot Open Project File");
+            }
+        }
+        private string SerializeAllDesignerItems()
+        {
+            var options = new JsonSerializerOptions
+            {
+                NumberHandling = System.Text.Json.Serialization.JsonNumberHandling.AllowNamedFloatingPointLiterals,
+                ReferenceHandler = ReferenceHandler.IgnoreCycles,
+                WriteIndented = true
+            };
+            XElement serializedItems = new XElement("SCADAProject",
+                 new XElement("TagInfos", JsonSerializer.Serialize(SCADADataProvider.Instance.TagInfos.ToList(), options)),
+                 new XElement("ConnectDevices", JsonSerializer.Serialize(SCADADataProvider.Instance.ConnectDevices.ToList(), options)),
+                 from item in MyDesignerCanvas.Children.OfType<SCADAItem>()
+                 let contentXaml = XamlWriter.Save(((SCADAItem)item).Content)
+                 let tagconnectionjson = JsonSerializer.Serialize(((SCADAItem)item).TagConnection, options)
+                 let animationsensejson = JsonSerializer.Serialize(((SCADAItem)item).AnimationSenses, options)
+                 let itemeventjson = JsonSerializer.Serialize(((SCADAItem)item).ItemEvents, options)
+                 select new XElement("SCADAItem",
+                             new XElement("Left", Canvas.GetLeft(item)),
+                             new XElement("Top", Canvas.GetTop(item)),
+                             new XElement("Width", item.Width),
+                             new XElement("Height", item.Height),
+                             new XElement("zIndex", Canvas.GetZIndex(item)),
+                             new XElement("Content", contentXaml),
+                             new XElement("AnimationSenses", animationsensejson),
+                             new XElement("ItemEvents", itemeventjson),
+                             new XElement("TagConnection", tagconnectionjson)
+                             )
+                  );
+            //XElement serializedItems = new XElement("SCADAProject",
+            //     new XElement("TagInfos", JsonSerializer.Serialize(DataProvider.Instance.DB.TagInfoes.ToList(), options)),
+            //     new XElement("ConnectDevices", JsonSerializer.Serialize(DataProvider.Instance.DB.ConnectDevices.ToList(), options)),
+            //     from item in MyDesignerCanvas.Children.OfType<SCADAItem>()
+            //     let contentXaml = XamlWriter.Save(((SCADAItem)item).Content)
+            //     let tagconnectionjson = JsonSerializer.Serialize(((SCADAItem)item).TagConnection, options)
+            //     let animationsensejson = JsonSerializer.Serialize(((SCADAItem)item).AnimationSenses, options)
+            //     let itemeventjson = JsonSerializer.Serialize(((SCADAItem)item).ItemEvents, options)
+            //     select new XElement("SCADAItem",
+            //                 new XElement("Left", Canvas.GetLeft(item)),
+            //                 new XElement("Top", Canvas.GetTop(item)),
+            //                 new XElement("Width", item.Width),
+            //                 new XElement("Height", item.Height),
+            //                 new XElement("zIndex", Canvas.GetZIndex(item)),
+            //                 new XElement("Content", contentXaml),
+            //                 new XElement("AnimationSenses", animationsensejson),
+            //                 new XElement("ItemEvents", itemeventjson),
+            //                 new XElement("TagConnection", tagconnectionjson)
+            //                 )
+            //      );
+            return serializedItems.ToString();
+        }
+
+        private void DeSerrializeAllDesignerItems(string openstring)
+        {
+            XElement parsedElement = XElement.Parse(openstring);
+            foreach (var itemElement in parsedElement.Elements("SCADAItem"))
+            {
+                SCADAItem pasteItem = new SCADAItem();
+                FrameworkElement content = XamlReader.Parse((string)itemElement.Element("Content")) as FrameworkElement;
+                pasteItem.Content = content;
+                pasteItem.Width = (double)itemElement.Element("Width");
+                pasteItem.Height = (double)itemElement.Element("Height");
+                pasteItem.TagConnection = JsonSerializer.Deserialize<TagInfo>((string)itemElement.Element("TagConnection"));
+                pasteItem.AnimationSenses = JsonSerializer.Deserialize<List<AnimationSense>>((string)itemElement.Element("AnimationSenses"));
+                pasteItem.ItemEvents = JsonSerializer.Deserialize<List<ItemEvent>>((string)itemElement.Element("ItemEvents"));
+                Point mousePosition = Mouse.GetPosition(this);
+                Canvas.SetLeft(pasteItem, (double)itemElement.Element("Left") + 10.0);
+                Canvas.SetTop(pasteItem, (double)itemElement.Element("Top") + 10.0);
+                pasteItem.IsSelected = true;
+                MyDesignerCanvas.Children.Add(pasteItem);
+            }
+
+            List<TagInfo> taginfos = JsonSerializer.Deserialize< List<TagInfo>>((string)parsedElement.Element("TagInfos"));
+            List<ConnectDevice> connectedDevices = JsonSerializer.Deserialize< List<ConnectDevice>>((string)parsedElement.Element("ConnectDevices"));
+
+            SCADADataProvider.Instance.TagInfos.AddRange(taginfos);
+            SCADADataProvider.Instance.ConnectDevices.AddRange(connectedDevices);
         }
     }
 }

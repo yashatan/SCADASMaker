@@ -80,7 +80,7 @@
                     Height="30"
                     Grid.Column="1"
                     Background="Blue"
-                    Margin="0 100 0 0"
+                    Margin="0 30 0 0"
                     IsEnabled="False"
                     Click="btnSend_Clicked">Send</Button>
             <Button Width="100"
@@ -88,9 +88,17 @@
                     Height="30"
                     Grid.Column="1"
                     Background="Blue"
-                    Margin="0 200 0 0"
+                    Margin="0 120 0 0"
                     IsEnabled="True"
                     Click="btnGenStationFile_Clicked">Generate</Button>
+            <Button Width="120"
+                    x:Name="btnStartSCADAStation"
+                    Height="30"
+                    Grid.Column="1"
+                    Background="Blue"
+                    Margin="0 200 0 0"
+                    IsEnabled="True"
+                    Click="btnStartSCADAStation_Click">RunStation</Button>
         </Grid>
     </Grid>
 </Window>

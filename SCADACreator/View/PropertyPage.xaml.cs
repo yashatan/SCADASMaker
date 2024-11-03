@@ -321,5 +321,10 @@ namespace SCADACreator.View
         {
             (currentItem as SCADAItem).TagConnection = (cbbTag.SelectedItem as TagInfo);
         }
+
+        private void txtPositionX_LostFocus(object sender, RoutedEventArgs e)
+        {
+            Canvas.SetLeft(currentItem, Convert.ToDouble(txtPositionX.Text));
+        }
     }
 }

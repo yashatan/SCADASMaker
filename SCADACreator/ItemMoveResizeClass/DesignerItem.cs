@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -7,6 +8,7 @@ using SCADACreator.Utility;
 
 namespace SCADACreator
 {
+    [SerializableAttribute]
     public class DesignerItem : ContentControl
     {
         public bool IsSelected
@@ -62,6 +64,7 @@ namespace SCADACreator
             {
                 if (e.LeftButton == MouseButtonState.Pressed)
                 {
+                    window.SetCurrentItemForPage(this);
                     if ((Keyboard.Modifiers & (ModifierKeys.Shift | ModifierKeys.Control)) != ModifierKeys.None)
                     {
                         this.IsSelected = !this.IsSelected;
@@ -77,7 +80,7 @@ namespace SCADACreator
                 }
                 else if (e.RightButton == MouseButtonState.Pressed)
                 {
-                    window.SetCurrentItemForPage(this);
+                   // window.SetCurrentItemForPage(this);
                 }
 
             }

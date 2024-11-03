@@ -9,14 +9,29 @@ namespace SCADACreator
     public class SCADAStationConfiguration
     {
         List<ControlData> controlDatas;
+        public List<ControlData> ControlDatas
+        {
+            get { return controlDatas; }
+            set { controlDatas = value; }
+        }
         List<TagInfo> tagInfos;
+        public List<TagInfo> TagInfos
+        {
+            get { return tagInfos; }
+            set { tagInfos = value; }
+        }
         List<ConnectDevice> connectDevices;
+        public List<ConnectDevice> ConnectDevices
+        {
+            get { return connectDevices; }
+            set { connectDevices = value; }
+        }
         public SCADAStationConfiguration()
         {
             
         }
-        public void SetControlDatas(List<ControlData> controlDatas) { this.controlDatas = controlDatas; }
-        public void SetTagInfos(List<TagInfo> tagInfos) { this.tagInfos = tagInfos; }
-        public void SetConnectDevices(List<ConnectDevice> connectDevices) { this.connectDevices = connectDevices; }
+        public void SetControlDatas(List<ControlData> controlDatas) { this.ControlDatas = controlDatas; }
+        public void SetTagInfos(List<TagInfo> tagInfos) { this.TagInfos = tagInfos; }
+        public void SetConnectDevices(List<ConnectDevice> connectDevices) { this.ConnectDevices = connectDevices; }
     }
 }

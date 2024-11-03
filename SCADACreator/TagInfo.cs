@@ -11,7 +11,7 @@ namespace SCADACreator
 {
     using System;
     using System.Collections.Generic;
-    
+
     public partial class TagInfo
     {
         public int Id { get; set; }
