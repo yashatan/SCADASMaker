@@ -51,49 +51,6 @@ namespace SCADACreator
             ItemEventFrame.Content = itemEventListPage;
         }
 
-        private void OnClickNew(object sender, RoutedEventArgs args)
-        {
-            MyDesignerCanvas.Children.Clear();
-            currentprojectInformation = new ProjectInformation();
-            Title = $"SCADA Creator - {currentprojectInformation.Name}";
-        }
-
-        private void OnClickRotateLeft(object sender, RoutedEventArgs args)
-        {
-            Rotate(-90);
-        }
-
-        private void OnClickRotateRight(object sender, RoutedEventArgs args)
-        {
-            Rotate(90);
-        }
-
-        // sort of a hack, only values of 90 (right) or -90 (left) make sense
-        // for demo purposes only
-        private void Rotate(double angle)
-        {
-            foreach (DesignerItem item in MyDesignerCanvas.SelectedItems)
-            {
-                FrameworkElement element = item.Content as FrameworkElement;
-                if (element != null)
-                {
-                    RotateTransform rotateTransform = element.LayoutTransform as RotateTransform;
-                    if (rotateTransform == null)
-                    {
-                        rotateTransform = new RotateTransform();
-                        element.LayoutTransform = rotateTransform;
-                    }
-
-                    rotateTransform.Angle = (rotateTransform.Angle + angle) % 360;
-                    Canvas.SetLeft(item, Canvas.GetLeft(item) - (item.Height - item.Width) / 2);
-                    Canvas.SetTop(item, Canvas.GetTop(item) - (item.Width - item.Height) / 2);
-                    double width = item.Width;
-                    item.Width = item.Height;
-                    item.Height = width;
-                }
-            }
-        }
-
         private void AddControButton_Click(object sender, RoutedEventArgs e)
         {
             SCADAItem Item1 = new SCADAItem();
@@ -565,5 +522,71 @@ namespace SCADACreator
             controlPropertyView.Show();
         }
         #endregion
+
+        #region ToolBar Event
+        private void OnClickBringToFront(object sender, RoutedEventArgs e)
+        {
+            foreach (DesignerItem item in MyDesignerCanvas.SelectedItems)
+            {
+                int maxZ = int.MinValue;
+                foreach (DesignerItem child in MyDesignerCanvas.Children)
+                {
+                    if (child != item)
+                    {
+                        maxZ = Math.Max(maxZ, Canvas.GetZIndex(child));
+                    }
+                }
+                Canvas.SetZIndex(item, maxZ + 1);
+            }
+        }
+        private void OnClickSendToBack(object sender, RoutedEventArgs e)
+        {
+            foreach (DesignerItem item in MyDesignerCanvas.SelectedItems)
+            {
+                int maxZ = int.MaxValue;
+                foreach (DesignerItem child in MyDesignerCanvas.Children)
+                {
+                    if (child != item)
+                    {
+                        maxZ = Math.Min(maxZ, Canvas.GetZIndex(child));
+                    }
+                }
+                Canvas.SetZIndex(item, maxZ - 1);
+            }
+        }
+        private void OnClickRotateLeft(object sender, RoutedEventArgs args)
+        {
+            Rotate(-90);
+        }
+
+        private void OnClickRotateRight(object sender, RoutedEventArgs args)
+        {
+            Rotate(90);
+        }
+        private void Rotate(double angle)
+        {
+            foreach (DesignerItem item in MyDesignerCanvas.SelectedItems)
+            {
+                FrameworkElement element = item.Content as FrameworkElement;
+                if (element != null)
+                {
+                    RotateTransform rotateTransform = element.LayoutTransform as RotateTransform;
+                    if (rotateTransform == null)
+                    {
+                        rotateTransform = new RotateTransform();
+                        element.LayoutTransform = rotateTransform;
+                    }
+
+                    rotateTransform.Angle = (rotateTransform.Angle + angle) % 360;
+                    Canvas.SetLeft(item, Canvas.GetLeft(item) - (item.Height - item.Width) / 2);
+                    Canvas.SetTop(item, Canvas.GetTop(item) - (item.Width - item.Height) / 2);
+                    double width = item.Width;
+                    item.Width = item.Height;
+                    item.Height = width;
+                }
+            }
+        }
+        #endregion
+
     }
 }

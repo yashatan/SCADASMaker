@@ -424,6 +424,9 @@
     <Resource Include="Images\PhoneFrameCut.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\BringToFront.png" />
+    <Resource Include="Images\SendToBack.png" />
+    <Resource Include="Images\plc.png" />
     <Content Include="ModelData.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ModelData.Context.cs</LastGenOutput>
