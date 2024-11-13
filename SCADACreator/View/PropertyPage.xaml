@@ -1,16 +1,22 @@
 ﻿<Page x:Class="SCADACreator.View.PropertyPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:s="clr-namespace:SCADACreator"
       xmlns:local="clr-namespace:SCADACreator.View"
-      mc:Ignorable="d" 
+      mc:Ignorable="d"
       Height="auto"
       Width="300"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       Title="PropertyPage">
-
+    <Page.Resources>
+        <Style TargetType="{x:Type s:DecimalTextBox}"
+               BasedOn="{StaticResource MaterialDesignFloatingHintTextBox}">
+            <Setter Property="IsEnabled"
+                    Value="{Binding HaveTargetItem}" />
+        </Style>
+    </Page.Resources>
     <Grid>
         <StackPanel>
             <StackPanel x:Name="PositionGroup">
@@ -24,23 +30,23 @@
                                Margin="20 0 0 0"
                                VerticalAlignment="Bottom"></TextBlock>
                     <s:DecimalTextBox materialDesign:HintAssist.Hint="Position X"
-                             x:Name="txtPositionX"
-                             FontSize="15"
-                             Margin="10 0 0 0"
-                             LostFocus="txtPositionX_LostFocus"
-                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                      x:Name="txtPositionX"
+                                      FontSize="15"
+                                      Margin="10 0 0 0"
+                                      LostFocus="txtPositionX_LostFocus" />
                     <TextBlock Text="Y:"
                                FontSize="15"
                                Margin="20 0 0 0"
                                VerticalAlignment="Bottom"></TextBlock>
                     <s:DecimalTextBox  materialDesign:HintAssist.Hint="Position Y"
-                             x:Name="txtPositionY"
-                             FontSize="15"
-                             Margin="10 0 0 0"
-                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                       x:Name="txtPositionY"
+                                       FontSize="15"
+                                       LostFocus="txtPositionY_LostFocus"
+                                       Margin="10 0 0 0" />
                 </StackPanel>
             </StackPanel>
-            <StackPanel x:Name="SizeGroup" Margin="0 10 0 0">
+            <StackPanel x:Name="SizeGroup"
+                        Margin="0 10 0 0">
                 <TextBlock Text="Size"
                            FontSize="20"
                            Margin="10 0 0 0"></TextBlock>
@@ -51,19 +57,19 @@
                                Margin="20 0 0 0"
                                VerticalAlignment="Bottom"></TextBlock>
                     <s:DecimalTextBox materialDesign:HintAssist.Hint="Width"
-                             x:Name="txtSizeWidth"
-                             FontSize="15"
-                             Margin="10 0 0 0"
-                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                      x:Name="txtSizeWidth"
+                                      LostFocus="txtSizeWidth_LostFocus"
+                                      FontSize="15"
+                                      Margin="10 0 0 0" />
                     <TextBlock Text="Height:"
                                FontSize="15"
                                Margin="20 0 0 0"
                                VerticalAlignment="Bottom"></TextBlock>
                     <s:DecimalTextBox  materialDesign:HintAssist.Hint="Height"
-                             x:Name="txtSizeHeight"
-                             FontSize="15"
-                             Margin="10 0 0 0"
-                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                       x:Name="txtSizeHeight"
+                                       LostFocus="txtSizeHeight_LostFocus"
+                                       FontSize="15"
+                                       Margin="10 0 0 0" />
                 </StackPanel>
             </StackPanel>
             <StackPanel x:Name="ContentGroup"
@@ -81,9 +87,9 @@
                     <TextBox materialDesign:HintAssist.Hint="Content"
                              x:Name="txtContentText"
                              LostFocus="txtContentText_LostFocus"
+                             TextChanged="txtContentText_TextChanged"
                              FontSize="15"
-                             Margin="10 0 0 0"
-                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                             Margin="10 0 0 0" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="FontSize:"
@@ -91,11 +97,10 @@
                                Margin="20 0 0 0"
                                VerticalAlignment="Bottom"></TextBlock>
                     <s:DecimalTextBox  materialDesign:HintAssist.Hint="Fontsize"
-                             x:Name="txtContentSize"
-                             LostFocus="txtContentSize_LostFocus"
-                             FontSize="15"
-                             Margin="10 0 0 0"
-                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                       x:Name="txtContentSize"
+                                       LostFocus="txtContentSize_LostFocus"
+                                       FontSize="15"
+                                       Margin="10 0 0 0" />
                 </StackPanel>
             </StackPanel>
             <StackPanel x:Name="ColorGroup"
@@ -111,47 +116,42 @@
                                Margin="20 0 0 0"
                                VerticalAlignment="Bottom"></TextBlock>
                     <s:DecimalTextBox  materialDesign:HintAssist.Hint="R"
-                             x:Name="txtForegroundR"
-                             LostFocus="txtForeground_LostFocus"
-                             FontSize="15"
-                             Margin="10 0 0 0"
-                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                       x:Name="txtForegroundR"
+                                       LostFocus="txtForeground_LostFocus"
+                                       FontSize="15"
+                                       Margin="10 0 0 0" />
                     <s:DecimalTextBox  materialDesign:HintAssist.Hint="G"
-                             x:Name="txtForegroundG"
-                             LostFocus="txtForeground_LostFocus"
-                             FontSize="15"
-                             Margin="10 0 0 0"
-                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                       x:Name="txtForegroundG"
+                                       LostFocus="txtForeground_LostFocus"
+                                       FontSize="15"
+                                       Margin="10 0 0 0" />
                     <s:DecimalTextBox  materialDesign:HintAssist.Hint="B"
-                             x:Name="txtForegroundB"
-                             LostFocus="txtForeground_LostFocus"
-                             FontSize="15"
-                             Margin="10 0 0 0"
-                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                       x:Name="txtForegroundB"
+                                       LostFocus="txtForeground_LostFocus"
+                                       FontSize="15"
+                                       Margin="10 0 0 0" />
                 </StackPanel>
-                <StackPanel Orientation="Horizontal" x:Name="ColorBackgroundGroup">
+                <StackPanel Orientation="Horizontal"
+                            x:Name="ColorBackgroundGroup">
                     <TextBlock Text="Background:"
                                FontSize="15"
                                Margin="20 0 0 0"
                                VerticalAlignment="Bottom"></TextBlock>
                     <s:DecimalTextBox  materialDesign:HintAssist.Hint="R"
-                             x:Name="txtBackgroundR"
-                             LostFocus="txtBackground_LostFocus"
-                             FontSize="15"
-                             Margin="10 0 0 0"
-                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                       x:Name="txtBackgroundR"
+                                       LostFocus="txtBackground_LostFocus"
+                                       FontSize="15"
+                                       Margin="10 0 0 0" />
                     <s:DecimalTextBox  materialDesign:HintAssist.Hint="G"
-                             x:Name="txtBackgroundG"
-                             LostFocus="txtBackground_LostFocus"
-                             FontSize="15"
-                             Margin="10 0 0 0"
-                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                       x:Name="txtBackgroundG"
+                                       LostFocus="txtBackground_LostFocus"
+                                       FontSize="15"
+                                       Margin="10 0 0 0" />
                     <s:DecimalTextBox  materialDesign:HintAssist.Hint="B"
-                             x:Name="txtBackgroundB"
-                             LostFocus="txtBackground_LostFocus"
-                             FontSize="15"
-                             Margin="10 0 0 0"
-                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                       x:Name="txtBackgroundB"
+                                       LostFocus="txtBackground_LostFocus"
+                                       FontSize="15"
+                                       Margin="10 0 0 0" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal"
                             x:Name="ColorFillGroup">
@@ -160,23 +160,20 @@
                                Margin="20 0 0 0"
                                VerticalAlignment="Bottom"></TextBlock>
                     <s:DecimalTextBox  materialDesign:HintAssist.Hint="R"
-                             x:Name="txtFillR"
-                             LostFocus="txtFill_LostFocus"
-                             FontSize="15"
-                             Margin="10 0 0 0"
-                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                       x:Name="txtFillR"
+                                       LostFocus="txtFill_LostFocus"
+                                       FontSize="15"
+                                       Margin="10 0 0 0" />
                     <s:DecimalTextBox  materialDesign:HintAssist.Hint="G"
-                             x:Name="txtFillG"
-                             LostFocus="txtFill_LostFocus"
-                             FontSize="15"
-                             Margin="10 0 0 0"
-                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                       x:Name="txtFillG"
+                                       LostFocus="txtFill_LostFocus"
+                                       FontSize="15"
+                                       Margin="10 0 0 0" />
                     <s:DecimalTextBox  materialDesign:HintAssist.Hint="B"
-                             x:Name="txtFillB"
-                             LostFocus="txtFill_LostFocus"
-                             FontSize="15"
-                             Margin="10 0 0 0"
-                             Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                                       x:Name="txtFillB"
+                                       LostFocus="txtFill_LostFocus"
+                                       FontSize="15"
+                                       Margin="10 0 0 0" />
                 </StackPanel>
             </StackPanel>
             <StackPanel x:Name="ConnectionGroup"
@@ -193,7 +190,6 @@
                     <ComboBox materialDesign:HintAssist.Hint="Tag"
                               materialDesign:HintAssist.HintOpacity=".26"
                               materialDesign:HintAssist.Foreground="Gray"
-                              materialDesign:TextFieldAssist.UnderlineBrush="#FF832424"
                               BorderBrush="Gray"
                               x:Name="cbbTag"
                               DisplayMemberPath="Name"
@@ -204,10 +200,6 @@
                               SelectionChanged="cbbTag_SelectionChanged"></ComboBox>
                 </StackPanel>
             </StackPanel>
-
-            
-            
         </StackPanel>
-
     </Grid>
 </Page>

@@ -144,6 +144,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelData.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Model\AlarmSetting.cs" />
     <Compile Include="Model\DataProvider.cs" />
     <Compile Include="Model\ProjectInformation.cs" />
     <Compile Include="Model\SCADAStationConfiguration.cs" />
@@ -168,6 +169,9 @@
     <Compile Include="Utility\ControlDataEncoder.cs" />
     <Compile Include="Utility\SCADAStationEncoder.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="View\Alarm\AlarmSettingWindow.xaml.cs">
+      <DependentUpon>AlarmSettingWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Animation\AnimationDetailWindow.xaml.cs">
       <DependentUpon>AnimationDetailWindow.xaml</DependentUpon>
     </Compile>
@@ -245,6 +249,10 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="View\Alarm\AlarmSettingWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Animation\AnimationDetailWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

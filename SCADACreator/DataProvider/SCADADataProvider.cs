@@ -14,14 +14,20 @@ namespace SCADACreator
     {
         public List<TagInfo> TagInfos; 
         public List<ConnectDevice> ConnectDevices; 
+        public List<AlarmSetting> AlarmSettingList; 
+
         private static SCADADataProvider instance;
         private int nextTagID;
         private int nextDeviceID;
+        private int nextAlarmPointID;
         // Private constructor to prevent instantiation
         private SCADADataProvider()
         {
+
             TagInfos = new List<TagInfo>();
             ConnectDevices = new List<ConnectDevice>();
+            AlarmSettingList = new List<AlarmSetting>();
+            //
         }
 
         // Public static method to get the single instance of the class
@@ -49,6 +55,18 @@ namespace SCADACreator
             nextDeviceID = ConnectDevices.Max(m => m.Id) + 1;
         }
 
+        public void AddListAlarmSettingList(List<AlarmSetting> alarmPoints)
+        {
+            AlarmSettingList.AddRange(alarmPoints);
+            nextAlarmPointID = AlarmSettingList.Max(m => m.Id) + 1;
+        }
+
+        public void AddDummyListAlarmPointList()
+        {
+            DummyData.CreateData();
+            AddListAlarmSettingList(DummyData.dummyAlarms);
+        }
+
         public void AddTagInfo(TagInfo tagInfo)
         {
             if (tagInfo != null)
@@ -61,15 +79,28 @@ namespace SCADACreator
         }
         public void AddConnectDevice(ConnectDevice connectDevice)
         {
-            connectDevice.Id = nextDeviceID;
-            nextDeviceID++;
-            ConnectDevices.Add(connectDevice);
+            if(connectDevice != null)
+            {
+                connectDevice.Id = nextDeviceID;
+                nextDeviceID++;
+                ConnectDevices.Add(connectDevice);
+            }
+        }
+        public void AddAlarmSetting(AlarmSetting alarmPoint)
+        {
+            if (alarmPoint != null)
+            {
+                alarmPoint.Id = nextAlarmPointID;
+                nextAlarmPointID++;
+                AlarmSettingList.Add(alarmPoint);
+            }
         }
 
         public void Clear()
         {
             TagInfos.Clear();
             ConnectDevices.Clear();
+            AlarmSettingList.Clear();
         }
     }
 

@@ -2,6 +2,7 @@
 using SCADACreator.Utility;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Linq.Expressions;
@@ -23,21 +24,40 @@ namespace SCADACreator.View
     /// <summary>
     /// Interaction logic for PropertyPage.xaml
     /// </summary>
-    public partial class PropertyPage : Page
+    public partial class PropertyPage : Page, INotifyPropertyChanged
     {
         DesignerItem currentItem { get; set; }
         FrameworkElement content { get; set; }
         List<TagInfo> tagsList = SCADADataProvider.Instance.TagInfos;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged(string propertyName) { PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName)); }
+       // public bool HaveTargetItem { get; set; }
+        private bool _HaveTargetItem = false;
+        public bool HaveTargetItem
+        {
+            get
+            {
+                return _HaveTargetItem;
+            }
+            set
+            {
+                _HaveTargetItem = value; OnPropertyChanged(nameof(HaveTargetItem));
+            }
+        }
         public PropertyPage()
         {
             InitializeComponent();
+            DataContext = this;
             cbbTag.ItemsSource = tagsList;
+            HaveTargetItem = false ;
         }
 
         public void SetCurrentItem(DesignerItem item)
         {
             currentItem = item;
             content = (FrameworkElement)item.Content;
+            HaveTargetItem = true;
             UpdateDataField();
         }
 
@@ -59,7 +79,11 @@ namespace SCADACreator.View
             {
                 ConnectionGroup.Visibility = Visibility.Visible;
                 cbbTag.SelectedItem = (currentItem as SCADAItem).TagConnection;
-                cbbTag.Text = (currentItem as SCADAItem).TagConnection.Name;
+                if((currentItem as SCADAItem).TagConnection != null)
+                {
+                    cbbTag.Text = (currentItem as SCADAItem).TagConnection.Name;
+                }
+
                 cbbTag.Items.Refresh();
 
             }
@@ -263,7 +287,8 @@ namespace SCADACreator.View
         }
         private void txtBackground_LostFocus(object sender, RoutedEventArgs e)
         {
-            if (content.GetType().IsSubclassOf(typeof(Shape))) {
+            if (content.GetType().IsSubclassOf(typeof(Shape)))
+            {
                 Brush b1 = (Brush)content.GetType().GetProperty("Fill").GetValue(content, null);
                 Color c1 = new Color();
                 if (!(b1 is null))
@@ -328,6 +353,52 @@ namespace SCADACreator.View
         private void txtPositionX_LostFocus(object sender, RoutedEventArgs e)
         {
             Canvas.SetLeft(currentItem, Convert.ToDouble(txtPositionX.Text));
+        }
+
+        private void txtContentText_KeyDown(object sender, KeyEventArgs e)
+        {
+            TextBlock txtContent = new TextBlock();
+            if (content.GetType() == typeof(Button))
+            {
+                txtContent = (TextBlock)(content as Button).Content;
+            }
+            else if (content.GetType() == typeof(TextBlock))
+            {
+                txtContent = (content as TextBlock);
+
+            }
+            txtContent.Text = txtContentText.Text;
+        }
+
+        private void txtContentText_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBlock txtContent = new TextBlock();
+            if (content.GetType() == typeof(Button))
+            {
+                txtContent = (TextBlock)(content as Button).Content;
+            }
+            else if (content.GetType() == typeof(TextBlock))
+            {
+                txtContent = (content as TextBlock);
+
+            }
+            txtContent.Text = txtContentText.Text;
+        }
+
+        private void txtPositionY_LostFocus(object sender, RoutedEventArgs e)
+        {
+            Canvas.SetTop(currentItem, Convert.ToDouble(txtPositionY.Text));
+
+        }
+
+        private void txtSizeWidth_LostFocus(object sender, RoutedEventArgs e)
+        {
+            currentItem.Width = Convert.ToDouble(txtSizeWidth.Text);
+        }
+
+        private void txtSizeHeight_LostFocus(object sender, RoutedEventArgs e)
+        {
+            currentItem.Height = Convert.ToDouble(txtSizeHeight.Text);
         }
     }
 }

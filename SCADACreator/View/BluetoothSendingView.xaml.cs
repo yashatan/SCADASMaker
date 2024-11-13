@@ -31,6 +31,7 @@ namespace SCADACreator
     {
         private BluetoothDeviceInfo[] devices;
         private UIElement[] canvasControl;
+        private ProjectInformation projectInformation;
         List<ControlData> controlDatas;
         public BluetoothSendingView()
         {
@@ -108,10 +109,11 @@ namespace SCADACreator
         }
 
 
-        public BluetoothSendingView(DesignerCanvas designerCanvas)
+        public BluetoothSendingView(DesignerCanvas designerCanvas,ProjectInformation currentprojectInformation)
         {
             InitializeComponent();
             GenerateControlDataFromCanvas(designerCanvas); // Convert controls to json string
+            projectInformation = currentprojectInformation;
             this.ContentRendered += ControlPropertyView_Loaded;
         }
         
@@ -132,8 +134,9 @@ namespace SCADACreator
             };
 
             SCADAStationConfiguration mSCADAStationConfiguration= new SCADAStationConfiguration();
-            mSCADAStationConfiguration.SetConnectDevices(DataProvider.Instance.DB.ConnectDevices.ToList());
+            mSCADAStationConfiguration.SetConnectDevices(SCADADataProvider.Instance.ConnectDevices);
             mSCADAStationConfiguration.SetTagInfos(SCADADataProvider.Instance.TagInfos);
+            mSCADAStationConfiguration.SetAlarmSettings(SCADADataProvider.Instance.AlarmSettingList);
             mSCADAStationConfiguration.SetControlDatas(controlDatas);
 
             string jsonSCADAStationConfiguration = JsonSerializer.Serialize(mSCADAStationConfiguration, options);//seriallize thành chuỗi json
@@ -158,10 +161,11 @@ namespace SCADACreator
             SCADAStationConfiguration mSCADAStationConfiguration = new SCADAStationConfiguration();
             mSCADAStationConfiguration.SetConnectDevices(SCADADataProvider.Instance.ConnectDevices);
             mSCADAStationConfiguration.SetTagInfos(SCADADataProvider.Instance.TagInfos);
+            mSCADAStationConfiguration.SetAlarmSettings(SCADADataProvider.Instance.AlarmSettingList);
             mSCADAStationConfiguration.SetControlDatas(controlDatas);
 
             string jsonSCADAStationConfiguration = JsonSerializer.Serialize(mSCADAStationConfiguration, options);//seriallize thành chuỗi json
-            string filename = AppDomain.CurrentDomain.BaseDirectory + "SCADAStationConfiguration.json";
+            string filename = AppDomain.CurrentDomain.BaseDirectory + $"{projectInformation.Name}.json";
             SaveFile(filename, jsonSCADAStationConfiguration);
             // Use ProcessStartInfo class
             Process proc = new Process();

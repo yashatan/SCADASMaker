@@ -50,7 +50,6 @@
                         <ComboBox materialDesign:HintAssist.Hint="Device"
                                   materialDesign:HintAssist.HintOpacity=".26"
                                   materialDesign:HintAssist.Foreground="Gray"
-                                  materialDesign:TextFieldAssist.UnderlineBrush="#FF832424"
                                   BorderBrush="Gray"
                                   x:Name="cbbDeviceAttach"
                                   DisplayMemberPath="Name"

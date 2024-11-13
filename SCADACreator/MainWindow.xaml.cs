@@ -23,6 +23,7 @@ using System.Text.Json;
 using System.Xml.Linq;
 using System.Windows.Markup;
 using System.Data.SqlTypes;
+using SCADACreator.View.Alarm;
 
 
 namespace SCADACreator
@@ -380,6 +381,7 @@ namespace SCADACreator
             XElement serializedItems = new XElement("SCADAProject",
                  new XElement("TagInfos", JsonSerializer.Serialize(SCADADataProvider.Instance.TagInfos, options)),
                  new XElement("ConnectDevices", JsonSerializer.Serialize(SCADADataProvider.Instance.ConnectDevices, options)),
+                 new XElement("AlarmSettings", JsonSerializer.Serialize(SCADADataProvider.Instance.AlarmSettingList, options)),
                  from item in MyDesignerCanvas.Children.OfType<SCADAItem>()
                  let contentXaml = XamlWriter.Save(((SCADAItem)item).Content)
                  let tagconnectionjson = JsonSerializer.Serialize(((SCADAItem)item).TagConnection, options)
@@ -420,9 +422,12 @@ namespace SCADACreator
 
             List<TagInfo> taginfos = JsonSerializer.Deserialize<List<TagInfo>>((string)parsedElement.Element("TagInfos"));
             List<ConnectDevice> connectedDevices = JsonSerializer.Deserialize<List<ConnectDevice>>((string)parsedElement.Element("ConnectDevices"));
+            List<AlarmSetting> alarmSettings = JsonSerializer.Deserialize<List<AlarmSetting>>((string)parsedElement.Element("AlarmSettings"));
 
             SCADADataProvider.Instance.AddListTagInfos(taginfos);
             SCADADataProvider.Instance.AddListConnectDevices(connectedDevices);
+            SCADADataProvider.Instance.AddListAlarmSettingList(alarmSettings);
+            //SCADADataProvider.Instance.AddDummyListAlarmPointList();//Need update
         }
 
         private void ClearCurrentProject()
@@ -518,7 +523,7 @@ namespace SCADACreator
         }
         private void MenuItemStartSCADA_Click(object sender, RoutedEventArgs e)
         {
-            BluetoothSendingView controlPropertyView = new BluetoothSendingView(MyDesignerCanvas);
+            BluetoothSendingView controlPropertyView = new BluetoothSendingView(MyDesignerCanvas, currentprojectInformation);
             controlPropertyView.Show();
         }
         #endregion
@@ -588,5 +593,15 @@ namespace SCADACreator
         }
         #endregion
 
+        private void MenuItemAlarmSetting_Click(object sender, RoutedEventArgs e)
+        {
+            AlarmSettingWindow alarmListWindow = new AlarmSettingWindow();
+            alarmListWindow.Show();
+        }
+
+        private void MenuItemTagSetting_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
