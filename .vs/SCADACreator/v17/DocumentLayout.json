@@ -3,39 +3,94 @@
   "WorkspaceRootPath": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|d:\\caohoc\\decuongluanvan\\diagramdesignerpart2\\scadacreator\\view\\propertypage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\propertypage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|d:\\caohoc\\decuongluanvan\\diagramdesignerpart2\\scadacreator\\view\\propertypage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\propertypage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|d:\\caohoc\\decuongluanvan\\diagramdesignerpart2\\scadacreator\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|d:\\caohoc\\decuongluanvan\\diagramdesignerpart2\\scadacreator\\model\\projectinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\model\\projectinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\scadacreator\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|d:\\caohoc\\decuongluanvan\\diagramdesignerpart2\\scadacreator\\itemmoveresizeclass\\resizethumb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\itemmoveresizeclass\\resizethumb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\scadacreator\\dataprovider\\dummydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\dataprovider\\dummydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|d:\\caohoc\\decuongluanvan\\diagramdesignerpart2\\scadacreator\\view\\alarm\\alarmsettingwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\alarm\\alarmsettingwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\scadacreator\\model\\scadastationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\model\\scadastationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\scadacreator\\dataprovider\\scadadataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\dataprovider\\scadadataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|d:\\caohoc\\decuongluanvan\\diagramdesignerpart2\\scadacreator\\view\\alarm\\alarmsettingwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|d:\\caohoc\\decuongluanvan\\diagramdesignerpart2\\scadacreator\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\scadacreator\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|d:\\caohoc\\decuongluanvan\\diagramdesignerpart2\\scadacreator\\model\\itemevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\model\\itemevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|d:\\caohoc\\decuongluanvan\\diagramdesignerpart2\\scadacreator\\model\\dataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\model\\dataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|d:\\caohoc\\decuongluanvan\\diagramdesignerpart2\\scadacreator\\model\\controldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\model\\controldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|d:\\caohoc\\decuongluanvan\\diagramdesignerpart2\\scadacreator\\model\\animationsense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\model\\animationsense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\scadacreator\\model\\alarmsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\model\\alarmsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\scadacreator\\view\\bluetoothsendingview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\bluetoothsendingview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|d:\\caohoc\\decuongluanvan\\diagramdesignerpart2\\scadacreator\\view\\bluetoothsendingview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\bluetoothsendingview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|SCADACreator||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\scadacreator\\taginfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\taginfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\scadacreator\\connectdevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\connectdevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\scadacreator\\view\\propertypage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\propertypage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\scadacreator\\view\\propertypage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\propertypage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\scadacreator\\itemmoveresizeclass\\resizethumb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\itemmoveresizeclass\\resizethumb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\scadacreator\\view\\alarm\\alarmsettingwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\alarm\\alarmsettingwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\scadacreator\\view\\alarm\\alarmsettingwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\alarm\\alarmsettingwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|d:\\caohoc\\decuongluanvan\\diagramdesignerpart2\\scadacreator\\view\\itemevent\\itemeventlistpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\scadacreator\\view\\itemevent\\itemeventlistpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\itemevent\\itemeventlistpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
@@ -43,7 +98,7 @@
       "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\itemevent\\itemeventdetailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|d:\\caohoc\\decuongluanvan\\diagramdesignerpart2\\scadacreator\\view\\connectdevice\\connectdevicedetailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\scadacreator\\view\\connectdevice\\connectdevicedetailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\connectdevice\\connectdevicedetailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
@@ -55,39 +110,35 @@
       "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\taginfo\\taginfodetailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|d:\\caohoc\\decuongluanvan\\diagramdesignerpart2\\scadacreator\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\scadacreator\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|d:\\caohoc\\decuongluanvan\\diagramdesignerpart2\\scadacreator\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\scadacreator\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|d:\\caohoc\\decuongluanvan\\diagramdesignerpart2\\scadacreator\\view\\connectdevice\\devicelistwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\scadacreator\\view\\connectdevice\\devicelistwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\connectdevice\\devicelistwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\scadacreator\\model\\alarmsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\model\\alarmsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|d:\\caohoc\\decuongluanvan\\diagramdesignerpart2\\scadacreator\\itemmoveresizeclass\\designeritem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\scadacreator\\itemmoveresizeclass\\designeritem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\itemmoveresizeclass\\designeritem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|d:\\caohoc\\decuongluanvan\\diagramdesignerpart2\\scadacreator\\itemmoveresizeclass\\designercanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\scadacreator\\itemmoveresizeclass\\designercanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\itemmoveresizeclass\\designercanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|d:\\caohoc\\decuongluanvan\\diagramdesignerpart2\\scadacreator\\resources\\toolbar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\scadacreator\\resources\\toolbar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\resources\\toolbar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|d:\\caohoc\\decuongluanvan\\diagramdesignerpart2\\scadacreator\\resources\\brushes.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\scadacreator\\resources\\brushes.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\resources\\brushes.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|d:\\caohoc\\decuongluanvan\\diagramdesignerpart2\\scadacreator\\view\\taginfo\\taginfodetailwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\scadacreator\\view\\taginfo\\taginfodetailwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
       "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\taginfo\\taginfodetailwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
     },
     {
@@ -107,20 +158,11 @@
       "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\animation\\animationdetailwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\scadacreator\\model\\scadastationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\model\\scadastationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\scadacreator\\dataprovider\\dummydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\dataprovider\\dummydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\scadacreator\\view\\bluetoothsendingview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\bluetoothsendingview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\scadacreator\\utility\\scadastationencoder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\utility\\scadastationencoder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|d:\\caohoc\\decuongluanvan\\diagramdesignerpart2\\scadacreator\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
     }
   ],
   "DocumentGroupContainers": [
@@ -130,15 +172,179 @@
       "DocumentGroups": [
         {
           "DockedWidth": 300,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\App.xaml.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\App.xaml.cs",
+              "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\App.xaml.cs",
+              "RelativeToolTip": "SCADACreator\\App.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T12:25:54.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AnimationSense.cs",
+              "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\Model\\AnimationSense.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\Model\\AnimationSense.cs",
+              "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\Model\\AnimationSense.cs",
+              "RelativeToolTip": "SCADACreator\\Model\\AnimationSense.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T10:30:21.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ItemEvent.cs",
+              "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\Model\\ItemEvent.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\Model\\ItemEvent.cs",
+              "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\Model\\ItemEvent.cs",
+              "RelativeToolTip": "SCADACreator\\Model\\ItemEvent.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T10:27:46.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AlarmSetting.cs",
+              "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\Model\\AlarmSetting.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\Model\\AlarmSetting.cs",
+              "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\Model\\AlarmSetting.cs",
+              "RelativeToolTip": "SCADACreator\\Model\\AlarmSetting.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAmwA8AAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T16:40:45.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\MainWindow.xaml.cs",
+              "RelativeToolTip": "SCADACreator\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAEYCAAAAAAAAAAAtwJoCAABZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T14:58:30.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BluetoothSendingView.xaml.cs",
+              "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\BluetoothSendingView.xaml.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\BluetoothSendingView.xaml.cs",
+              "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\BluetoothSendingView.xaml.cs",
+              "RelativeToolTip": "SCADACreator\\View\\BluetoothSendingView.xaml.cs",
+              "ViewState": "AQIAAJYAAAAAAAAAAADgv6gAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T14:58:45.323Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "SCADADataProvider.cs",
+              "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\DataProvider\\SCADADataProvider.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\DataProvider\\SCADADataProvider.cs",
+              "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\DataProvider\\SCADADataProvider.cs",
+              "RelativeToolTip": "SCADACreator\\DataProvider\\SCADADataProvider.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAADEAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T16:39:31.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProjectInformation.cs",
+              "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\Model\\ProjectInformation.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\Model\\ProjectInformation.cs",
+              "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\Model\\ProjectInformation.cs",
+              "RelativeToolTip": "SCADACreator\\Model\\ProjectInformation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAlwBgAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T17:06:24.971Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SCADAStationConfiguration.cs",
+              "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\Model\\SCADAStationConfiguration.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\Model\\SCADAStationConfiguration.cs",
+              "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\Model\\SCADAStationConfiguration.cs",
+              "RelativeToolTip": "SCADACreator\\Model\\SCADAStationConfiguration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T10:38:04.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DummyData.cs",
+              "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\DataProvider\\DummyData.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\DataProvider\\DummyData.cs",
+              "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\DataProvider\\DummyData.cs",
+              "RelativeToolTip": "SCADACreator\\DataProvider\\DummyData.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAgwCUAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T14:54:43.682Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ControlData.cs",
+              "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\Model\\ControlData.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\Model\\ControlData.cs",
+              "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\Model\\ControlData.cs",
+              "RelativeToolTip": "SCADACreator\\Model\\ControlData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T10:30:31.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DataProvider.cs",
+              "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\Model\\DataProvider.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\Model\\DataProvider.cs",
+              "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\Model\\DataProvider.cs",
+              "RelativeToolTip": "SCADACreator\\Model\\DataProvider.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T10:30:34.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\MainWindow.xaml",
+              "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\MainWindow.xaml",
+              "RelativeToolTip": "SCADACreator\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-10T14:52:49.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "ResizeThumb.cs",
               "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\ItemMoveResizeClass\\ResizeThumb.cs",
               "RelativeDocumentMoniker": "SCADACreator\\ItemMoveResizeClass\\ResizeThumb.cs",
@@ -151,32 +357,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AnimationDetailWindow.xaml",
-              "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\Animation\\AnimationDetailWindow.xaml",
-              "RelativeDocumentMoniker": "SCADACreator\\View\\Animation\\AnimationDetailWindow.xaml",
-              "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\Animation\\AnimationDetailWindow.xaml",
-              "RelativeToolTip": "SCADACreator\\View\\Animation\\AnimationDetailWindow.xaml",
+              "DocumentIndex": 17,
+              "Title": "PropertyPage.xaml",
+              "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\PropertyPage.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\PropertyPage.xaml",
+              "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\PropertyPage.xaml",
+              "RelativeToolTip": "SCADACreator\\View\\PropertyPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-09T10:38:08.615Z",
+              "WhenOpened": "2024-11-12T17:20:39.712Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PropertyPage.xaml.cs",
-              "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\PropertyPage.xaml.cs",
-              "RelativeDocumentMoniker": "SCADACreator\\View\\PropertyPage.xaml.cs",
-              "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\PropertyPage.xaml.cs*",
-              "RelativeToolTip": "SCADACreator\\View\\PropertyPage.xaml.cs*",
-              "ViewState": "AQIAAHABAAAAAAAAAAAvwI4BAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T17:19:29.616Z",
+              "DocumentIndex": 13,
+              "Title": "BluetoothSendingView.xaml",
+              "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\BluetoothSendingView.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\BluetoothSendingView.xaml",
+              "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\BluetoothSendingView.xaml",
+              "RelativeToolTip": "SCADACreator\\View\\BluetoothSendingView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-30T09:50:35.939Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 20,
               "Title": "AlarmSettingWindow.xaml.cs",
               "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\Alarm\\AlarmSettingWindow.xaml.cs",
               "RelativeDocumentMoniker": "SCADACreator\\View\\Alarm\\AlarmSettingWindow.xaml.cs",
@@ -189,57 +394,70 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SCADADataProvider.cs",
-              "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\DataProvider\\SCADADataProvider.cs",
-              "RelativeDocumentMoniker": "SCADACreator\\DataProvider\\SCADADataProvider.cs",
-              "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\DataProvider\\SCADADataProvider.cs",
-              "RelativeToolTip": "SCADACreator\\DataProvider\\SCADADataProvider.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAqwFgAAAAjAAAA",
+              "DocumentIndex": 14,
+              "Title": "SCADACreator",
+              "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\SCADACreator.csproj",
+              "RelativeDocumentMoniker": "SCADACreator\\SCADACreator.csproj",
+              "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\SCADACreator.csproj",
+              "RelativeToolTip": "SCADACreator\\SCADACreator.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-11-19T17:02:44.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PropertyPage.xaml.cs",
+              "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\PropertyPage.xaml.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\PropertyPage.xaml.cs",
+              "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\PropertyPage.xaml.cs",
+              "RelativeToolTip": "SCADACreator\\View\\PropertyPage.xaml.cs",
+              "ViewState": "AQIAAHABAAAAAAAAAAAvwI4BAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T16:39:31.698Z",
+              "WhenOpened": "2024-11-12T17:19:29.616Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PropertyPage.xaml",
-              "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\PropertyPage.xaml",
-              "RelativeDocumentMoniker": "SCADACreator\\View\\PropertyPage.xaml",
-              "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\PropertyPage.xaml*",
-              "RelativeToolTip": "SCADACreator\\View\\PropertyPage.xaml*",
+              "DocumentIndex": 25,
+              "Title": "AnimationDetailWindow.xaml",
+              "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\Animation\\AnimationDetailWindow.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\Animation\\AnimationDetailWindow.xaml",
+              "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\Animation\\AnimationDetailWindow.xaml",
+              "RelativeToolTip": "SCADACreator\\View\\Animation\\AnimationDetailWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-12T17:20:39.712Z",
+              "WhenOpened": "2024-11-09T10:38:08.615Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "SCADACreator\\MainWindow.xaml",
-              "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\MainWindow.xaml",
-              "RelativeToolTip": "SCADACreator\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-10T14:52:49.02Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "SCADACreator\\MainWindow.xaml.cs",
-              "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\MainWindow.xaml.cs",
-              "RelativeToolTip": "SCADACreator\\MainWindow.xaml.cs",
-              "ViewState": "AQIAADUBAAAAAAAAAAAwwGQBAAAYAAAA",
+              "DocumentIndex": 16,
+              "Title": "ConnectDevice.cs",
+              "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\ConnectDevice.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\ConnectDevice.cs",
+              "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\ConnectDevice.cs",
+              "RelativeToolTip": "SCADACreator\\ConnectDevice.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAIBJwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T14:58:30.005Z",
+              "WhenOpened": "2024-11-19T16:50:55.993Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 15,
+              "Title": "TagInfo.cs",
+              "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\TagInfo.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\TagInfo.cs",
+              "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\TagInfo.cs",
+              "RelativeToolTip": "SCADACreator\\TagInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T16:52:07.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "ItemEventListPage.xaml",
               "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\ItemEvent\\ItemEventListPage.xaml",
               "RelativeDocumentMoniker": "SCADACreator\\View\\ItemEvent\\ItemEventListPage.xaml",
@@ -251,7 +469,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 21,
               "Title": "AlarmSettingWindow.xaml",
               "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\Alarm\\AlarmSettingWindow.xaml",
               "RelativeDocumentMoniker": "SCADACreator\\View\\Alarm\\AlarmSettingWindow.xaml",
@@ -263,7 +481,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 23,
               "Title": "ItemEventDetailWindow.xaml",
               "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\ItemEvent\\ItemEventDetailWindow.xaml",
               "RelativeDocumentMoniker": "SCADACreator\\View\\ItemEvent\\ItemEventDetailWindow.xaml",
@@ -275,7 +493,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 24,
               "Title": "ConnectDeviceDetailWindow.xaml",
               "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\ConnectDevice\\ConnectDeviceDetailWindow.xaml",
               "RelativeDocumentMoniker": "SCADACreator\\View\\ConnectDevice\\ConnectDeviceDetailWindow.xaml",
@@ -287,7 +505,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 26,
               "Title": "TagInfoDetailWindow.xaml",
               "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\TagInfo\\TagInfoDetailWindow.xaml",
               "RelativeDocumentMoniker": "SCADACreator\\View\\TagInfo\\TagInfoDetailWindow.xaml",
@@ -299,7 +517,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 27,
               "Title": "App.xaml",
               "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\App.xaml",
               "RelativeDocumentMoniker": "SCADACreator\\App.xaml",
@@ -311,20 +529,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "AlarmSetting.cs",
-              "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\Model\\AlarmSetting.cs",
-              "RelativeDocumentMoniker": "SCADACreator\\Model\\AlarmSetting.cs",
-              "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\Model\\AlarmSetting.cs",
-              "RelativeToolTip": "SCADACreator\\Model\\AlarmSetting.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEQAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T16:40:45.149Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 30,
               "Title": "DesignerItem.cs",
               "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\ItemMoveResizeClass\\DesignerItem.cs",
               "RelativeDocumentMoniker": "SCADACreator\\ItemMoveResizeClass\\DesignerItem.cs",
@@ -337,7 +542,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 28,
               "Title": "app.config",
               "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\app.config",
               "RelativeDocumentMoniker": "SCADACreator\\app.config",
@@ -350,7 +555,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 33,
               "Title": "Brushes.xaml",
               "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\Resources\\Brushes.xaml",
               "RelativeDocumentMoniker": "SCADACreator\\Resources\\Brushes.xaml",
@@ -362,7 +567,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 31,
               "Title": "DesignerCanvas.cs",
               "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\ItemMoveResizeClass\\DesignerCanvas.cs",
               "RelativeDocumentMoniker": "SCADACreator\\ItemMoveResizeClass\\DesignerCanvas.cs",
@@ -375,7 +580,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 29,
               "Title": "DeviceListWindow.xaml",
               "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\ConnectDevice\\DeviceListWindow.xaml",
               "RelativeDocumentMoniker": "SCADACreator\\View\\ConnectDevice\\DeviceListWindow.xaml",
@@ -387,20 +592,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 34,
               "Title": "TagInfoDetailWindow.xaml.cs",
               "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\TagInfo\\TagInfoDetailWindow.xaml.cs",
               "RelativeDocumentMoniker": "SCADACreator\\View\\TagInfo\\TagInfoDetailWindow.xaml.cs",
               "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\TagInfo\\TagInfoDetailWindow.xaml.cs",
               "RelativeToolTip": "SCADACreator\\View\\TagInfo\\TagInfoDetailWindow.xaml.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAADMAAAAfAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAIBJwDMAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-09T10:39:09.553Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 32,
               "Title": "ToolBar.xaml",
               "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\Resources\\ToolBar.xaml",
               "RelativeDocumentMoniker": "SCADACreator\\Resources\\ToolBar.xaml",
@@ -412,20 +617,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 35,
               "Title": "ItemEventDetailWindow.xaml.cs",
               "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\ItemEvent\\ItemEventDetailWindow.xaml.cs",
               "RelativeDocumentMoniker": "SCADACreator\\View\\ItemEvent\\ItemEventDetailWindow.xaml.cs",
               "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\ItemEvent\\ItemEventDetailWindow.xaml.cs",
               "RelativeToolTip": "SCADACreator\\View\\ItemEvent\\ItemEventDetailWindow.xaml.cs",
-              "ViewState": "AQIAAC4AAAAAAAAAAAA1wE8AAAAVAAAA",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAQwE8AAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-09T10:38:37.63Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 36,
               "Title": "AnimationListPage.xaml.cs",
               "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\Animation\\AnimationListPage.xaml.cs",
               "RelativeDocumentMoniker": "SCADACreator\\View\\Animation\\AnimationListPage.xaml.cs",
@@ -438,7 +643,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 37,
               "Title": "AnimationListPage.xaml",
               "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\Animation\\AnimationListPage.xaml",
               "RelativeDocumentMoniker": "SCADACreator\\View\\Animation\\AnimationListPage.xaml",
@@ -450,59 +655,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 38,
               "Title": "AnimationDetailWindow.xaml.cs",
               "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\Animation\\AnimationDetailWindow.xaml.cs",
               "RelativeDocumentMoniker": "SCADACreator\\View\\Animation\\AnimationDetailWindow.xaml.cs",
               "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\Animation\\AnimationDetailWindow.xaml.cs",
               "RelativeToolTip": "SCADACreator\\View\\Animation\\AnimationDetailWindow.xaml.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAIBJwAAAAAAAAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAIBZwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-09T10:38:11.92Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "SCADAStationConfiguration.cs",
-              "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\Model\\SCADAStationConfiguration.cs",
-              "RelativeDocumentMoniker": "SCADACreator\\Model\\SCADAStationConfiguration.cs",
-              "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\Model\\SCADAStationConfiguration.cs",
-              "RelativeToolTip": "SCADACreator\\Model\\SCADAStationConfiguration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-09T10:38:04.364Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "BluetoothSendingView.xaml.cs",
-              "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\BluetoothSendingView.xaml.cs",
-              "RelativeDocumentMoniker": "SCADACreator\\View\\BluetoothSendingView.xaml.cs",
-              "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\View\\BluetoothSendingView.xaml.cs",
-              "RelativeToolTip": "SCADACreator\\View\\BluetoothSendingView.xaml.cs",
-              "ViewState": "AQIAAIMAAAAAAAAAAAAawK8AAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T14:58:45.323Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "DummyData.cs",
-              "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\DataProvider\\DummyData.cs",
-              "RelativeDocumentMoniker": "SCADACreator\\DataProvider\\DummyData.cs",
-              "ToolTip": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\DataProvider\\DummyData.cs",
-              "RelativeToolTip": "SCADACreator\\DataProvider\\DummyData.cs",
-              "ViewState": "AQIAADkAAAAAAAAAAIBJwCUAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T14:54:43.682Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 39,
               "Title": "SCADAStationEncoder.cs",
               "DocumentMoniker": "D:\\CaoHoc\\DeCuongLuanVan\\DiagramDesignerPart2\\SCADACreator\\Utility\\SCADAStationEncoder.cs",
               "RelativeDocumentMoniker": "SCADACreator\\Utility\\SCADAStationEncoder.cs",

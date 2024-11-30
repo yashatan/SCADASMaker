@@ -10,46 +10,46 @@
         Height="1000"
         Width="1420">
     <DockPanel Margin="0">
-		<!--<Grid>
+        <!--<Grid>
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
         </Grid>-->
-		<Menu IsMainMenu="True"
-			  DockPanel.Dock="Top">
-			<MenuItem Header="_File">
-				<MenuItem Header="New SCADA"
-						  Click="MenuItemNewSCADA_Click" />
-				<MenuItem Header="Open"
-						  Click="MenuItemOpen_Click" />
-				<MenuItem Header="Save"
-						  InputGestureText="Ctrl+S"
-						  Click="MenuItemSave_Click"
-						  Icon="{materialDesign:PackIcon Kind=ContentSave}"></MenuItem>
-				<MenuItem Header="Save As.."
-						  Click="MenuItemSaveAs_Click" />
-				<MenuItem Header="Exit"
-						  Click="MenuItemExit_Click"
-						  Icon="{materialDesign:PackIcon Kind=ExitToApp}" />
-				<Separator />
-			</MenuItem>
-			<MenuItem Header="_Project">
-				<MenuItem Header="_Tags"
+        <Menu IsMainMenu="True"
+              DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="New SCADA"
+                          Click="MenuItemNewSCADA_Click" />
+                <MenuItem Header="Open"
+                          Click="MenuItemOpen_Click" />
+                <MenuItem Header="Save"
+                          InputGestureText="Ctrl+S"
+                          Click="MenuItemSave_Click"
+                          Icon="{materialDesign:PackIcon Kind=ContentSave}"></MenuItem>
+                <MenuItem Header="Save As.."
+                          Click="MenuItemSaveAs_Click" />
+                <MenuItem Header="Exit"
+                          Click="MenuItemExit_Click"
+                          Icon="{materialDesign:PackIcon Kind=ExitToApp}" />
+                <Separator />
+            </MenuItem>
+            <MenuItem Header="_Project">
+                <MenuItem Header="_Tags"
                           Icon="{materialDesign:PackIcon Kind=TagMultipleOutline}"
-						  Click="MenuItemTags_Click" />
+                          Click="MenuItemTags_Click" />
                 <MenuItem Header="_Devices"
                           Click="MenuItemDevices_Click"></MenuItem>
                 <MenuItem Header="_Alarm Setting"
                           Click="MenuItemAlarmSetting_Click"></MenuItem>
                 <MenuItem Header="_Tag Logging"
-                          Click="MenuItemTagSetting_Click"></MenuItem>
+                          Click="MenuItemTagLoggingSetting_Click"></MenuItem>
                 <Separator />
-				<MenuItem Header="_Start SCADA"
-						  Click="MenuItemStartSCADA_Click" />
-			</MenuItem>
-		</Menu>
-		<ToolBar Height="50"
+                <MenuItem Header="_Start SCADA"
+                          Click="MenuItemStartSCADA_Click" />
+            </MenuItem>
+        </Menu>
+        <ToolBar Height="50"
                  Style="{DynamicResource MaterialDesignToolBar}"
                  DockPanel.Dock="Top">
             <Button ToolTip="New Project"
@@ -102,107 +102,116 @@
                            Source="Images/SendToBack.png" />
                 </Button.Content>
             </Button>
+            <Button ToolTip="Send to back"
+                    Margin="-10,0,0,0"
+                    Height="65"
+                    Width="65"
+                    Click="OnClickStartSCADA">
+                <materialDesign:PackIcon Kind="Play"
+                                         Height="40"
+                                         Width="40" />
+            </Button>
         </ToolBar>
-		<Grid Margin="0,5,0,0">
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="32.273" />
-				<ColumnDefinition Width="11.39" />
-				<ColumnDefinition Width="356.337" />
-				<ColumnDefinition />
-				<ColumnDefinition Width="350" />
-			</Grid.ColumnDefinitions>
-			<Grid Grid.Column="3"
-				  Background="Silver"></Grid>
-			<Image HorizontalAlignment="Left"
-				   VerticalAlignment="Top"
-				   Margin="20, 10, 0 ,0"
-				   Height="808"
-				   Stretch="Fill"
-				   Width="417"
-				   Grid.Column="3"
-				   Source="Images/PhoneFrameCut.png"></Image>
-			<Border Margin="36,24,0,0"
-					Grid.Column="3"
-					HorizontalAlignment="Left"
-					VerticalAlignment="Top"
-					BorderBrush="LightGray"
-					ClipToBounds="True"
-					CornerRadius="50"
-					Height="780"
-					Width="384"
-					Background="White"
-					BorderThickness="1">
-				<Grid>
-					<ScrollViewer Name="DesignerScrollViewer"
-								  Background="Transparent"
-								  HorizontalScrollBarVisibility="Hidden"
-								  VerticalScrollBarVisibility="Hidden">
-						<s:DesignerCanvas x:Name="MyDesignerCanvas"
-										  MinHeight="720"
-										  MinWidth="320"
-										  AllowDrop="True"
-										  Background="Transparent"></s:DesignerCanvas>
-					</ScrollViewer>
-				</Grid>
-			</Border>
-			<s:ZoomBox Width="200"
-					   Grid.Column="3"
-					   HorizontalAlignment="Right"
-					   VerticalAlignment="Top"
-					   ScrollViewer="{Binding ElementName=DesignerScrollViewer}"
-					   Margin="0,25,10,0" />
-			<Border Grid.Column="4"
-					BorderBrush="LightGray"
-					BorderThickness="1">
-				<ScrollViewer>
-					<StackPanel>
-						<Expander IsExpanded="True"
-								  Header="Symbols"
-								  Margin="0,1,0,0"
-								  Content="{StaticResource SymbolStencils}" />
-						<!--<Expander IsExpanded="False"
+        <Grid Margin="0,5,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="32.273" />
+                <ColumnDefinition Width="11.39" />
+                <ColumnDefinition Width="356.337" />
+                <ColumnDefinition />
+                <ColumnDefinition Width="350" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="3"
+                  Background="Silver"></Grid>
+            <Image HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="20, 10, 0 ,0"
+                   Height="808"
+                   Stretch="Fill"
+                   Width="417"
+                   Grid.Column="3"
+                   Source="Images/PhoneFrameCut.png"></Image>
+            <Border Margin="36,24,0,0"
+                    Grid.Column="3"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    BorderBrush="LightGray"
+                    ClipToBounds="True"
+                    CornerRadius="50"
+                    Height="780"
+                    Width="384"
+                    Background="White"
+                    BorderThickness="1">
+                <Grid>
+                    <ScrollViewer Name="DesignerScrollViewer"
+                                  Background="Transparent"
+                                  HorizontalScrollBarVisibility="Hidden"
+                                  VerticalScrollBarVisibility="Hidden">
+                        <s:DesignerCanvas x:Name="MyDesignerCanvas"
+                                          MinHeight="720"
+                                          MinWidth="320"
+                                          AllowDrop="True"
+                                          Background="Transparent"></s:DesignerCanvas>
+                    </ScrollViewer>
+                </Grid>
+            </Border>
+            <s:ZoomBox Width="200"
+                       Grid.Column="3"
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Top"
+                       ScrollViewer="{Binding ElementName=DesignerScrollViewer}"
+                       Margin="0,25,10,0" />
+            <Border Grid.Column="4"
+                    BorderBrush="LightGray"
+                    BorderThickness="1">
+                <ScrollViewer>
+                    <StackPanel>
+                        <Expander IsExpanded="True"
+                                  Header="Symbols"
+                                  Margin="0,1,0,0"
+                                  Content="{StaticResource SymbolStencils}" />
+                        <!--<Expander IsExpanded="False"
                                   Header="Flow Chart"
                                   Margin="0,1,0,0"
                                   Content="{StaticResource FlowChartSymbols}" />-->
-						<Expander IsExpanded="False"
-								  Header="Basic Control"
-								  Margin="0,1,0,0"
-								  Content="{StaticResource BasicControl}" />
-						<Expander Header="Basic Shapes"
-								  Margin="0,1,0,0"
-								  Content="{StaticResource BasicShapesStencils}" />
-					</StackPanel>
-				</ScrollViewer>
-			</Border>
-			<Border Grid.Column="0"
-					BorderBrush="LightGray"
-					BorderThickness="1"
-					Grid.ColumnSpan="3">
-				<ScrollViewer>
-					<StackPanel>
-						<Expander IsExpanded="True"
-								  Header="Properties"
-								  Margin="0,1,0,0">
-							<Frame x:Name="PropertyFrame"
-								   Background="White"
-								   NavigationUIVisibility="Hidden"></Frame>
-						</Expander>
-						<Expander IsExpanded="False"
-								  Header="Animations"
-								  Margin="0,1,0,0">
-							<Frame x:Name="AnimationFrame"
-								   Background="White"
-								   NavigationUIVisibility="Hidden"></Frame>
-						</Expander>
-						<Expander Header="Event"
-								  Margin="0,1,0,0">
-							<Frame x:Name="ItemEventFrame"
-								   Background="White"
-								   NavigationUIVisibility="Hidden"></Frame>
-						</Expander>
-					</StackPanel>
-				</ScrollViewer>
-			</Border>
-		</Grid>
-	</DockPanel>
+                        <Expander IsExpanded="False"
+                                  Header="Basic Control"
+                                  Margin="0,1,0,0"
+                                  Content="{StaticResource BasicControl}" />
+                        <Expander Header="Basic Shapes"
+                                  Margin="0,1,0,0"
+                                  Content="{StaticResource BasicShapesStencils}" />
+                    </StackPanel>
+                </ScrollViewer>
+            </Border>
+            <Border Grid.Column="0"
+                    BorderBrush="LightGray"
+                    BorderThickness="1"
+                    Grid.ColumnSpan="3">
+                <ScrollViewer>
+                    <StackPanel>
+                        <Expander IsExpanded="True"
+                                  Header="Properties"
+                                  Margin="0,1,0,0">
+                            <Frame x:Name="PropertyFrame"
+                                   Background="White"
+                                   NavigationUIVisibility="Hidden"></Frame>
+                        </Expander>
+                        <Expander IsExpanded="False"
+                                  Header="Animations"
+                                  Margin="0,1,0,0">
+                            <Frame x:Name="AnimationFrame"
+                                   Background="White"
+                                   NavigationUIVisibility="Hidden"></Frame>
+                        </Expander>
+                        <Expander Header="Event"
+                                  Margin="0,1,0,0">
+                            <Frame x:Name="ItemEventFrame"
+                                   Background="White"
+                                   NavigationUIVisibility="Hidden"></Frame>
+                        </Expander>
+                    </StackPanel>
+                </ScrollViewer>
+            </Border>
+        </Grid>
+    </DockPanel>
 </Window>

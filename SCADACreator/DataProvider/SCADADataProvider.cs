@@ -15,6 +15,7 @@ namespace SCADACreator
         public List<TagInfo> TagInfos; 
         public List<ConnectDevice> ConnectDevices; 
         public List<AlarmSetting> AlarmSettingList; 
+        public ProjectInformation ProjectInformation;
 
         private static SCADADataProvider instance;
         private int nextTagID;

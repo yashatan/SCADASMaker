@@ -8,7 +8,15 @@ namespace SCADACreator
 {
         public class SCADAStationConfiguration
         {
-            List<ControlData> controlDatas;
+        private ProjectInformation projectInformation;
+
+        public ProjectInformation ProjectInformation
+        {
+            get { return projectInformation; }
+            set { projectInformation = value; }
+        }
+
+        List<ControlData> controlDatas;
             public List<ControlData> ControlDatas
             {
                 get { return controlDatas; }

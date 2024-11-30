@@ -24,6 +24,8 @@ using System.Xml.Linq;
 using System.Windows.Markup;
 using System.Data.SqlTypes;
 using SCADACreator.View.Alarm;
+using System.Diagnostics;
+using System.Data.SQLite;
 
 
 namespace SCADACreator
@@ -33,13 +35,12 @@ namespace SCADACreator
         public PropertyPage propertyPage;
         public AnimationListPage animationListPage;
         public ItemEventListPage itemEventListPage;
-        private ProjectInformation currentprojectInformation;
         public MainWindow()
         {
             InitializeComponent();
             Loaded += MainWindow_Loaded;
-            currentprojectInformation = new ProjectInformation();
-            Title = $"SCADA Creator - {currentprojectInformation.Name}";
+            SCADADataProvider.Instance.ProjectInformation = new ProjectInformation();
+            Title = $"SCADA Creator - {SCADADataProvider.Instance.ProjectInformation.Name}";
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
@@ -382,6 +383,7 @@ namespace SCADACreator
                  new XElement("TagInfos", JsonSerializer.Serialize(SCADADataProvider.Instance.TagInfos, options)),
                  new XElement("ConnectDevices", JsonSerializer.Serialize(SCADADataProvider.Instance.ConnectDevices, options)),
                  new XElement("AlarmSettings", JsonSerializer.Serialize(SCADADataProvider.Instance.AlarmSettingList, options)),
+                 new XElement("ProjectInformation", JsonSerializer.Serialize(SCADADataProvider.Instance.ProjectInformation, options)),
                  from item in MyDesignerCanvas.Children.OfType<SCADAItem>()
                  let contentXaml = XamlWriter.Save(((SCADAItem)item).Content)
                  let tagconnectionjson = JsonSerializer.Serialize(((SCADAItem)item).TagConnection, options)
@@ -419,14 +421,24 @@ namespace SCADACreator
                 Canvas.SetTop(pasteItem, (double)itemElement.Element("Top"));
                 MyDesignerCanvas.Children.Add(pasteItem);
             }
-
+            SCADADataProvider.Instance.ProjectInformation = JsonSerializer.Deserialize<ProjectInformation>((string)parsedElement.Element("ProjectInformation"));
             List<TagInfo> taginfos = JsonSerializer.Deserialize<List<TagInfo>>((string)parsedElement.Element("TagInfos"));
             List<ConnectDevice> connectedDevices = JsonSerializer.Deserialize<List<ConnectDevice>>((string)parsedElement.Element("ConnectDevices"));
             List<AlarmSetting> alarmSettings = JsonSerializer.Deserialize<List<AlarmSetting>>((string)parsedElement.Element("AlarmSettings"));
 
-            SCADADataProvider.Instance.AddListTagInfos(taginfos);
-            SCADADataProvider.Instance.AddListConnectDevices(connectedDevices);
-            SCADADataProvider.Instance.AddListAlarmSettingList(alarmSettings);
+            if (taginfos.Count > 0)
+            {
+                SCADADataProvider.Instance.AddListTagInfos(taginfos);
+            }
+            if (connectedDevices.Count > 0)
+            {
+                SCADADataProvider.Instance.AddListConnectDevices(connectedDevices);
+            }
+
+            if (alarmSettings.Count > 0)
+            {
+                SCADADataProvider.Instance.AddListAlarmSettingList(alarmSettings);
+            }
             //SCADADataProvider.Instance.AddDummyListAlarmPointList();//Need update
         }
 
@@ -434,24 +446,36 @@ namespace SCADACreator
         {
             MyDesignerCanvas.Children.Clear();
             SCADADataProvider.Instance.Clear();
-            currentprojectInformation = new ProjectInformation();
+            SCADADataProvider.Instance.ProjectInformation = new ProjectInformation();
         }
         private void SaveProject()
         {
             var savestring = SerializeAllDesignerItems();
-            if (currentprojectInformation.IsNewProject)
+            if (SCADADataProvider.Instance.ProjectInformation.IsNewProject)
             {
-                currentprojectInformation.IsNewProject = false;
+                SCADADataProvider.Instance.ProjectInformation.IsNewProject = false;
                 SaveFileDialog saveFileDialog = new SaveFileDialog();
                 saveFileDialog.FileName = "untitled";
                 saveFileDialog.Filter = "JsonString (*.json)|*.json";
-                saveFileDialog.ShowDialog();
-                currentprojectInformation.FilePath = saveFileDialog.FileName;
-                Title = currentprojectInformation.Name = System.IO.Path.GetFileNameWithoutExtension(saveFileDialog.FileName);
-            }
-            File.WriteAllText(currentprojectInformation.FilePath, savestring);//Save Json string to file
-        }
 
+                if (saveFileDialog.ShowDialog() == true)
+                {
+                    Title = SCADADataProvider.Instance.ProjectInformation.Name = System.IO.Path.GetFileNameWithoutExtension(saveFileDialog.FileName);
+                    string directoryPath = $"{System.IO.Path.GetDirectoryName(saveFileDialog.FileName)}\\{SCADADataProvider.Instance.ProjectInformation.Name}";
+                    SCADADataProvider.Instance.ProjectInformation.FilePath = $"{directoryPath}\\{SCADADataProvider.Instance.ProjectInformation.Name}.json";
+                    if (!Directory.Exists(directoryPath))
+                    {
+                        Directory.CreateDirectory(directoryPath);
+                    }
+
+                    var sourceDbPath = ".\\..\\..\\DBOrigin\\scadastationorigin.db"; // Đường dẫn tới cơ sở dữ liệu gốc
+                    var newDbPath = $"{directoryPath}\\{SCADADataProvider.Instance.ProjectInformation.Name}.db";
+                    File.Copy(sourceDbPath, newDbPath);
+                }
+
+            }
+            File.WriteAllText(SCADADataProvider.Instance.ProjectInformation.FilePath, savestring);//Save Json string to file
+        }
 
         protected override void OnKeyDown(KeyEventArgs e)
         {
@@ -466,19 +490,46 @@ namespace SCADACreator
         private void MenuItemNewSCADA_Click(object sender, RoutedEventArgs e)
         {
             ClearCurrentProject();
-            Title = $"SCADA Creator - {currentprojectInformation.Name}";
+            Title = $"SCADA Creator - {SCADADataProvider.Instance.ProjectInformation.Name}";
         }
         private void MenuItemSaveAs_Click(object sender, RoutedEventArgs e)
         {
-            var savestring = SerializeAllDesignerItems();
-            currentprojectInformation.IsNewProject = false;
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.FileName = "untitled";
-            saveFileDialog.Filter = "JsonString (*.json)|*.json";
-            saveFileDialog.ShowDialog();
-            currentprojectInformation.FilePath = saveFileDialog.FileName;
-            Title = currentprojectInformation.Name = System.IO.Path.GetFileNameWithoutExtension(saveFileDialog.FileName);
-            File.WriteAllText(currentprojectInformation.FilePath, savestring);//Save Json string to file
+            if (SCADADataProvider.Instance.ProjectInformation.IsNewProject == true)
+            {
+                SaveProject();
+            }
+            else
+            {
+                var savestring = SerializeAllDesignerItems();
+                SCADADataProvider.Instance.ProjectInformation.IsNewProject = false;
+                var sourceDbPath = $"{System.IO.Path.GetDirectoryName(SCADADataProvider.Instance.ProjectInformation.FilePath)}\\{SCADADataProvider.Instance.ProjectInformation.Name}.db"; // Đường dẫn tới cơ sở dữ liệu gốc
+                if (File.Exists(sourceDbPath))
+                {
+                    sourceDbPath = ".\\..\\..\\DBOrigin\\scadastationorigin.db";
+                }
+
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.InitialDirectory = System.IO.Path.GetDirectoryName(System.IO.Path.GetDirectoryName(SCADADataProvider.Instance.ProjectInformation.FilePath));
+                saveFileDialog.FileName = "untitled";
+                saveFileDialog.Filter = "JsonString (*.json)|*.json";
+                if (saveFileDialog.ShowDialog() == true)
+                {
+                    Title = SCADADataProvider.Instance.ProjectInformation.Name = System.IO.Path.GetFileNameWithoutExtension(saveFileDialog.FileName);
+                    string directoryPath = $"{System.IO.Path.GetDirectoryName(saveFileDialog.FileName)}\\{SCADADataProvider.Instance.ProjectInformation.Name}";
+                    SCADADataProvider.Instance.ProjectInformation.FilePath = $"{directoryPath}\\{SCADADataProvider.Instance.ProjectInformation.Name}.json";
+                    if (!Directory.Exists(directoryPath))
+                    {
+                        Directory.CreateDirectory(directoryPath);
+                    }
+                    //var sourceDbPath = ".\\..\\..\\DBOrigin\\scadastationorigin.db"; // Đường dẫn tới cơ sở dữ liệu gốc
+                    var newDbPath = $"{directoryPath}\\{SCADADataProvider.Instance.ProjectInformation.Name}.db";
+                    File.Copy(sourceDbPath, newDbPath);
+                    File.WriteAllText(SCADADataProvider.Instance.ProjectInformation.FilePath, savestring);//Save Json string to file
+                }
+
+            }
+
+
         }
         private void MenuItemExit_Click(object sender, RoutedEventArgs e)
         {
@@ -490,7 +541,6 @@ namespace SCADACreator
         }
         private void MenuItemOpen_Click(object sender, RoutedEventArgs e)
         {
-
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Text files (*.json)|*.json|All files (*.*)|*.*";
             if (openFileDialog.ShowDialog() == true)
@@ -500,10 +550,7 @@ namespace SCADACreator
                 try
                 {
                     DeSerrializeAllDesignerItems(jsonString);
-                    this.Title = currentprojectInformation.Name = System.IO.Path.GetFileNameWithoutExtension(openFileDialog.FileName);
-                    currentprojectInformation.IsNewProject = false;
-                    currentprojectInformation.FilePath = openFileDialog.FileName;
-                    currentprojectInformation.Name = System.IO.Path.GetFileNameWithoutExtension(openFileDialog.FileName);
+                    this.Title = SCADADataProvider.Instance.ProjectInformation.Name;
                 }
                 catch
                 {
@@ -523,8 +570,17 @@ namespace SCADACreator
         }
         private void MenuItemStartSCADA_Click(object sender, RoutedEventArgs e)
         {
-            BluetoothSendingView controlPropertyView = new BluetoothSendingView(MyDesignerCanvas, currentprojectInformation);
-            controlPropertyView.Show();
+            StartProcess();
+        }
+        private void MenuItemAlarmSetting_Click(object sender, RoutedEventArgs e)
+        {
+            AlarmSettingWindow alarmListWindow = new AlarmSettingWindow();
+            alarmListWindow.Show();
+        }
+
+        private void MenuItemTagLoggingSetting_Click(object sender, RoutedEventArgs e)
+        {
+
         }
         #endregion
 
@@ -593,15 +649,77 @@ namespace SCADACreator
         }
         #endregion
 
-        private void MenuItemAlarmSetting_Click(object sender, RoutedEventArgs e)
+
+        #region Start SCADA
+        private void OnClickStartSCADA(object sender, RoutedEventArgs e)
         {
-            AlarmSettingWindow alarmListWindow = new AlarmSettingWindow();
-            alarmListWindow.Show();
+            StartProcess();
         }
 
-        private void MenuItemTagSetting_Click(object sender, RoutedEventArgs e)
+        private void StartProcess()
         {
-
+            var controlDatas = GenerateControlDataFromCanvas(MyDesignerCanvas);
+            string filename = $"{System.IO.Path.GetDirectoryName(SCADADataProvider.Instance.ProjectInformation.FilePath)}\\{SCADADataProvider.Instance.ProjectInformation.Name}Station.json";
+            CreateSCADAStationFile(controlDatas, filename);
+            if (!File.Exists(SCADADataProvider.Instance.ProjectInformation.GetDBPath()))
+            {
+                var sourceDbPath = ".\\..\\..\\DBOrigin\\scadastationorigin.db"; // Đường dẫn tới cơ sở dữ liệu gốc
+                var newDbPath = SCADADataProvider.Instance.ProjectInformation.GetDBPath();
+                File.Copy(sourceDbPath, newDbPath);
+            }
+            StartSCADAStation(filename);
         }
+
+        private void StartSCADAStation(string filename)
+        {
+            // Use ProcessStartInfo class
+            Process proc = new Process();
+            proc.StartInfo.FileName = "D:\\CaoHoc\\DeCuongLuanVan\\SCADAStationNetFrameWork\\SCADAStationNetFrameWork\\bin\\Debug\\SCADAStationNetFrameWork.exe"; //Need update
+            proc.StartInfo.UseShellExecute = true;
+            proc.StartInfo.Verb = "runas";
+            proc.StartInfo.Arguments = $"-f {filename}";
+            proc.Start();
+        }
+        private void CreateSCADAStationFile(List<ControlData> controlDatas, string filename)
+        {
+            var options = new JsonSerializerOptions
+            {
+                NumberHandling = System.Text.Json.Serialization.JsonNumberHandling.AllowNamedFloatingPointLiterals,
+                ReferenceHandler = ReferenceHandler.IgnoreCycles,
+                WriteIndented = true
+            };
+
+            SCADAStationConfiguration mSCADAStationConfiguration = new SCADAStationConfiguration();
+            mSCADAStationConfiguration.SetConnectDevices(SCADADataProvider.Instance.ConnectDevices);
+            mSCADAStationConfiguration.SetTagInfos(SCADADataProvider.Instance.TagInfos);
+            mSCADAStationConfiguration.SetAlarmSettings(SCADADataProvider.Instance.AlarmSettingList);
+            mSCADAStationConfiguration.ProjectInformation = (SCADADataProvider.Instance.ProjectInformation);
+            mSCADAStationConfiguration.SetControlDatas(controlDatas);
+
+            string jsonSCADAStationConfiguration = JsonSerializer.Serialize(mSCADAStationConfiguration, options);//seriallize thành chuỗi json
+
+            SaveFile(filename, jsonSCADAStationConfiguration);
+        }
+
+        private void SaveFile(string filePath, string savestring)
+        {
+            File.WriteAllText(filePath, savestring);//Save Json string to file
+        }
+
+        private List<ControlData> GenerateControlDataFromCanvas(DesignerCanvas designerCanvas)
+        {
+            UIElement[] canvasControl = designerCanvas.Children.Cast<UIElement>().ToArray();
+            var controlDatas = new List<ControlData>();
+            foreach (SCADAItem item in canvasControl)
+            {
+
+                ControlData controldata = ControlDataEncoder.Convert(item);
+                controlDatas.Add(controldata);
+
+            }
+            return controlDatas;
+        }
+        #endregion
+
     }
 }
