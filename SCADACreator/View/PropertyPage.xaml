@@ -130,6 +130,16 @@
                                        LostFocus="txtForeground_LostFocus"
                                        FontSize="15"
                                        Margin="10 0 0 0" />
+                    <Button x:Name="btnForeground"
+                            Height="20"
+                            Width="20"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Background="White"
+                            BorderBrush="Black"
+                            Margin="10 20 0 0"
+                            BorderThickness="1"
+                            Click="btnForeground_Clicked"></Button>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal"
                             x:Name="ColorBackgroundGroup">
@@ -152,6 +162,16 @@
                                        LostFocus="txtBackground_LostFocus"
                                        FontSize="15"
                                        Margin="10 0 0 0" />
+                    <Button x:Name="btnBackground"
+                            Height="20"
+                            Width="20"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Background="White"
+                            BorderBrush="Black"
+                            Margin="10 20 0 0"
+                            BorderThickness="1"
+                            Click="btnBackground_Clicked"></Button>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal"
                             x:Name="ColorFillGroup">
@@ -174,6 +194,16 @@
                                        LostFocus="txtFill_LostFocus"
                                        FontSize="15"
                                        Margin="10 0 0 0" />
+                    <Button x:Name="btnFill"
+                            Height="20"
+                            Width="20"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Background="White"
+                            BorderBrush="Black"
+                            Margin="10 20 0 0"
+                            BorderThickness="1"
+                            Click="btnFill_Clicked"></Button>
                 </StackPanel>
             </StackPanel>
             <StackPanel x:Name="ConnectionGroup"

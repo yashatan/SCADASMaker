@@ -12,8 +12,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using SCADACreator.Utility;
 using SCADACreator.View;
-using InTheHand.Net;
-using InTheHand.Net.Bluetooth;
 using SCADACreator.Model;
 using InTheHand.Net.Sockets;
 using Microsoft.Win32;
@@ -382,7 +380,9 @@ namespace SCADACreator
             XElement serializedItems = new XElement("SCADAProject",
                  new XElement("TagInfos", JsonSerializer.Serialize(SCADADataProvider.Instance.TagInfos, options)),
                  new XElement("ConnectDevices", JsonSerializer.Serialize(SCADADataProvider.Instance.ConnectDevices, options)),
-                 new XElement("AlarmSettings", JsonSerializer.Serialize(SCADADataProvider.Instance.AlarmSettingList, options)),
+                 new XElement("AlarmSettings", JsonSerializer.Serialize(SCADADataProvider.Instance.AlarmSettings, options)),
+                 new XElement("TagLoggingSettings", JsonSerializer.Serialize(SCADADataProvider.Instance.TagLoggingSettings, options)),
+                 new XElement("TrendViewSettings", JsonSerializer.Serialize(SCADADataProvider.Instance.TrendViewSettings, options)),
                  new XElement("ProjectInformation", JsonSerializer.Serialize(SCADADataProvider.Instance.ProjectInformation, options)),
                  from item in MyDesignerCanvas.Children.OfType<SCADAItem>()
                  let contentXaml = XamlWriter.Save(((SCADAItem)item).Content)
@@ -425,6 +425,8 @@ namespace SCADACreator
             List<TagInfo> taginfos = JsonSerializer.Deserialize<List<TagInfo>>((string)parsedElement.Element("TagInfos"));
             List<ConnectDevice> connectedDevices = JsonSerializer.Deserialize<List<ConnectDevice>>((string)parsedElement.Element("ConnectDevices"));
             List<AlarmSetting> alarmSettings = JsonSerializer.Deserialize<List<AlarmSetting>>((string)parsedElement.Element("AlarmSettings"));
+            List<TagLoggingSetting> tagLoggingSettings = JsonSerializer.Deserialize<List<TagLoggingSetting>>((string)parsedElement.Element("TagLoggingSettings"));
+            List<TrendViewSetting> trendViewSettings = JsonSerializer.Deserialize<List<TrendViewSetting>>((string)parsedElement.Element("TrendViewSettings"));
 
             if (taginfos.Count > 0)
             {
@@ -437,7 +439,16 @@ namespace SCADACreator
 
             if (alarmSettings.Count > 0)
             {
-                SCADADataProvider.Instance.AddListAlarmSettingList(alarmSettings);
+                SCADADataProvider.Instance.AddListAlarmSettings(alarmSettings);
+            }
+
+            if (tagLoggingSettings.Count > 0)
+            {
+                SCADADataProvider.Instance.AddListTagLoggingSettings(tagLoggingSettings);
+            }
+            if (trendViewSettings.Count > 0)
+            {
+                SCADADataProvider.Instance.AddListTrendViewSettings(trendViewSettings);
             }
             //SCADADataProvider.Instance.AddDummyListAlarmPointList();//Need update
         }
@@ -580,7 +591,13 @@ namespace SCADACreator
 
         private void MenuItemTagLoggingSetting_Click(object sender, RoutedEventArgs e)
         {
-
+            TagLoggingSettingWindow trendSettingWindow = new TagLoggingSettingWindow();
+            trendSettingWindow.Show();
+        }
+        private void MenuItemTrendViewSetting_Click(object sender, RoutedEventArgs e)
+        {
+            TrendViewSettingWindow trendViewSettingWindow = new TrendViewSettingWindow();
+            trendViewSettingWindow.Show();
         }
         #endregion
 
@@ -658,16 +675,24 @@ namespace SCADACreator
 
         private void StartProcess()
         {
-            var controlDatas = GenerateControlDataFromCanvas(MyDesignerCanvas);
-            string filename = $"{System.IO.Path.GetDirectoryName(SCADADataProvider.Instance.ProjectInformation.FilePath)}\\{SCADADataProvider.Instance.ProjectInformation.Name}Station.json";
-            CreateSCADAStationFile(controlDatas, filename);
-            if (!File.Exists(SCADADataProvider.Instance.ProjectInformation.GetDBPath()))
+            if (SCADADataProvider.Instance.ProjectInformation.IsNewProject)
             {
-                var sourceDbPath = ".\\..\\..\\DBOrigin\\scadastationorigin.db"; // Đường dẫn tới cơ sở dữ liệu gốc
-                var newDbPath = SCADADataProvider.Instance.ProjectInformation.GetDBPath();
-                File.Copy(sourceDbPath, newDbPath);
+                MessageBox.Show("Please save project before start");
             }
-            StartSCADAStation(filename);
+            else
+            {
+                var controlDatas = GenerateControlDataFromCanvas(MyDesignerCanvas);
+                string filename = $"{System.IO.Path.GetDirectoryName(SCADADataProvider.Instance.ProjectInformation.FilePath)}\\{SCADADataProvider.Instance.ProjectInformation.Name}Station.json";
+                CreateSCADAStationFile(controlDatas, filename);
+                if (!File.Exists(SCADADataProvider.Instance.ProjectInformation.GetDBPath()))
+                {
+                    var sourceDbPath = ".\\..\\..\\DBOrigin\\scadastationorigin.db"; // Đường dẫn tới cơ sở dữ liệu gốc
+                    var newDbPath = SCADADataProvider.Instance.ProjectInformation.GetDBPath();
+                    File.Copy(sourceDbPath, newDbPath);
+                }
+                StartSCADAStation(filename);
+            }
+
         }
 
         private void StartSCADAStation(string filename)
@@ -692,7 +717,7 @@ namespace SCADACreator
             SCADAStationConfiguration mSCADAStationConfiguration = new SCADAStationConfiguration();
             mSCADAStationConfiguration.SetConnectDevices(SCADADataProvider.Instance.ConnectDevices);
             mSCADAStationConfiguration.SetTagInfos(SCADADataProvider.Instance.TagInfos);
-            mSCADAStationConfiguration.SetAlarmSettings(SCADADataProvider.Instance.AlarmSettingList);
+            mSCADAStationConfiguration.SetAlarmSettings(SCADADataProvider.Instance.AlarmSettings);
             mSCADAStationConfiguration.ProjectInformation = (SCADADataProvider.Instance.ProjectInformation);
             mSCADAStationConfiguration.SetControlDatas(controlDatas);
 
@@ -720,6 +745,12 @@ namespace SCADACreator
             return controlDatas;
         }
         #endregion
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
 
     }
 }

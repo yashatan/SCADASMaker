@@ -21,17 +21,19 @@ namespace SCADACreator.View.Alarm
     /// </summary>
     public partial class AlarmSettingWindow : Window
     {
-        List<AlarmSetting> alarmpointlist;
+        List<AlarmSetting> alarmSettinglist;
         public List<TagInfo> tags { get; set; }
         public AlarmSettingWindow()
         {
             InitializeComponent();
-            alarmpointlist = SCADADataProvider.Instance.AlarmSettingList;
+            alarmSettinglist = SCADADataProvider.Instance.AlarmSettings;
             tags = SCADADataProvider.Instance.TagInfos;
-            alarmlistview.ItemsSource = alarmpointlist;
+
+            alarmlistview.ItemsSource = alarmSettinglist;
+            alarmlistview.Items.Refresh();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
 
             SCADADataProvider.Instance.AddAlarmSetting(new AlarmSetting
@@ -45,29 +47,36 @@ namespace SCADACreator.View.Alarm
         {
             var button = sender as Button;
             var chosenAlarmSetting = button.DataContext as AlarmSetting;
-            alarmpointlist.Remove(chosenAlarmSetting);
+            alarmSettinglist.Remove(chosenAlarmSetting);
             alarmlistview.Items.Refresh();
+        }
+
+        private void ComboBox_Loaded(object sender, RoutedEventArgs e)
+        {
+            var comboBox = sender as ComboBox;
+            var chosenAlarmSetting = comboBox.DataContext as AlarmSetting;
+            comboBox.SelectedItem = (comboBox.ItemsSource as List<TagInfo>).FirstOrDefault(m => m.Id == chosenAlarmSetting.TriggerTag.Id);
         }
     }
 
-    public class EnumToIndexTypeConverter : IValueConverter 
-    { 
-        public object Convert(object value, Type targetType, object parameter, CultureInfo culture) 
-        { 
-            if (value is AlarmSetting.AlarmType enumValue) 
-            { 
-                return (int)enumValue; 
-            } 
-            return 0; 
-        } 
-        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-        { 
-            if (value is int index) 
-            { 
-                return (AlarmSetting.AlarmType)index; 
+    public class EnumToIndexTypeConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (value is AlarmSetting.AlarmType enumValue)
+            {
+                return (int)enumValue;
             }
-            return AlarmSetting.AlarmType.Warning; 
-        } 
+            return 0;
+        }
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (value is int index)
+            {
+                return (AlarmSetting.AlarmType)index;
+            }
+            return AlarmSetting.AlarmType.Warning;
+        }
     }
 
     public class EnumToIndexModeConverter : IValueConverter

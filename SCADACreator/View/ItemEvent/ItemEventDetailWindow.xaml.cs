@@ -57,8 +57,12 @@ namespace SCADACreator.View
         private void UpdateItemEventData()
         {
             txtName.Text = itemevent.Name;
-            cbbTag.SelectedItem = itemevent.Tag;
-            cbbTag.Text = itemevent.Tag.Name;
+            if(itemevent.Tag != null)
+            {
+                cbbTag.SelectedItem = itemevent.Tag;
+                cbbTag.Text = itemevent.Tag.Name;
+            }
+
             cbbEventType.SelectedIndex = (int)itemevent.EventType;
             cbbActionType.SelectedIndex = (int)itemevent.ActionType;
         }

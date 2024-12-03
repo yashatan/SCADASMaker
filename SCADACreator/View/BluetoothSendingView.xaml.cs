@@ -136,7 +136,7 @@ namespace SCADACreator
             SCADAStationConfiguration mSCADAStationConfiguration= new SCADAStationConfiguration();
             mSCADAStationConfiguration.SetConnectDevices(SCADADataProvider.Instance.ConnectDevices);
             mSCADAStationConfiguration.SetTagInfos(SCADADataProvider.Instance.TagInfos);
-            mSCADAStationConfiguration.SetAlarmSettings(SCADADataProvider.Instance.AlarmSettingList);
+            mSCADAStationConfiguration.SetAlarmSettings(SCADADataProvider.Instance.AlarmSettings);
             mSCADAStationConfiguration.SetControlDatas(controlDatas);
 
             string jsonSCADAStationConfiguration = JsonSerializer.Serialize(mSCADAStationConfiguration, options);//seriallize thành chuỗi json
@@ -161,7 +161,7 @@ namespace SCADACreator
             SCADAStationConfiguration mSCADAStationConfiguration = new SCADAStationConfiguration();
             mSCADAStationConfiguration.SetConnectDevices(SCADADataProvider.Instance.ConnectDevices);
             mSCADAStationConfiguration.SetTagInfos(SCADADataProvider.Instance.TagInfos);
-            mSCADAStationConfiguration.SetAlarmSettings(SCADADataProvider.Instance.AlarmSettingList);
+            mSCADAStationConfiguration.SetAlarmSettings(SCADADataProvider.Instance.AlarmSettings);
             mSCADAStationConfiguration.SetControlDatas(controlDatas);
 
             string jsonSCADAStationConfiguration = JsonSerializer.Serialize(mSCADAStationConfiguration, options);//seriallize thành chuỗi json

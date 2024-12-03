@@ -1,19 +1,18 @@
-﻿<Window x:Class="SCADACreator.View.Alarm.AlarmSettingWindow"
+﻿<Window x:Class="SCADACreator.View.TagLoggingSettingWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:SCADACreator.View.Alarm"
+        xmlns:local="clr-namespace:SCADACreator.View"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         xmlns:s="clr-namespace:SCADACreator"
-        Title="Alarm Seting Window"
+        Title="Tag Logging Seting Window"
         WindowStartupLocation="CenterScreen"
         Height="450"
-        Width="880">
+        Width="500">
     <Window.Resources>
-        <local:EnumToIndexModeConverter x:Key="EnumToIndexModeConverter" />
-        <local:EnumToIndexTypeConverter x:Key="EnumToIndexTypeConverter" />
+        <local:EnumToIndexCycleTypeConverter x:Key="EnumToIndexCycleTypeConverter" />
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -26,13 +25,13 @@
               VerticalAlignment="Top"
               Height="40"
               Background="Blue">
-            <TextBlock Text="Alarm Setting"
+            <TextBlock Text="Tag Logging Setting"
                        Foreground="White"
                        FontSize="30"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"></TextBlock>
         </Grid>
-        <ListView x:Name="alarmlistview"
+        <ListView x:Name="taglogginglistview"
                   HorizontalAlignment="Stretch"
                   ScrollViewer.VerticalScrollBarVisibility="Auto"
                   Grid.Row="1">
@@ -55,59 +54,33 @@
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn Header="Content"
-                                    Width="auto">
+                    <GridViewColumn Header="Tag"
+                                   Width="150"
+                                    >
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBox Text="{Binding Text}"
-                                         MinWidth="250"
-                                         materialDesign:HintAssist.Hint="Content"
-                                         Width="Auto" />
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-                    <GridViewColumn Header="Trigger Tag">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <ComboBox ItemsSource="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:AlarmSettingWindow}}, Path=tags}"
-                                          SelectedItem="{Binding TriggerTag, Mode=TwoWay}"                                       
+                                <ComboBox ItemsSource="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type local:TagLoggingSettingWindow}}, Path=tags}"
                                           DisplayMemberPath="Name"
                                           Width="auto"
-                                          Loaded="ComboBox_Loaded" />
+                                          Loaded="ComboBox_Loaded"
+                                          SelectedItem="{Binding Tag}"></ComboBox>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn Header="Type">
+                    <GridViewColumn Header="Cycle"
+                                    Width="100">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <ComboBox Width="70"
-                                          SelectedIndex="{Binding Type, Converter={StaticResource EnumToIndexTypeConverter}}">
-                                    <ComboBoxItem Content="Warning" />
-                                    <ComboBoxItem Content="Error" />
+                                <ComboBox Width="90"
+                                          SelectedIndex="{Binding LoggingCycle, Converter={StaticResource EnumToIndexCycleTypeConverter}}">
+                                    <ComboBoxItem Content="1 sec" />
+                                    <ComboBoxItem Content="2 secs" />
+                                    <ComboBoxItem Content="5 secs" />
+                                    <ComboBoxItem Content="10 secs" />
+                                    <ComboBoxItem Content="1 min" />
+                                    <ComboBoxItem Content="5 mins" />
+                                    <ComboBoxItem Content="1 hour" />
                                 </ComboBox>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-                    <GridViewColumn Header="Mode">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <ComboBox Width="60"
-                                          SelectedIndex="{Binding LimitMode, Converter={StaticResource EnumToIndexModeConverter}}">
-                                    <ComboBoxItem Content="Lower" />
-                                    <ComboBoxItem Content="Higher" />
-                                </ComboBox>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-                    <GridViewColumn Header="Limit"
-                                    Width="auto">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <s:DecimalTextBox Text="{Binding Limit}"
-                                                  MinWidth="50"
-                                                  Style="{StaticResource MaterialDesignTextBox}"
-                                                  Width="Auto"
-                                                  />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -117,7 +90,7 @@
                             <DataTemplate>
                                 <Button BorderBrush="Transparent"
                                         Background="Transparent"
-                                        Click="btnDeleteAlarmSetting_Cliked"
+                                        Click="btnDeleteTrendSetting_Click"
                                         Cursor="Hand">
                                     <materialDesign:PackIcon Kind="DeleteCircle"
                                                              Height="20"
@@ -137,6 +110,7 @@
                 BorderBrush="Transparent"
                 Cursor="Hand"
                 Margin="0 0 60 10"
+                x:Name="btnAdd"
                 VerticalAlignment="Bottom"
                 Click="btnAdd_Click"
                 Background="Transparent">

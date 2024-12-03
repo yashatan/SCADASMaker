@@ -14,20 +14,26 @@ namespace SCADACreator
     {
         public List<TagInfo> TagInfos; 
         public List<ConnectDevice> ConnectDevices; 
-        public List<AlarmSetting> AlarmSettingList; 
+        public List<AlarmSetting> AlarmSettings; 
+        public List<TagLoggingSetting> TagLoggingSettings; 
+        public List<TrendViewSetting> TrendViewSettings; 
         public ProjectInformation ProjectInformation;
 
         private static SCADADataProvider instance;
         private int nextTagID;
         private int nextDeviceID;
-        private int nextAlarmPointID;
+        private int nextAlarmSettingID;
+        private int nextTagLoggingSettingID;
+        private int nextTrendViewSettingID;
         // Private constructor to prevent instantiation
         private SCADADataProvider()
         {
 
             TagInfos = new List<TagInfo>();
             ConnectDevices = new List<ConnectDevice>();
-            AlarmSettingList = new List<AlarmSetting>();
+            AlarmSettings = new List<AlarmSetting>();
+            TagLoggingSettings = new List<TagLoggingSetting>();
+            TrendViewSettings = new List<TrendViewSetting>();
             //
         }
 
@@ -56,16 +62,21 @@ namespace SCADACreator
             nextDeviceID = ConnectDevices.Max(m => m.Id) + 1;
         }
 
-        public void AddListAlarmSettingList(List<AlarmSetting> alarmPoints)
+        public void AddListAlarmSettings(List<AlarmSetting> alarmSettings)
         {
-            AlarmSettingList.AddRange(alarmPoints);
-            nextAlarmPointID = AlarmSettingList.Max(m => m.Id) + 1;
+            AlarmSettings.AddRange(alarmSettings);
+            nextAlarmSettingID = AlarmSettings.Max(m => m.Id) + 1;
         }
 
-        public void AddDummyListAlarmPointList()
+        public void AddListTagLoggingSettings(List<TagLoggingSetting> tagLoggingSettings)
         {
-            DummyData.CreateData();
-            AddListAlarmSettingList(DummyData.dummyAlarms);
+            TagLoggingSettings.AddRange(tagLoggingSettings);
+            nextTagLoggingSettingID = TagLoggingSettings.Max(m => m.Id) + 1;
+        }
+        public void AddListTrendViewSettings(List<TrendViewSetting> trendViewSettings)
+        {
+            TrendViewSettings.AddRange(trendViewSettings);
+            nextTrendViewSettingID = TagLoggingSettings.Max(m => m.Id) + 1;
         }
 
         public void AddTagInfo(TagInfo tagInfo)
@@ -91,9 +102,29 @@ namespace SCADACreator
         {
             if (alarmPoint != null)
             {
-                alarmPoint.Id = nextAlarmPointID;
-                nextAlarmPointID++;
-                AlarmSettingList.Add(alarmPoint);
+                alarmPoint.Id = nextAlarmSettingID;
+                nextAlarmSettingID++;
+                AlarmSettings.Add(alarmPoint);
+            }
+        }
+
+        public void AddTagLoggingSetting(TagLoggingSetting tagLoggingSetting)
+        {
+            if (tagLoggingSetting != null)
+            {
+                tagLoggingSetting.Id = nextTagLoggingSettingID;
+                nextTagLoggingSettingID++;
+                TagLoggingSettings.Add(tagLoggingSetting);
+            }
+        }
+
+        public void AddTrendViewSetting(TrendViewSetting trendViewSetting)
+        {
+            if (trendViewSetting != null)
+            {
+                trendViewSetting.Id = nextTrendViewSettingID;
+                nextTrendViewSettingID++;
+                TrendViewSettings.Add(trendViewSetting);
             }
         }
 
@@ -101,7 +132,8 @@ namespace SCADACreator
         {
             TagInfos.Clear();
             ConnectDevices.Clear();
-            AlarmSettingList.Clear();
+            AlarmSettings.Clear();
+            TagLoggingSettings.Clear();
         }
     }
 

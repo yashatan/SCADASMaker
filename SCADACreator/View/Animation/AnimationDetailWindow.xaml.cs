@@ -57,8 +57,12 @@ namespace SCADACreator.View
         private void UpdateAnimationData()
         {
             txtName.Text = animation.Name;
-            cbbTag.SelectedItem = animation.Tag;
-            cbbTag.Text = animation.Tag.Name;
+            if (animation.Tag != null)
+            {
+                cbbTag.SelectedItem = animation.Tag;
+                cbbTag.Text = animation.Tag.Name;
+            }
+
             txtTagMaxValue.Text = animation.Tagvaluemax.ToString();
             txtTagMinValue.Text = animation.Tagvaluemin.ToString();
             this.cbbProperty.SelectedIndex = (int)animation.PropertyNeedChange;
@@ -136,9 +140,9 @@ namespace SCADACreator.View
                     else animation.PropertyBoolValueWhenTagInRange = false;
                     break;
                 case PropertyType.emBackgroundColor:
-                    animation.ColorWhenTagInRange.R = Convert.ToInt32(txtColorR.Text);
-                    animation.ColorWhenTagInRange.G = Convert.ToInt32(txtColorG.Text);
-                    animation.ColorWhenTagInRange.B = Convert.ToInt32(txtColorB.Text);
+                    animation.ColorWhenTagInRange.R = Convert.ToByte(txtColorR.Text);
+                    animation.ColorWhenTagInRange.G = Convert.ToByte(txtColorG.Text);
+                    animation.ColorWhenTagInRange.B = Convert.ToByte(txtColorB.Text);
                     break;
                 case PropertyType.emHeight: 
                     animation.PropertyValueWhenTagInRange = Convert.ToInt32(txtIntValue.Text);

@@ -107,6 +107,7 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -158,6 +159,9 @@
     <Compile Include="Model\DataProvider.cs" />
     <Compile Include="Model\ProjectInformation.cs" />
     <Compile Include="Model\SCADAStationConfiguration.cs" />
+    <Compile Include="Model\TagLoggingSetting.cs" />
+    <Compile Include="Model\TrendSetting.cs" />
+    <Compile Include="Model\TrendViewSetting.cs" />
     <Compile Include="TagInfo.cs">
       <DependentUpon>ModelData.tt</DependentUpon>
     </Compile>
@@ -169,6 +173,15 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="View\Trend\TrendViewSettingDetailWindow.xaml.cs">
+      <DependentUpon>TrendViewSettingDetailWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Trend\TrendViewSettingWindow .xaml.cs">
+      <DependentUpon>TrendViewSettingWindow .xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Trend\TagLoggingSettingWindow.xaml.cs">
+      <DependentUpon>TagLoggingSettingWindow.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -383,6 +396,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Trend\TrendViewSettingDetailWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Trend\TrendViewSettingWindow .xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Trend\TagLoggingSettingWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\rt2.png" />
@@ -459,6 +484,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -42,8 +42,12 @@
                           Click="MenuItemDevices_Click"></MenuItem>
                 <MenuItem Header="_Alarm Setting"
                           Click="MenuItemAlarmSetting_Click"></MenuItem>
-                <MenuItem Header="_Tag Logging"
-                          Click="MenuItemTagLoggingSetting_Click"></MenuItem>
+                <MenuItem Header="_Trend Setting">
+                    <MenuItem Header="_ Tag Logging"
+                              Click="MenuItemTagLoggingSetting_Click"></MenuItem>
+                    <MenuItem Header="_ Trend View Setting"
+                              Click="MenuItemTrendViewSetting_Click"></MenuItem>
+                </MenuItem>
                 <Separator />
                 <MenuItem Header="_Start SCADA"
                           Click="MenuItemStartSCADA_Click" />
