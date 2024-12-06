@@ -718,6 +718,8 @@ namespace SCADACreator
             mSCADAStationConfiguration.SetConnectDevices(SCADADataProvider.Instance.ConnectDevices);
             mSCADAStationConfiguration.SetTagInfos(SCADADataProvider.Instance.TagInfos);
             mSCADAStationConfiguration.SetAlarmSettings(SCADADataProvider.Instance.AlarmSettings);
+            mSCADAStationConfiguration.SetTagLoggingSettings(SCADADataProvider.Instance.TagLoggingSettings);
+            mSCADAStationConfiguration.SetTrendViewSettings(SCADADataProvider.Instance.TrendViewSettings);
             mSCADAStationConfiguration.ProjectInformation = (SCADADataProvider.Instance.ProjectInformation);
             mSCADAStationConfiguration.SetControlDatas(controlDatas);
 

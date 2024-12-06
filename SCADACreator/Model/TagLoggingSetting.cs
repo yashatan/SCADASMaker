@@ -10,6 +10,7 @@ namespace SCADACreator.Model
     {
         public TagLoggingSetting() {
             LoggingCycle = CycleType.em1Sec;
+            currentDuration = 0.0;
         }
         public int Id { get; set; }
         public string Name { get; set; }
@@ -28,5 +29,41 @@ namespace SCADACreator.Model
         }
 
         public CycleType LoggingCycle { get; set; }
+        public double currentDuration { get; set; }
+        public double GetTimeCycle()
+        {
+            double timetowait;
+            switch (LoggingCycle)
+            {
+                case CycleType.em1Sec:
+                    timetowait = 1.0;
+                    break;
+                case CycleType.em2Sec:
+                    timetowait = 2.0;
+                    break;
+                case CycleType.em5Sec:
+                    timetowait = 5.0;
+                    break;
+                case CycleType.em10Sec:
+                    timetowait = 10.0;
+                    break;
+                case CycleType.em1min:
+                    timetowait = 60.0;
+                    break;
+                case CycleType.em5min:
+                    timetowait = 60.0 * 5;
+                    break;
+                case CycleType.em10min:
+                    timetowait = 60.0 * 10;
+                    break;
+                case CycleType.em1hour:
+                    timetowait = 60.0 * 60;
+                    break;
+                default:
+                    timetowait = 60.0;
+                    break;
+            }
+            return timetowait;
+        }
     }
 }
