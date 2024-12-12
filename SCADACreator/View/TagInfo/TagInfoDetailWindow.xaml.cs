@@ -1,6 +1,8 @@
 ﻿using SCADACreator.Model;
+using SCADACreator.Utility;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +25,7 @@ namespace SCADACreator.View
     {
         private TagInfo currentTag;
         List<ConnectDevice> deviceAttachs = SCADADataProvider.Instance.ConnectDevices;
+        List<string> TagTypes = new List<string>() { "Bool", "Byte", "Short", "Int", "Real", "Double" };
         private event EventHandler<TagInfoEventArgs> _ApplyEvent;//event handle when confirm button clicked
         public event EventHandler<TagInfoEventArgs> ApplyEvent
         {
@@ -39,12 +42,14 @@ namespace SCADACreator.View
         {
             InitializeComponent();
             this.cbbDeviceAttach.ItemsSource = deviceAttachs;
+            this.cbbTagType.ItemsSource = TagTypes;
         }
 
         public TagInfoDetailWindow(TagInfo tagInfo)
         {
             InitializeComponent();
             this.cbbDeviceAttach.ItemsSource = deviceAttachs;
+            this.cbbTagType.ItemsSource = TagTypes;
             currentTag = tagInfo;
             UpdateData();
         }
@@ -53,9 +58,16 @@ namespace SCADACreator.View
         {
             txtName.Text = currentTag.Name;
             txtAddress.Text = currentTag.MemoryAddress;
-            if(currentTag.ConnectDevice != null)
+            txtNodeId.Text = currentTag.NodeId;
+            cbbTagType.SelectedIndex = (int) currentTag.Type;
+            txtBitPosition.Text = currentTag.BitPosition.ToString();
+            if (currentTag.ConnectDevice != null)
             {
                 cbbDeviceAttach.SelectedItem = currentTag.ConnectDevice;
+                if(currentTag.ConnectDevice.ConnectionType == (int)EnumDefinition.emConnectionType.emOPCUA)
+                {
+                    OPCGroup.Visibility = Visibility.Visible;
+                }
                 cbbDeviceAttach.Text = currentTag.ConnectDevice.Name;
             }
 
@@ -64,7 +76,13 @@ namespace SCADACreator.View
 
         private void cbbDeviceAttach_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            if ((cbbDeviceAttach.SelectedItem as ConnectDevice).ConnectionType == (int)EnumDefinition.emConnectionType.emOPCUA)
+            {
+                OPCGroup.Visibility = Visibility.Visible;
+            }
+            else {
+                OPCGroup.Visibility = Visibility.Collapsed;
+            }
         }
 
         private void CloseButton_Click(object sender, RoutedEventArgs e)
@@ -77,7 +95,9 @@ namespace SCADACreator.View
             currentTag.Name = txtName.Text;
             currentTag.MemoryAddress = txtAddress.Text;
             currentTag.ConnectDevice = cbbDeviceAttach.SelectedItem as ConnectDevice;
-
+            currentTag.Type= (TagInfo.TagType) cbbTagType.SelectedIndex;
+            currentTag.BitPosition = Convert.ToByte(txtBitPosition.Text);
+            currentTag.NodeId = txtNodeId.Text;
             if (_ApplyEvent != null)
             {
                 _ApplyEvent(this, new TagInfoEventArgs(currentTag));
@@ -93,5 +113,19 @@ namespace SCADACreator.View
                 TagInfo = tagInfo;
             }
         }
+
+        private void cbbTagType_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string currentTagType = (string)cbbTagType.SelectedItem;
+            switch (currentTagType)
+            {
+                case "Bool":
+                    BitPositionGroup.Visibility = Visibility.Visible; break;
+                default:
+                    BitPositionGroup.Visibility = Visibility.Collapsed;
+                    break;
+            }
+        }
     }
+
 }

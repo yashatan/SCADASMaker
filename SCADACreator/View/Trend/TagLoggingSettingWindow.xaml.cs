@@ -53,7 +53,10 @@ namespace SCADACreator.View
         {
             var comboBox = sender as ComboBox;
             var tagLoggingSetting = comboBox.DataContext as TagLoggingSetting;
-            comboBox.SelectedItem = (comboBox.ItemsSource as List<TagInfo>).FirstOrDefault(m => m.Id == tagLoggingSetting.Tag.Id);
+            if (tagLoggingSetting.Tag != null)
+            {
+                comboBox.SelectedItem = (comboBox.ItemsSource as List<TagInfo>).FirstOrDefault(m => m.Id == tagLoggingSetting.Tag.Id);
+            }
         }
     }
 

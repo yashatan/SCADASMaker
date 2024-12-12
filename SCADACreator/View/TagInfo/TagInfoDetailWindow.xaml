@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SCADACreator.View"
         mc:Ignorable="d"
+        xmlns:s="clr-namespace:SCADACreator"
         Title="TagInfoDetailWindow"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         WindowStartupLocation="CenterScreen"
@@ -67,6 +68,52 @@
                                    Margin="20 0 0 0"
                                    VerticalAlignment="Bottom"></TextBlock>
                         <TextBox x:Name="txtAddress"
+                                 FontSize="15"
+                                 MinWidth="150"
+                                 Margin="10 0 0 0"
+                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Height="40"
+                                x:Name="OPCGroup"
+                                Visibility="Collapsed"
+                                >
+                        <TextBlock Text="Node ID:"
+                                   FontSize="15"
+                                   Margin="20 0 0 0"
+                                   VerticalAlignment="Bottom"></TextBlock>
+                        <TextBox x:Name="txtNodeId"
+                                 FontSize="15"
+                                 MinWidth="150"
+                                 Margin="10 0 0 0"
+                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                Height="40">
+                        <TextBlock Text="Type:"
+                                   FontSize="15"
+                                   Margin="20 0 0 0"
+                                   VerticalAlignment="Bottom"></TextBlock>
+                        <ComboBox materialDesign:HintAssist.Hint="Type of tag"
+                                  materialDesign:HintAssist.HintOpacity=".26"
+                                  materialDesign:HintAssist.Foreground="Gray"
+                                  BorderBrush="Gray"
+                                  x:Name="cbbTagType"
+                                  IsEditable="False"
+                                  Width="100"
+                                  Margin="10 10 0 0"
+                                  SelectionChanged="cbbTagType_SelectionChanged"
+                                  FontSize="15"></ComboBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                x:Name="BitPositionGroup"
+                                Visibility="Collapsed"
+                                Height="40">
+                        <TextBlock Text="Bit Position:"
+                                   FontSize="15"
+                                   Margin="20 0 0 0"
+                                   VerticalAlignment="Bottom"></TextBlock>
+                        <s:NaturalNumberTextBox  x:Name="txtBitPosition"
                                  FontSize="15"
                                  MinWidth="150"
                                  Margin="10 0 0 0"

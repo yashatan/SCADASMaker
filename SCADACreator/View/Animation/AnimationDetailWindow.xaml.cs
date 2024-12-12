@@ -8,6 +8,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Markup.Localizer;
 using System.Windows.Media;
@@ -83,7 +84,18 @@ namespace SCADACreator.View
 
         private void txtColor_LostFocus(object sender, RoutedEventArgs e)
         {
+            Color c1 = new Color();
 
+            ColorRGB newColor = new ColorRGB(c1);
+            try
+            {
+                newColor.R = Convert.ToByte(txtColorR.Text);
+                newColor.G = Convert.ToByte(txtColorG.Text);
+                newColor.B = Convert.ToByte(txtColorB.Text);
+            }
+            catch { }
+            Brush bg = new SolidColorBrush(Color.FromRgb((byte)newColor.R, (byte)newColor.G, (byte)newColor.B));
+            btnBackground.Background = bg;
         }
 
         private void cbbProperty_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -161,6 +173,25 @@ namespace SCADACreator.View
             }
             this.Close();
 
+        }
+
+        private void btnBackground_Clicked(object sender, RoutedEventArgs e)
+        {
+            ColorDialog colorDialog = new ColorDialog();
+            if (colorDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                Brush bg = new SolidColorBrush(Color.FromRgb(colorDialog.Color.R, colorDialog.Color.G, colorDialog.Color.B));
+                btnBackground.Background = bg;
+                if (!(bg is null))
+                {
+                    Color c1 = ((SolidColorBrush)bg).Color;
+                    var colorRGB = new ColorRGB(c1);
+
+                    txtColorR.Text = colorRGB.R.ToString();
+                    txtColorG.Text = colorRGB.G.ToString();
+                    txtColorB.Text = colorRGB.B.ToString();
+                }
+            }
         }
     }
 }

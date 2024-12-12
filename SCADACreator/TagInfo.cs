@@ -14,12 +14,26 @@ namespace SCADACreator
 
     public partial class TagInfo
     {
+        public TagInfo()
+        {
+            Type = TagType.eBool;
+        }
         public int Id { get; set; }
         public string Name { get; set; }
         public string MemoryAddress { get; set; }
+        public string NodeId { get; set; }
         public int DeviceAttach { get; set; }
-        public string Type { get; set; }
-    
+        public enum TagType
+        {
+            eBool,
+            eByte,
+            eShort,
+            eInt,
+            eReal,
+            eDouble
+        }
+        public TagType Type { get; set; }
+        public byte BitPosition { get; set; }
         public virtual ConnectDevice ConnectDevice { get; set; }
     }
 }

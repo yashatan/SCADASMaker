@@ -25,7 +25,7 @@ namespace SCADACreator.View
     {
         private ItemEvent itemevent;
         List<string> eventTypes = new List<string>() { "Click", "Press", "Release" };
-        List<string> actionTypes = new List<string>() { "Set", "Reset" };
+        List<string> actionTypes = new List<string>() { "SetBit", "ResetBit", "SetValue" };
         List<TagInfo> tagsList = SCADADataProvider.Instance.TagInfos;
         private event EventHandler _ApplyEvent;//event handle when confirm button clicked
         public event EventHandler ApplyEvent
@@ -57,6 +57,7 @@ namespace SCADACreator.View
         private void UpdateItemEventData()
         {
             txtName.Text = itemevent.Name;
+            txtValue.Text = itemevent.Value.ToString();
             if(itemevent.Tag != null)
             {
                 cbbTag.SelectedItem = itemevent.Tag;
@@ -65,11 +66,6 @@ namespace SCADACreator.View
 
             cbbEventType.SelectedIndex = (int)itemevent.EventType;
             cbbActionType.SelectedIndex = (int)itemevent.ActionType;
-        }
-
-        private void cbbActionType_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
         }
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
@@ -82,12 +78,26 @@ namespace SCADACreator.View
             itemevent.Tag = cbbTag.SelectedItem as TagInfo;
             itemevent.EventType = (ItemEventType)cbbEventType.SelectedIndex;
             itemevent.ActionType = (ItemActiontype)cbbActionType.SelectedIndex;
+            itemevent.Value = Convert.ToInt32(txtValue.Text);
             if (_ApplyEvent != null)
             {
                 _ApplyEvent(this, new EventArgs());
             }
             this.Close();
 
+        }
+
+        private void cbbActionType_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string currentConnectionType = (string)cbbActionType.SelectedItem;
+            if(currentConnectionType == "SetValue")
+            {
+                ValueGroup.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                ValueGroup.Visibility = Visibility.Collapsed;
+            }
         }
     }
 }

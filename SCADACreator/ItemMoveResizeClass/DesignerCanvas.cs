@@ -131,7 +131,12 @@ namespace SCADACreator
 
                     }
                     var xmlStringnext = SerrializeControl();
-                    Clipboard.SetText(xmlStringnext);
+                    try
+                    {
+                        Clipboard.SetText(xmlStringnext);
+                    }
+                    catch (Exception ex) { }
+
                 }
             }
         }

@@ -62,6 +62,7 @@ namespace SCADACreator.View
             txtS7Slot.Text = deviceinfo.S7PLCSlot.ToString();
 
             txtModbusPort.Text = deviceinfo.ModbusPort.ToString();
+            txtModbusDeviceId.Text = deviceinfo.ModbusDeviceId.ToString();
             //txtOPCUAPassword.Text = deviceinfo.OPCUAUserPassword.ToString();
             //txtOPCUAUsername.Text = deviceinfo.OPCUAUserName.ToString();
         }
@@ -105,6 +106,7 @@ namespace SCADACreator.View
                     break;
                 case (int)EnumDefinition.emConnectionType.emTCP:
                     deviceinfo.ModbusPort = Int32.Parse(txtModbusPort.Text);
+                    deviceinfo.ModbusDeviceId = byte.Parse(txtModbusDeviceId.Text);
                     break;
                 case (int)EnumDefinition.emConnectionType.emOPCUA:
                     deviceinfo.OPCUAUserName = txtOPCUAUsername.Text;

@@ -45,4 +45,39 @@ namespace SCADACreator
             return regex.IsMatch(text);
         }
     }
+    public class NaturalNumberTextBox : TextBox
+    {
+        public NaturalNumberTextBox()
+        {
+            this.PreviewTextInput += NaturalNumberTextBox_PreviewTextInput;
+            DataObject.AddPastingHandler(this, NaturalNumberTextBox_Pasting);
+        }
+
+        private void NaturalNumberTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = !IsTextAllowed(this.Text + e.Text);
+        }
+
+        private void NaturalNumberTextBox_Pasting(object sender, DataObjectPastingEventArgs e)
+        {
+            if (e.DataObject.GetDataPresent(DataFormats.Text))
+            {
+                string text = (string)e.DataObject.GetData(DataFormats.Text);
+                if (!IsTextAllowed(text))
+                {
+                    e.CancelCommand();
+                }
+            }
+            else
+            {
+                e.CancelCommand();
+            }
+        }
+
+        private static bool IsTextAllowed(string text)
+        {
+            Regex regex = new Regex(@"^[0-9]+$"); // Chỉ cho phép số thập phân dương
+            return regex.IsMatch(text);
+        }
+    }
 }

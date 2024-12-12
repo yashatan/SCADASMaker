@@ -23,6 +23,7 @@ namespace SCADACreator.Utility
             data.ControlType = content.GetType().Name;
             data.X = Canvas.GetLeft(item);
             data.Y = Canvas.GetTop(item);
+            data.ZIndex = Canvas.GetZIndex(item);
             data.Width = content.ActualWidth;
             data.Height = content.ActualHeight;
             data.TagConnection = item.TagConnection;

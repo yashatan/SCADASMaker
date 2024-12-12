@@ -25,6 +25,8 @@ using SCADACreator.View.Alarm;
 using System.Diagnostics;
 using System.Data.SQLite;
 
+using Path = System.IO.Path;
+
 
 namespace SCADACreator
 {
@@ -419,6 +421,7 @@ namespace SCADACreator
                 pasteItem.ItemEvents = JsonSerializer.Deserialize<List<ItemEvent>>((string)itemElement.Element("ItemEvents"));
                 Canvas.SetLeft(pasteItem, (double)itemElement.Element("Left"));
                 Canvas.SetTop(pasteItem, (double)itemElement.Element("Top"));
+                Canvas.SetZIndex(pasteItem, (int)itemElement.Element("zIndex"));
                 MyDesignerCanvas.Children.Add(pasteItem);
             }
             SCADADataProvider.Instance.ProjectInformation = JsonSerializer.Deserialize<ProjectInformation>((string)parsedElement.Element("ProjectInformation"));
@@ -520,7 +523,7 @@ namespace SCADACreator
                 }
 
                 SaveFileDialog saveFileDialog = new SaveFileDialog();
-                saveFileDialog.InitialDirectory = System.IO.Path.GetDirectoryName(System.IO.Path.GetDirectoryName(SCADADataProvider.Instance.ProjectInformation.FilePath));
+                //saveFileDialog.InitialDirectory = System.IO.Path.GetDirectoryName(System.IO.Path.GetDirectoryName(SCADADataProvider.Instance.ProjectInformation.FilePath));
                 saveFileDialog.FileName = "untitled";
                 saveFileDialog.Filter = "JsonString (*.json)|*.json";
                 if (saveFileDialog.ShowDialog() == true)
@@ -561,6 +564,8 @@ namespace SCADACreator
                 try
                 {
                     DeSerrializeAllDesignerItems(jsonString);
+                    SCADADataProvider.Instance.ProjectInformation.FilePath = openFileDialog.FileName;
+                    SCADADataProvider.Instance.ProjectInformation.Name = Path.GetFileNameWithoutExtension(openFileDialog.FileName);
                     this.Title = SCADADataProvider.Instance.ProjectInformation.Name;
                 }
                 catch
@@ -699,7 +704,7 @@ namespace SCADACreator
         {
             // Use ProcessStartInfo class
             Process proc = new Process();
-            proc.StartInfo.FileName = "D:\\CaoHoc\\DeCuongLuanVan\\SCADAStationNetFrameWork\\SCADAStationNetFrameWork\\bin\\Debug\\SCADAStationNetFrameWork.exe"; //Need update
+            proc.StartInfo.FileName = "..\\..\\..\\..\\SCADAStation\\SCADAStationNetFrameWork\\bin\\Debug\\SCADAStationNetFrameWork.exe"; //Need update
             proc.StartInfo.UseShellExecute = true;
             proc.StartInfo.Verb = "runas";
             proc.StartInfo.Arguments = $"-f {filename}";
@@ -744,6 +749,7 @@ namespace SCADACreator
                 controlDatas.Add(controldata);
 
             }
+            controlDatas = controlDatas.OrderBy(m =>m.ZIndex).ToList();
             return controlDatas;
         }
         #endregion

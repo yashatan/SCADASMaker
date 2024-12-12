@@ -134,6 +134,7 @@ namespace SCADACreator
             ConnectDevices.Clear();
             AlarmSettings.Clear();
             TagLoggingSettings.Clear();
+            TrendViewSettings.Clear();
         }
     }
 
