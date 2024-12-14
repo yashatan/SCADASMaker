@@ -42,6 +42,12 @@
                           Click="MenuItemDevices_Click"></MenuItem>
                 <MenuItem Header="_Alarm Setting"
                           Click="MenuItemAlarmSetting_Click"></MenuItem>
+                <MenuItem Header="Page Setting">
+                    <MenuItem Header="_ Controls Page"
+                              Click="MenuItemControlsPageSetting_Click"></MenuItem>
+                    <MenuItem Header="_ Table Page"
+                              Click="MenuItemTablePageSetting_Click"></MenuItem>
+                </MenuItem>
                 <MenuItem Header="_Trend Setting">
                     <MenuItem Header="_ Tag Logging"
                               Click="MenuItemTagLoggingSetting_Click"></MenuItem>
@@ -119,16 +125,17 @@
                     Margin="-10,0,0,0"
                     Height="65"
                     Width="65"
+                    Visibility="Collapsed"
                     Click="TestButton">
                 <materialDesign:PackIcon Kind="TestTube"
                                          Height="40"
                                          Width="40" />
-                
             </Button>
             <Button ToolTip="Send to back"
                     Margin="-10,0,0,0"
                     Height="65"
                     Width="65"
+                    Visibility="Collapsed"
                     Click="TestButton2">
                 <materialDesign:PackIcon Kind="TestTubeEmpty"
                                          Height="40"

@@ -157,6 +157,7 @@
     </Compile>
     <Compile Include="Model\AlarmSetting.cs" />
     <Compile Include="Model\DataProvider.cs" />
+    <Compile Include="Model\DesignPage.cs" />
     <Compile Include="Model\ProjectInformation.cs" />
     <Compile Include="Model\SCADAPage.cs" />
     <Compile Include="Model\SCADAStationConfiguration.cs" />
