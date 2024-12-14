@@ -16,13 +16,6 @@ namespace SCADACreator
             get { return projectInformation; }
             set { projectInformation = value; }
         }
-
-        List<ControlData> controlDatas;
-        public List<ControlData> ControlDatas
-        {
-            get { return controlDatas; }
-            set { controlDatas = value; }
-        }
         List<TagInfo> tagInfos;
         public List<TagInfo> TagInfos
         {
@@ -63,7 +56,6 @@ namespace SCADACreator
         {
 
         }
-        public void SetControlDatas(List<ControlData> controlDatas) { this.ControlDatas = controlDatas; }
         public void SetTagInfos(List<TagInfo> tagInfos) { this.TagInfos = tagInfos; }
         public void SetConnectDevices(List<ConnectDevice> connectDevices) { this.ConnectDevices = connectDevices; }
         public void SetAlarmSettings(List<AlarmSetting> alarmSettings) { this.AlarmSettings = alarmSettings; }

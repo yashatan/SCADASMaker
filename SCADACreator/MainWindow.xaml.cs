@@ -47,6 +47,7 @@ namespace SCADACreator
             if (itemEventListPage == null) itemEventListPage = new ItemEventListPage();
             ItemEventFrame.Content = itemEventListPage;
         }
+        #region Design View
         public void SetCurrentItemForPage(DesignerItem designerItem)
         {
             propertyPage.SetCurrentItem(designerItem);
@@ -66,6 +67,8 @@ namespace SCADACreator
                 item.Height = 65;
             }
         }
+        #endregion
+
         private string SerializeAllDesignerItems()
         {
             var options = new JsonSerializerOptions
@@ -311,6 +314,15 @@ namespace SCADACreator
             TrendViewSettingWindow trendViewSettingWindow = new TrendViewSettingWindow();
             trendViewSettingWindow.Show();
         }
+        private void MenuItemTablePageSetting_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void MenuItemControlsPageSetting_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
         #endregion
         #region ToolBar Event
         private void OnClickBringToFront(object sender, RoutedEventArgs e)
@@ -387,9 +399,14 @@ namespace SCADACreator
             }
             else
             {
-                var controlDatas = GenerateControlDataFromCanvas(MyDesignerCanvas);
+                foreach (SCADAPage page in SCADADataProvider.Instance.SCADAPages)
+                {
+                    var controldatas = GenerateControlDataFromSCADAPages(page);
+                    page.ControlDatas = controldatas;
+                }
+                //var controlDatas = GenerateControlDataFromCanvas(MyDesignerCanvas);
                 string filename = $"{System.IO.Path.GetDirectoryName(SCADADataProvider.Instance.ProjectInformation.FilePath)}\\{SCADADataProvider.Instance.ProjectInformation.Name}Station.json";
-                CreateSCADAStationFile(controlDatas, filename);
+                CreateSCADAStationFile(filename);
                 if (!File.Exists(SCADADataProvider.Instance.ProjectInformation.GetDBPath()))
                 {
                     var sourceDbPath = ".\\..\\..\\DBOrigin\\scadastationorigin.db"; // Đường dẫn tới cơ sở dữ liệu gốc
@@ -409,7 +426,7 @@ namespace SCADACreator
             proc.StartInfo.Arguments = $"-f {filename}";
             proc.Start();
         }
-        private void CreateSCADAStationFile(List<ControlData> controlDatas, string filename)
+        private void CreateSCADAStationFile(string filename)
         {
             var options = new JsonSerializerOptions
             {
@@ -424,7 +441,7 @@ namespace SCADACreator
             mSCADAStationConfiguration.SetTagLoggingSettings(SCADADataProvider.Instance.TagLoggingSettings);
             mSCADAStationConfiguration.SetTrendViewSettings(SCADADataProvider.Instance.TrendViewSettings);
             mSCADAStationConfiguration.ProjectInformation = (SCADADataProvider.Instance.ProjectInformation);
-            mSCADAStationConfiguration.SetControlDatas(controlDatas);
+            mSCADAStationConfiguration.SetSCADAPages(SCADADataProvider.Instance.SCADAPages);
             string jsonSCADAStationConfiguration = JsonSerializer.Serialize(mSCADAStationConfiguration, options);//seriallize thành chuỗi json
             SaveFile(filename, jsonSCADAStationConfiguration);
         }
@@ -437,6 +454,18 @@ namespace SCADACreator
             UIElement[] canvasControl = designerCanvas.Children.Cast<UIElement>().ToArray();
             var controlDatas = new List<ControlData>();
             foreach (SCADAItem item in canvasControl)
+            {
+                ControlData controldata = ControlDataEncoder.Convert(item);
+                controlDatas.Add(controldata);
+            }
+            controlDatas = controlDatas.OrderBy(m => m.ZIndex).ToList();
+            return controlDatas;
+        }
+        private List<ControlData> GenerateControlDataFromSCADAPages(SCADAPage page)
+        {
+            //UIElement[] canvasControl = designerCanvas.Children.Cast<UIElement>().ToArray();
+            var controlDatas = new List<ControlData>();
+            foreach (SCADAItem item in page.SCADAItems)
             {
                 ControlData controldata = ControlDataEncoder.Convert(item);
                 controlDatas.Add(controldata);
@@ -470,43 +499,11 @@ namespace SCADACreator
         #region TestZone
         private void TestButton(object sender, RoutedEventArgs e)
         {
-            SCADAPage testPage = new SCADAPage("TestPage");
-            SCADAItem Item1 = new SCADAItem();
-            Image imageMotor1 = new Image();
-            imageMotor1.MinWidth = 50;
-            imageMotor1.MinHeight = 50;
-            imageMotor1.Source = new BitmapImage(new Uri("../Images/pump_side_green.gif", UriKind.Relative));
-            imageMotor1.IsHitTestVisible = false;
-            Item1.Content = imageMotor1;
-            setItemsize(Item1, imageMotor1);
-            AnimationSense animation1 = new AnimationSense();
-            animation1.Name = "testanmiationList1";
-            animation1.Tagvaluemax = 0;
-            animation1.Tagvaluemin = 0;
-            animation1.PropertyNeedChange = AnimationSense.PropertyType.emIsVisible;
-            animation1.PropertyBoolValueWhenTagInRange = false;
-            AnimationSense animation1_2 = new AnimationSense();
-            animation1_2.Name = "testanmiationList1_2";
-            animation1_2.Tagvaluemax = 1;
-            animation1_2.Tagvaluemin = 1;
-            animation1_2.PropertyNeedChange = AnimationSense.PropertyType.emIsVisible;
-            animation1_2.PropertyBoolValueWhenTagInRange = true;
-            Item1.AnimationSenses.Add(animation1);
-            Item1.AnimationSenses.Add(animation1_2);
-            Canvas.SetLeft(Item1, 50);
-            Canvas.SetTop(Item1, 50);
-            testPage.SCADAItems.Add(Item1);
-            SCADADataProvider.Instance.AddSCADAPage(testPage);
+
         }
         private void TestButton2(object sender, RoutedEventArgs e)
         {
-            SCADAPage pagechange = SCADADataProvider.Instance.SCADAPages.Where(x => x.Name != currentPage.Name).FirstOrDefault();
-            ChangePage(pagechange);
-            //foreach (SCADAItem item in MyDesignerCanvas.Children)
-            //{
-            //    SCADADataProvider.Instance.SCADAPages.FirstOrDefault().SCADAItems.Add(item);
-            //}
-            //SCADADataProvider.Instance.ProjectInformation.MainPageId = SCADADataProvider.Instance.SCADAPages.FirstOrDefault().Id;
+
         }
         private void AddControButton_Click(object sender, RoutedEventArgs e)
         {
@@ -779,8 +776,7 @@ namespace SCADACreator
             MyDesignerCanvas.Children.Add(Item9);
         }
         #endregion
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
-        {
-        }
+
+
     }
 }

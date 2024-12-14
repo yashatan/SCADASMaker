@@ -137,7 +137,7 @@ namespace SCADACreator
             mSCADAStationConfiguration.SetConnectDevices(SCADADataProvider.Instance.ConnectDevices);
             mSCADAStationConfiguration.SetTagInfos(SCADADataProvider.Instance.TagInfos);
             mSCADAStationConfiguration.SetAlarmSettings(SCADADataProvider.Instance.AlarmSettings);
-            mSCADAStationConfiguration.SetControlDatas(controlDatas);
+            //mSCADAStationConfiguration.SetControlDatas(controlDatas);
 
             string jsonSCADAStationConfiguration = JsonSerializer.Serialize(mSCADAStationConfiguration, options);//seriallize thành chuỗi json
 
@@ -162,7 +162,7 @@ namespace SCADACreator
             mSCADAStationConfiguration.SetConnectDevices(SCADADataProvider.Instance.ConnectDevices);
             mSCADAStationConfiguration.SetTagInfos(SCADADataProvider.Instance.TagInfos);
             mSCADAStationConfiguration.SetAlarmSettings(SCADADataProvider.Instance.AlarmSettings);
-            mSCADAStationConfiguration.SetControlDatas(controlDatas);
+            //mSCADAStationConfiguration.SetControlDatas(controlDatas);
 
             string jsonSCADAStationConfiguration = JsonSerializer.Serialize(mSCADAStationConfiguration, options);//seriallize thành chuỗi json
             string filename = AppDomain.CurrentDomain.BaseDirectory + $"{projectInformation.Name}.json";
