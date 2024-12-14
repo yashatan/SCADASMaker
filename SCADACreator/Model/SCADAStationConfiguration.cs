@@ -53,6 +53,12 @@ namespace SCADACreator
             get { return trendViewSettings; }
             set { trendViewSettings = value; }
         }
+        List<SCADAPage> scadaPages;
+        public List<SCADAPage> SCADAPages
+        {
+            get { return scadaPages; }
+            set { scadaPages = value; }
+        }
         public SCADAStationConfiguration()
         {
 
@@ -63,5 +69,6 @@ namespace SCADACreator
         public void SetAlarmSettings(List<AlarmSetting> alarmSettings) { this.AlarmSettings = alarmSettings; }
         public void SetTagLoggingSettings(List<TagLoggingSetting> tagLoggingSettings) { this.TagLoggingSettings = tagLoggingSettings; }
         public void SetTrendViewSettings(List<TrendViewSetting> trendViewSettings) { this.TrendViewSettings = trendViewSettings; }
+        public void SetSCADAPages(List<SCADAPage> scadaPages) { this.SCADAPages = scadaPages; }
     }
 }

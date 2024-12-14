@@ -17,6 +17,7 @@ namespace SCADACreator
         public List<AlarmSetting> AlarmSettings; 
         public List<TagLoggingSetting> TagLoggingSettings; 
         public List<TrendViewSetting> TrendViewSettings; 
+        public List<SCADAPage> SCADAPages; 
         public ProjectInformation ProjectInformation;
 
         private static SCADADataProvider instance;
@@ -25,6 +26,7 @@ namespace SCADACreator
         private int nextAlarmSettingID;
         private int nextTagLoggingSettingID;
         private int nextTrendViewSettingID;
+        private int nextSCADAPageID;
         // Private constructor to prevent instantiation
         private SCADADataProvider()
         {
@@ -34,6 +36,8 @@ namespace SCADACreator
             AlarmSettings = new List<AlarmSetting>();
             TagLoggingSettings = new List<TagLoggingSetting>();
             TrendViewSettings = new List<TrendViewSetting>();
+            SCADAPages = new List<SCADAPage>();
+            AddSCADAPage(new SCADAPage("MainPage"));
             //
         }
 
@@ -77,6 +81,12 @@ namespace SCADACreator
         {
             TrendViewSettings.AddRange(trendViewSettings);
             nextTrendViewSettingID = TagLoggingSettings.Max(m => m.Id) + 1;
+        }
+        public void AddListSCADAPages(List<SCADAPage> scadaPages)
+        {
+            SCADAPages.Clear();
+            SCADAPages.AddRange(scadaPages);
+            nextSCADAPageID = SCADAPages.Max(m => m.Id) + 1;
         }
 
         public void AddTagInfo(TagInfo tagInfo)
@@ -127,7 +137,15 @@ namespace SCADACreator
                 TrendViewSettings.Add(trendViewSetting);
             }
         }
-
+        public void AddSCADAPage(SCADAPage scadaPage)
+        {
+            if (scadaPage != null)
+            {
+                scadaPage.Id = nextTrendViewSettingID;
+                nextTrendViewSettingID++;
+                SCADAPages.Add(scadaPage);
+            }
+        }
         public void Clear()
         {
             TagInfos.Clear();
@@ -135,6 +153,8 @@ namespace SCADACreator
             AlarmSettings.Clear();
             TagLoggingSettings.Clear();
             TrendViewSettings.Clear();
+            SCADAPages.Clear();
+            AddSCADAPage(new SCADAPage("MainPage"));
         }
     }
 

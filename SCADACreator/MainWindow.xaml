@@ -115,6 +115,25 @@
                                          Height="40"
                                          Width="40" />
             </Button>
+            <Button ToolTip="Send to back"
+                    Margin="-10,0,0,0"
+                    Height="65"
+                    Width="65"
+                    Click="TestButton">
+                <materialDesign:PackIcon Kind="TestTube"
+                                         Height="40"
+                                         Width="40" />
+                
+            </Button>
+            <Button ToolTip="Send to back"
+                    Margin="-10,0,0,0"
+                    Height="65"
+                    Width="65"
+                    Click="TestButton2">
+                <materialDesign:PackIcon Kind="TestTubeEmpty"
+                                         Height="40"
+                                         Width="40" />
+            </Button>
         </ToolBar>
         <Grid Margin="0,5,0,0">
             <Grid.ColumnDefinitions>
