@@ -89,6 +89,7 @@
                              LostFocus="txtContentText_LostFocus"
                              TextChanged="txtContentText_TextChanged"
                              FontSize="15"
+                             Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                              Margin="10 0 0 0" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">

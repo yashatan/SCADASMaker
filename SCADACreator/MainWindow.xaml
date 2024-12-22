@@ -55,6 +55,8 @@
                               Click="MenuItemTrendViewSetting_Click"></MenuItem>
                 </MenuItem>
                 <Separator />
+                <MenuItem Header="_SCADA Server Path"
+                          Click="MenuItemSCADAServerPathSetting_Click"></MenuItem>
                 <MenuItem Header="_Start SCADA"
                           Click="MenuItemStartSCADA_Click" />
             </MenuItem>
@@ -112,7 +114,7 @@
                            Source="Images/SendToBack.png" />
                 </Button.Content>
             </Button>
-            <Button ToolTip="Send to back"
+            <Button ToolTip="Run SCADA"
                     Margin="-10,0,0,0"
                     Height="65"
                     Width="65"

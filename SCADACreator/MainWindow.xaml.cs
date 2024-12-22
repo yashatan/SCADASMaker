@@ -323,6 +323,11 @@ namespace SCADACreator
         {
 
         }
+
+        private void MenuItemSCADAServerPathSetting_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
         #endregion
         #region ToolBar Event
         private void OnClickBringToFront(object sender, RoutedEventArgs e)
@@ -787,6 +792,7 @@ namespace SCADACreator
             MyDesignerCanvas.Children.Add(Item8);
             MyDesignerCanvas.Children.Add(Item9);
         }
+
         #endregion
 
 
