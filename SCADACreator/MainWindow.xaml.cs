@@ -37,6 +37,7 @@ namespace SCADACreator
             Loaded += MainWindow_Loaded;
             SCADADataProvider.Instance.ProjectInformation = new ProjectInformation();
             Title = $"SCADA Creator - {SCADADataProvider.Instance.ProjectInformation.Name}";
+            LoadSCADAServerPATH();
         }
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
@@ -324,9 +325,18 @@ namespace SCADACreator
 
         }
 
+        private string SCADAServerPath;
         private void MenuItemSCADAServerPathSetting_Click(object sender, RoutedEventArgs e)
         {
+            SettingSCADAServerWindow settingSCADAPath = new SettingSCADAServerWindow(SCADAServerPath);
+            settingSCADAPath.ApplyEvent += SettingSCADAPath_ApplyEvent;
+            settingSCADAPath.ShowDialog();
+        }
 
+        private void SettingSCADAPath_ApplyEvent(object sender, StringEventArgs e)
+        {
+            SCADAServerPath = e.ServerPath;
+            SaveSCADAServerPATH();
         }
         #endregion
         #region ToolBar Event
@@ -409,7 +419,7 @@ namespace SCADACreator
                 CreateSCADAStationFile(SCADAPages, filename);
                 if (!File.Exists(SCADADataProvider.Instance.ProjectInformation.GetDBPath()))
                 {
-                    var sourceDbPath = ".\\..\\..\\DBOrigin\\scadastationorigin.db"; // Đường dẫn tới cơ sở dữ liệu gốc
+                    var sourceDbPath = ".\\DBOrigin\\scadastationorigin.db"; // Đường dẫn tới cơ sở dữ liệu gốc
                     var newDbPath = SCADADataProvider.Instance.ProjectInformation.GetDBPath();
                     File.Copy(sourceDbPath, newDbPath);
                 }
@@ -420,7 +430,7 @@ namespace SCADACreator
         {
             // Use ProcessStartInfo class
             Process proc = new Process();
-            proc.StartInfo.FileName = "..\\..\\..\\..\\SCADAStation\\SCADAStationNetFrameWork\\bin\\Debug\\SCADAStationNetFrameWork.exe"; //Need update
+            proc.StartInfo.FileName = SCADAServerPath; //Need update
             proc.StartInfo.UseShellExecute = true;
             proc.StartInfo.Verb = "runas";
             proc.StartInfo.Arguments = $"-f {filename}";
@@ -510,6 +520,19 @@ namespace SCADACreator
                 currentPage.SCADAItems.Add(item);
             }
             LoadSCADAPage(loadpage);
+        }
+
+        void LoadSCADAServerPATH()
+        {
+            string filePath = "DataProvider\\SCADAServerPATH.txt";
+            SCADAServerPath = File.ReadAllText(filePath);
+        }
+
+        void SaveSCADAServerPATH()
+        {
+            string filePath = "DataProvider\\SCADAServerPATH.txt";
+            File.WriteAllText(filePath, SCADAServerPath);
+
         }
         #endregion
         #region TestZone

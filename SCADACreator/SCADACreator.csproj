@@ -176,6 +176,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="View\SettingSCADAServerWindow.xaml.cs">
+      <DependentUpon>SettingSCADAServerWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Trend\TrendViewSettingDetailWindow.xaml.cs">
       <DependentUpon>TrendViewSettingDetailWindow.xaml</DependentUpon>
     </Compile>
@@ -263,6 +266,9 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelData.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="DBOrigin\scadastationorigin.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="ModelData.edmx.diagram">
       <DependentUpon>ModelData.edmx</DependentUpon>
     </None>
@@ -386,6 +392,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\SettingSCADAServerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\TagInfo\TagInfoDetailWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -472,6 +482,9 @@
     <Resource Include="Images\BringToFront.png" />
     <Resource Include="Images\SendToBack.png" />
     <Resource Include="Images\plc.png" />
+    <Content Include="DataProvider\SCADAServerPATH.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="ModelData.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ModelData.Context.cs</LastGenOutput>

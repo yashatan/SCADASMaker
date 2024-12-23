@@ -1,0 +1,1 @@
+﻿..\..\..\..\SCADAStation\SCADAStationNetFrameWork\bin\Debug\SCADAStationNetFrameWork.exe
