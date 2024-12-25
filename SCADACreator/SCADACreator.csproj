@@ -176,6 +176,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="View\PageSetting\PagesSettingWindow.xaml.cs">
+      <DependentUpon>PagesSettingWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\SettingSCADAServerWindow.xaml.cs">
       <DependentUpon>SettingSCADAServerWindow.xaml</DependentUpon>
     </Compile>
@@ -385,6 +388,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ItemEvent\ItemEventListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PageSetting\PagesSettingWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

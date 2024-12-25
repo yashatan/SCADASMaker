@@ -104,8 +104,7 @@ namespace SCADACreator
                                   new XElement("TagConnection", tagconnectionjson)
                                   ),
                       new XElement("Id", page.Id),
-                      new XElement("Name", page.Name),
-                      new XElement("PageType", page.PageType)
+                      new XElement("Name", page.Name)
                        )
                   );
             return serializedItems.ToString();
@@ -149,7 +148,6 @@ namespace SCADACreator
                 DesignPage page = new DesignPage();
                 page.Id = (int)pageElement.Element("Id");
                 page.Name = (string)pageElement.Element("Name");
-                page.PageType = (int)pageElement.Element("PageType");
                 foreach (var itemElement in pageElement.Elements("SCADAItem"))
                 {
                     SCADAItem scadaItem = new SCADAItem();
@@ -167,7 +165,7 @@ namespace SCADACreator
                 }
                 if (page.Id == SCADADataProvider.Instance.ProjectInformation.MainPageId)
                 {
-                    LoadSCADAPage(page);
+                    LoadDesignPage(page);
                 }
                 designPages.Add(page);
             }
@@ -322,7 +320,15 @@ namespace SCADACreator
 
         private void MenuItemControlsPageSetting_Click(object sender, RoutedEventArgs e)
         {
+            PagesSettingWindow pagesSettingWindow = new PagesSettingWindow();
+            pagesSettingWindow.OpenScreen += PagesSettingWindow_OpenScreen;
+            pagesSettingWindow.Show();
+        }
 
+        private void PagesSettingWindow_OpenScreen(object sender, IntEventArgs e)
+        {
+            var page = SCADADataProvider.Instance.DesignPages.First(x => x.Id == e.Value);
+            ChangePage(page);
         }
 
         private string SCADAServerPath;
@@ -493,7 +499,7 @@ namespace SCADACreator
                 var controldatas = GenerateControlDataFromSCADAPages(page);
                 scadaPage.Id = page.Id;
                 scadaPage.Name = page.Name;
-                scadaPage.PageType = page.PageType;
+                //scadaPage.PageType = page.PageType;
                 scadaPage.ControlDatas = controldatas;
                 scadaPages.Add(scadaPage);
             }
@@ -502,7 +508,7 @@ namespace SCADACreator
         #endregion
         #region MultiPage
         private DesignPage currentPage;
-        void LoadSCADAPage(DesignPage page)
+        void LoadDesignPage(DesignPage page)
         {
             var SCADAItems = page.SCADAItems;
             MyDesignerCanvas.Children.Clear();
@@ -519,7 +525,7 @@ namespace SCADACreator
             {
                 currentPage.SCADAItems.Add(item);
             }
-            LoadSCADAPage(loadpage);
+            LoadDesignPage(loadpage);
         }
 
         void LoadSCADAServerPATH()

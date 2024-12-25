@@ -141,8 +141,8 @@ namespace SCADACreator
         {
             if (designPage != null)
             {
-                designPage.Id = nextTrendViewSettingID;
-                nextTrendViewSettingID++;
+                designPage.Id = nextDesignPageID;
+                nextDesignPageID++;
                 DesignPages.Add(designPage);
             }
         }

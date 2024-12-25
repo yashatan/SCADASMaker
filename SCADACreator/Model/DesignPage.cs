@@ -21,7 +21,8 @@ namespace SCADACreator
             Name = name;
         }
         public int Id { get; set; }
-        public int PageType { get; set; }
         public string Name { get; set; }
+        public bool IsMainPage { get { return (Id == SCADADataProvider.Instance.ProjectInformation.MainPageId); } }
+        public bool IsButtonEnabled => !IsMainPage;
     }
 }
