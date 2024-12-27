@@ -182,6 +182,12 @@ namespace SCADACreator
         }
         private void SaveProject()
         {
+            //Save current Page
+            currentPage.SCADAItems.Clear();
+            foreach (SCADAItem item in MyDesignerCanvas.Children)
+            {
+                currentPage.SCADAItems.Add(item);
+            }
             var savestring = SerializeAllDesignerItems();
             if (SCADADataProvider.Instance.ProjectInformation.IsNewProject)
             {
