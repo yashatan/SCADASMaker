@@ -12,7 +12,7 @@
                 MinWidth="45"
                 Height="auto">
             <TextBlock Text="Button"
-                       HorizontalAlignment="Center"
+                       HorizontalAlignment="Stretch"
                        VerticalAlignment="Stretch"></TextBlock>
         </Button>
         <TextBlock IsHitTestVisible="False"
