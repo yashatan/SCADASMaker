@@ -23,10 +23,11 @@ namespace SCADACreator.View
     /// </summary>
     public partial class ItemEventDetailWindow : Window
     {
-        private ItemEvent itemevent;
+        private ItemEvent currentItemEvent;
         List<string> eventTypes = new List<string>() { "Click", "Press", "Release" };
-        List<string> actionTypes = new List<string>() { "SetBit", "ResetBit", "SetValue" };
+        List<string> actionTypes = new List<string>() { "SetBit", "ResetBit", "SetValue", "OpenScreen" };
         List<TagInfo> tagsList = SCADADataProvider.Instance.TagInfos;
+        List<DesignPage> pageList = SCADADataProvider.Instance.DesignPages;
         private event EventHandler _ApplyEvent;//event handle when confirm button clicked
         public event EventHandler ApplyEvent
         {
@@ -47,25 +48,40 @@ namespace SCADACreator.View
         public ItemEventDetailWindow(ItemEvent itemevent)
         {
             InitializeComponent();
-            this.itemevent = itemevent;
+            this.currentItemEvent = itemevent;
             this.cbbEventType.ItemsSource = eventTypes;
             this.cbbActionType.ItemsSource = actionTypes;
             this.cbbTag.ItemsSource = tagsList;
+            this.cbbPage.ItemsSource = pageList;
             UpdateItemEventData();
         }
 
         private void UpdateItemEventData()
         {
-            txtName.Text = itemevent.Name;
-            txtValue.Text = itemevent.Value.ToString();
-            if(itemevent.Tag != null)
+            txtName.Text = currentItemEvent.Name;
+            txtValue.Text = currentItemEvent.Value.ToString();
+            if(currentItemEvent.Tag != null)
             {
-                cbbTag.SelectedItem = itemevent.Tag;
-                cbbTag.Text = itemevent.Tag.Name;
+                cbbTag.SelectedItem = currentItemEvent.Tag;
+                cbbTag.Text = currentItemEvent.Tag.Name;
             }
-
-            cbbEventType.SelectedIndex = (int)itemevent.EventType;
-            cbbActionType.SelectedIndex = (int)itemevent.ActionType;
+            if (pageList.Any(p=>p.Id == currentItemEvent.PageID))
+            {
+                cbbPage.SelectedItem = pageList.FirstOrDefault(p=>p.Id == currentItemEvent.PageID);
+                cbbPage.Text = pageList.FirstOrDefault(p => p.Id == currentItemEvent.PageID).Name;
+            }
+            cbbEventType.SelectedIndex = (int)currentItemEvent.EventType;
+            cbbActionType.SelectedIndex = (int)currentItemEvent.ActionType;
+            if (currentItemEvent.ActionType == ItemEvent.ItemActiontype.emOpenScreen)
+            {
+                ScreenGroup.Visibility = Visibility.Visible;
+                TagGroup.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                ScreenGroup.Visibility= Visibility.Collapsed;
+                TagGroup.Visibility = Visibility.Visible;
+            }
         }
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
@@ -74,11 +90,12 @@ namespace SCADACreator.View
 
         private void ApplyButton_Click(object sender, RoutedEventArgs e)
         {
-            itemevent.Name = txtName.Text;
-            itemevent.Tag = cbbTag.SelectedItem as TagInfo;
-            itemevent.EventType = (ItemEventType)cbbEventType.SelectedIndex;
-            itemevent.ActionType = (ItemActiontype)cbbActionType.SelectedIndex;
-            itemevent.Value = Convert.ToInt32(txtValue.Text);
+            currentItemEvent.Name = txtName.Text;
+            currentItemEvent.Tag = cbbTag.SelectedItem as TagInfo;
+            currentItemEvent.PageID = (cbbPage.SelectedItem as DesignPage).Id;
+            currentItemEvent.EventType = (ItemEventType)cbbEventType.SelectedIndex;
+            currentItemEvent.ActionType = (ItemActiontype)cbbActionType.SelectedIndex;
+            currentItemEvent.Value = Convert.ToInt32(txtValue.Text);
             if (_ApplyEvent != null)
             {
                 _ApplyEvent(this, new EventArgs());
@@ -97,6 +114,16 @@ namespace SCADACreator.View
             else
             {
                 ValueGroup.Visibility = Visibility.Collapsed;
+            }
+            if (currentConnectionType == "OpenScreen")
+            {
+                ScreenGroup.Visibility = Visibility.Visible;
+                TagGroup.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                ScreenGroup.Visibility = Visibility.Collapsed;
+                TagGroup.Visibility = Visibility.Visible;
             }
         }
     }

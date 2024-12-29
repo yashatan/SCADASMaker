@@ -44,23 +44,6 @@
                     </StackPanel>
                     <StackPanel Orientation="Horizontal"
                                 Height="40">
-                        <TextBlock Text="Tag:"
-                                   FontSize="15"
-                                   Margin="20 0 0 0"
-                                   VerticalAlignment="Bottom"></TextBlock>
-                        <ComboBox materialDesign:HintAssist.Hint="Tag"
-                                  materialDesign:HintAssist.HintOpacity=".26"
-                                  materialDesign:HintAssist.Foreground="Gray"
-                                  BorderBrush="Gray"
-                                  x:Name="cbbTag"
-                                  DisplayMemberPath="Name"
-                                  IsEditable="True"
-                                  MinWidth="130"
-                                  Margin="10 10 0 0"
-                                  FontSize="15"></ComboBox>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal"
-                                Height="40">
                         <TextBlock Text="Event:"
                                    FontSize="15"
                                    Margin="20 0 0 0"
@@ -109,6 +92,42 @@
                                           FontSize="15"
                                           Margin="10 0 0 0"
                                           Style="{StaticResource MaterialDesignFloatingHintTextBox}"></s:DecimalTextBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                x:Name="TagGroup"
+                                Height="40">
+                        <TextBlock Text="Tag:"
+                                   FontSize="15"
+                                   Margin="20 0 0 0"
+                                   VerticalAlignment="Bottom"></TextBlock>
+                        <ComboBox materialDesign:HintAssist.Hint="Tag"
+                                  materialDesign:HintAssist.HintOpacity=".26"
+                                  materialDesign:HintAssist.Foreground="Gray"
+                                  BorderBrush="Gray"
+                                  x:Name="cbbTag"
+                                  DisplayMemberPath="Name"
+                                  IsEditable="True"
+                                  MinWidth="130"
+                                  Margin="10 10 0 0"
+                                  FontSize="15"></ComboBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal"
+                                x:Name="ScreenGroup"
+                                Height="40">
+                        <TextBlock Text="Page:"
+                                   FontSize="15"
+                                   Margin="20 0 0 0"
+                                   VerticalAlignment="Bottom"></TextBlock>
+                        <ComboBox materialDesign:HintAssist.Hint="Page"
+                                  materialDesign:HintAssist.HintOpacity=".26"
+                                  materialDesign:HintAssist.Foreground="Gray"
+                                  BorderBrush="Gray"
+                                  x:Name="cbbPage"
+                                  DisplayMemberPath="Name"
+                                  IsEditable="True"
+                                  MinWidth="130"
+                                  Margin="10 10 0 0"
+                                  FontSize="15"></ComboBox>
                     </StackPanel>
                 </StackPanel>
             </Grid>

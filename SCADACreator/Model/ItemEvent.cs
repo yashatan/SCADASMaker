@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls.Primitives;
 using System.Windows.Controls;
+using System.Windows.Forms;
 
 namespace SCADACreator
 {
@@ -28,7 +29,8 @@ namespace SCADACreator
         {
             emSetbit,
             emResetBit,
-            emSetValue
+            emSetValue,
+            emOpenScreen
         }
         private string name;
         public int Value { get; set; }
@@ -41,6 +43,7 @@ namespace SCADACreator
         public ItemEventType EventType { get => eventType; set => eventType = value; }
         public ItemActiontype ActionType { get; set; }
         public virtual TagInfo Tag { get; set; }
+        public int PageID { get; set; }
 
     }
 }

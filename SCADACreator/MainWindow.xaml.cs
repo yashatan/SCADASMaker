@@ -37,6 +37,7 @@ namespace SCADACreator
             Loaded += MainWindow_Loaded;
             SCADADataProvider.Instance.ProjectInformation = new ProjectInformation();
             Title = $"SCADA Creator - {SCADADataProvider.Instance.ProjectInformation.Name}";
+            currentPage = SCADADataProvider.Instance.DesignPages.First();
             LoadSCADAServerPATH();
         }
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
