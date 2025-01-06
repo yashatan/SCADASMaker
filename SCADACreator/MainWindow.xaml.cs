@@ -71,7 +71,7 @@ namespace SCADACreator
         }
         #endregion
 
-        private string SerializeAllDesignerItems()
+        private string SerializeSCADAProject()
         {
             var options = new JsonSerializerOptions
             {
@@ -86,6 +86,7 @@ namespace SCADACreator
                  new XElement("TagLoggingSettings", JsonSerializer.Serialize(SCADADataProvider.Instance.TagLoggingSettings, options)),
                  new XElement("TrendViewSettings", JsonSerializer.Serialize(SCADADataProvider.Instance.TrendViewSettings, options)),
                  new XElement("ProjectInformation", JsonSerializer.Serialize(SCADADataProvider.Instance.ProjectInformation, options)),
+                 new XElement("TablePages", JsonSerializer.Serialize(SCADADataProvider.Instance.TablePages, options)),
                  from page in SCADADataProvider.Instance.DesignPages
                  select new XElement("Pages",
                       from item in page.SCADAItems
@@ -119,6 +120,7 @@ namespace SCADACreator
             List<AlarmSetting> alarmSettings = JsonSerializer.Deserialize<List<AlarmSetting>>((string)parsedElement.Element("AlarmSettings"));
             List<TagLoggingSetting> tagLoggingSettings = JsonSerializer.Deserialize<List<TagLoggingSetting>>((string)parsedElement.Element("TagLoggingSettings"));
             List<TrendViewSetting> trendViewSettings = JsonSerializer.Deserialize<List<TrendViewSetting>>((string)parsedElement.Element("TrendViewSettings"));
+            List<TablePage> tablePages = JsonSerializer.Deserialize<List<TablePage>>((string)parsedElement.Element("TablePages"));
             if (taginfos.Count > 0)
             {
                 SCADADataProvider.Instance.AddListTagInfos(taginfos);
@@ -138,6 +140,10 @@ namespace SCADACreator
             if (trendViewSettings.Count > 0)
             {
                 SCADADataProvider.Instance.AddListTrendViewSettings(trendViewSettings);
+            }
+            if (tablePages.Count > 0)
+            {
+                SCADADataProvider.Instance.AddListTablePages(tablePages);
             }
         }
         private void DeserrializePagesData(string openstring)
@@ -189,7 +195,7 @@ namespace SCADACreator
             {
                 currentPage.SCADAItems.Add(item);
             }
-            var savestring = SerializeAllDesignerItems();
+            var savestring = SerializeSCADAProject();
             if (SCADADataProvider.Instance.ProjectInformation.IsNewProject)
             {
                 SCADADataProvider.Instance.ProjectInformation.IsNewProject = false;
@@ -234,7 +240,7 @@ namespace SCADACreator
             }
             else
             {
-                var savestring = SerializeAllDesignerItems();
+                var savestring = SerializeSCADAProject();
                 SCADADataProvider.Instance.ProjectInformation.IsNewProject = false;
                 var sourceDbPath = $"{System.IO.Path.GetDirectoryName(SCADADataProvider.Instance.ProjectInformation.FilePath)}\\{SCADADataProvider.Instance.ProjectInformation.Name}.db"; // Đường dẫn tới cơ sở dữ liệu gốc
                 if (File.Exists(sourceDbPath))
@@ -322,7 +328,8 @@ namespace SCADACreator
         }
         private void MenuItemTablePageSetting_Click(object sender, RoutedEventArgs e)
         {
-
+            TablePageSettingWindow tablePageSettingWindow = new TablePageSettingWindow();
+            tablePageSettingWindow.Show();
         }
 
         private void MenuItemControlsPageSetting_Click(object sender, RoutedEventArgs e)
@@ -465,6 +472,7 @@ namespace SCADACreator
             mSCADAStationConfiguration.SetTrendViewSettings(SCADADataProvider.Instance.TrendViewSettings);
             mSCADAStationConfiguration.ProjectInformation = (SCADADataProvider.Instance.ProjectInformation);
             mSCADAStationConfiguration.SetSCADAPages(scadaPages);
+            mSCADAStationConfiguration.SetTablePages(SCADADataProvider.Instance.TablePages);
             string jsonSCADAStationConfiguration = JsonSerializer.Serialize(mSCADAStationConfiguration, options);//seriallize thành chuỗi json
             SaveFile(filename, jsonSCADAStationConfiguration);
         }
@@ -506,7 +514,6 @@ namespace SCADACreator
                 var controldatas = GenerateControlDataFromSCADAPages(page);
                 scadaPage.Id = page.Id;
                 scadaPage.Name = page.Name;
-                //scadaPage.PageType = page.PageType;
                 scadaPage.ControlDatas = controldatas;
                 scadaPages.Add(scadaPage);
             }

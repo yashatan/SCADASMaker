@@ -27,8 +27,9 @@ namespace SCADACreator.View
         List<string> eventTypes = new List<string>() { "Click", "Press", "Release" };
         List<string> actionTypes = new List<string>() { "SetBit", "ResetBit", "SetValue", "OpenScreen" };
         List<TagInfo> tagsList = SCADADataProvider.Instance.TagInfos;
-        List<DesignPage> pageList = SCADADataProvider.Instance.DesignPages;
-        private event EventHandler _ApplyEvent;//event handle when confirm button clicked
+        //List<DesignPage> pageList = SCADADataProvider.Instance.DesignPages;
+        List<BaseSCADAPage> pageList;
+        private event EventHandler _ApplyEvent;
         public event EventHandler ApplyEvent
         {
             add
@@ -52,7 +53,11 @@ namespace SCADACreator.View
             this.cbbEventType.ItemsSource = eventTypes;
             this.cbbActionType.ItemsSource = actionTypes;
             this.cbbTag.ItemsSource = tagsList;
+            pageList = new List<BaseSCADAPage>();
+            pageList.AddRange(SCADADataProvider.Instance.DesignPages);
+            pageList.AddRange(SCADADataProvider.Instance.TablePages);
             this.cbbPage.ItemsSource = pageList;
+
             UpdateItemEventData();
         }
 
@@ -65,10 +70,13 @@ namespace SCADACreator.View
                 cbbTag.SelectedItem = currentItemEvent.Tag;
                 cbbTag.Text = currentItemEvent.Tag.Name;
             }
-            if (pageList.Any(p=>p.Id == currentItemEvent.PageID))
+            if (pageList.Any(p=>p.Id == currentItemEvent.PageID && p.PageType == currentItemEvent.PageType))
             {
-                cbbPage.SelectedItem = pageList.FirstOrDefault(p=>p.Id == currentItemEvent.PageID);
-                cbbPage.Text = pageList.FirstOrDefault(p => p.Id == currentItemEvent.PageID).Name;
+                var page = pageList.FirstOrDefault(p => p.Id == currentItemEvent.PageID && p.PageType == currentItemEvent.PageType);
+                if (page != null) {
+                    cbbPage.SelectedItem = page;
+                    cbbPage.Text = page.Name;
+                }
             }
             cbbEventType.SelectedIndex = (int)currentItemEvent.EventType;
             cbbActionType.SelectedIndex = (int)currentItemEvent.ActionType;
@@ -92,7 +100,10 @@ namespace SCADACreator.View
         {
             currentItemEvent.Name = txtName.Text;
             currentItemEvent.Tag = cbbTag.SelectedItem as TagInfo;
-            currentItemEvent.PageID = (cbbPage.SelectedItem as DesignPage).Id;
+            if ((cbbPage.SelectedItem as BaseSCADAPage) != null) {
+                currentItemEvent.PageID = (cbbPage.SelectedItem as BaseSCADAPage).Id;
+                currentItemEvent.PageType = (cbbPage.SelectedItem as BaseSCADAPage).PageType;
+            }
             currentItemEvent.EventType = (ItemEventType)cbbEventType.SelectedIndex;
             currentItemEvent.ActionType = (ItemActiontype)cbbActionType.SelectedIndex;
             currentItemEvent.Value = Convert.ToInt32(txtValue.Text);

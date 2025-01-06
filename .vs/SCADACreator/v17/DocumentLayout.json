@@ -3,42 +3,307 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Work\\SCADASMaker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|c:\\users\\admin\\work\\scadasmaker\\scadacreator\\view\\taginfo\\taginfodetailwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\taginfo\\taginfodetailwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|c:\\users\\admin\\work\\scadasmaker\\scadacreator\\view\\trend\\trendviewsettingdetailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\trend\\trendviewsettingdetailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|c:\\users\\admin\\work\\scadasmaker\\scadacreator\\view\\taginfo\\taginfodetailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\taginfo\\taginfodetailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|c:\\users\\admin\\work\\scadasmaker\\scadacreator\\view\\trend\\trendviewsettingwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\trend\\trendviewsettingwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|c:\\users\\admin\\work\\scadasmaker\\scadacreator\\view\\trend\\trendviewsettingwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\trend\\trendviewsettingwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|c:\\users\\admin\\work\\scadasmaker\\scadacreator\\taginfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\taginfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\view\\pagesetting\\tablepagesettingdetailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\pagesetting\\tablepagesettingdetailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\view\\pagesetting\\tablepagesettingdetailwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\pagesetting\\tablepagesettingdetailwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\view\\pagesetting\\tablepagesettingwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\pagesetting\\tablepagesettingwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\view\\pagesetting\\tablepagesettingwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\pagesetting\\tablepagesettingwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\view\\itemevent\\itemeventdetailwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\itemevent\\itemeventdetailwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\view\\pagesetting\\tablepagetaglistwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\pagesetting\\tablepagetaglistwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\view\\trend\\trendviewsettingdetailwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\trend\\trendviewsettingdetailwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\view\\pagesetting\\tablepagetaglistwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\pagesetting\\tablepagetaglistwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\model\\itemevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\model\\itemevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|c:\\users\\admin\\work\\scadasmaker\\scadacreator\\model\\scadapage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\model\\scadapage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|c:\\users\\admin\\work\\scadasmaker\\scadacreator\\model\\basescadapage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\model\\basescadapage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\model\\tablepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\model\\tablepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\model\\scadastationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\model\\scadastationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\dataprovider\\scadadataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\dataprovider\\scadadataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\model\\designpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\model\\designpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\view\\itemevent\\itemeventdetailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\itemevent\\itemeventdetailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\view\\itemevent\\itemeventlistpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\itemevent\\itemeventlistpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\model\\projectinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\model\\projectinformation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\view\\animation\\animationlistpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\animation\\animationlistpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|c:\\users\\admin\\work\\scadasmaker\\scadacreator\\view\\animation\\animationlistpage.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\animation\\animationlistpage.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\view\\animation\\animationdetailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\animation\\animationdetailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\view\\alarm\\alarmsettingwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\alarm\\alarmsettingwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|c:\\users\\admin\\work\\scadasmaker\\scadacreator\\view\\pagesetting\\pagessettingwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\pagesetting\\pagessettingwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\view\\taginfo\\taglistwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\taginfo\\taglistwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\taginfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\taginfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|c:\\users\\admin\\work\\scadasmaker\\scadacreator\\view\\trend\\tagloggingsettingwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\trend\\tagloggingsettingwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\view\\connectdevice\\devicelistwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\connectdevice\\devicelistwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\view\\taginfo\\taginfodetailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\taginfo\\taginfodetailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\view\\bluetoothsendingview.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\bluetoothsendingview.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\model\\trendviewsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\model\\trendviewsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\stencils\\flowchartsymbols.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\stencils\\flowchartsymbols.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\stencils\\basiccontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\stencils\\basiccontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\itemmoveresizeclass\\toolboxitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\itemmoveresizeclass\\toolboxitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\resources\\toolbox.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\resources\\toolbox.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\resources\\zoombox.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\resources\\zoombox.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\resources\\tooltip.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\resources\\tooltip.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\resources\\scadaitem.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\resources\\scadaitem.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\resources\\toolbar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\resources\\toolbar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\view\\propertypage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\propertypage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\stencils\\basicshapes.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\stencils\\basicshapes.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\stencils\\regelungstechniksymbole.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\stencils\\regelungstechniksymbole.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\stencils\\symbolstencils.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\stencils\\symbolstencils.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\itemmoveresizeclass\\rotatethumb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\itemmoveresizeclass\\rotatethumb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\dataprovider\\scadaserverpath.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\dataprovider\\scadaserverpath.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|SCADACreator||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|c:\\users\\admin\\work\\scadasmaker\\scadacreator\\model\\scadastationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\model\\scadastationconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\resources\\designeritem.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\resources\\designeritem.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\resources\\resizechrome.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\resources\\resizechrome.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\resources\\brushes.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\resources\\brushes.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\view\\pagesetting\\pagessettingwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\pagesetting\\pagessettingwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\view\\alarm\\alarmsettingwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\alarm\\alarmsettingwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\view\\settingscadaserverwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\settingscadaserverwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\view\\settingscadaserverwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\settingscadaserverwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\view\\animation\\animationdetailwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\animation\\animationdetailwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\view\\bluetoothsendingview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\bluetoothsendingview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\itemmoveresizeclass\\designercanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\itemmoveresizeclass\\designercanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\model\\tagloggingsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\model\\tagloggingsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\model\\trendsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\model\\trendsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\model\\alarmsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\model\\alarmsetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|c:\\users\\admin\\work\\scadasmaker\\scadacreator\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\connectdevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\connectdevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\utility\\decimaltextbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\utility\\decimaltextbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\view\\connectdevice\\connectdevicedetailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\connectdevice\\connectdevicedetailwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|C:\\Users\\Admin\\Work\\SCADASMaker\\scadacreator\\view\\taginfo\\taginfodetailwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{4946722F-CFFF-4FC6-B1C1-A6107316A58C}|SCADACreator\\SCADACreator.csproj|solutionrelative:scadacreator\\view\\taginfo\\taginfodetailwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\obj\\Debug\\View\\SettingSCADAServerWindow.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SCADACreator\\obj\\Debug\\View\\SettingSCADAServerWindow.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\obj\\Debug\\View\\PageSetting\\TablePageTagListWindow.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SCADACreator\\obj\\Debug\\View\\PageSetting\\TablePageTagListWindow.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\obj\\Debug\\View\\PageSetting\\TablePageSettingDetailWindow.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SCADACreator\\obj\\Debug\\View\\PageSetting\\TablePageSettingDetailWindow.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\obj\\Debug\\View\\PageSetting\\TablePageSettingListWindow.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SCADACreator\\obj\\Debug\\View\\PageSetting\\TablePageSettingListWindow.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\obj\\Debug\\View\\PageSetting\\PagesSettingWindowxaml.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SCADACreator\\obj\\Debug\\View\\PageSetting\\PagesSettingWindowxaml.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\obj\\Debug\\View\\PageSetting\\PageSettingWindow.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SCADACreator\\obj\\Debug\\View\\PageSetting\\PageSettingWindow.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,92 +312,56 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 300,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 222,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TagInfoDetailWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\TagInfo\\TagInfoDetailWindow.xaml.cs",
-              "RelativeDocumentMoniker": "SCADACreator\\View\\TagInfo\\TagInfoDetailWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\TagInfo\\TagInfoDetailWindow.xaml.cs",
-              "RelativeToolTip": "SCADACreator\\View\\TagInfo\\TagInfoDetailWindow.xaml.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAQwGMAAAAvAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "TrendViewSettingWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\Trend\\TrendViewSettingWindow.xaml.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\Trend\\TrendViewSettingWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\Trend\\TrendViewSettingWindow.xaml.cs",
+              "RelativeToolTip": "SCADACreator\\View\\Trend\\TrendViewSettingWindow.xaml.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACUAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T16:24:05.788Z",
+              "WhenOpened": "2025-01-06T14:51:31.804Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TagInfoDetailWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\TagInfo\\TagInfoDetailWindow.xaml",
-              "RelativeDocumentMoniker": "SCADACreator\\View\\TagInfo\\TagInfoDetailWindow.xaml",
-              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\TagInfo\\TagInfoDetailWindow.xaml",
-              "RelativeToolTip": "SCADACreator\\View\\TagInfo\\TagInfoDetailWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-12T16:22:58.723Z",
+              "DocumentIndex": 11,
+              "Title": "TrendViewSettingDetailWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\Trend\\TrendViewSettingDetailWindow.xaml.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\Trend\\TrendViewSettingDetailWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\Trend\\TrendViewSettingDetailWindow.xaml.cs",
+              "RelativeToolTip": "SCADACreator\\View\\Trend\\TrendViewSettingDetailWindow.xaml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAgwBYAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T17:48:49.21Z",
               "EditorCaption": ""
-            },
+            }
+          ]
+        },
+        {
+          "DockedWidth": 344,
+          "SelectedChildIndex": 3,
+          "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "TagInfo.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\TagInfo.cs",
-              "RelativeDocumentMoniker": "SCADACreator\\TagInfo.cs",
-              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\TagInfo.cs",
-              "RelativeToolTip": "SCADACreator\\TagInfo.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T16:22:44.049Z",
+              "Title": "TablePageSettingDetailWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\PageSetting\\TablePageSettingDetailWindow.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\PageSetting\\TablePageSettingDetailWindow.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\PageSetting\\TablePageSettingDetailWindow.xaml",
+              "RelativeToolTip": "SCADACreator\\View\\PageSetting\\TablePageSettingDetailWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-04T17:26:15.969Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "SCADAStationConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Model\\SCADAStationConfiguration.cs",
-              "RelativeDocumentMoniker": "SCADACreator\\Model\\SCADAStationConfiguration.cs",
-              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Model\\SCADAStationConfiguration.cs",
-              "RelativeToolTip": "SCADACreator\\Model\\SCADAStationConfiguration.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T10:15:39.784Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "app.config",
-              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\app.config",
-              "RelativeDocumentMoniker": "SCADACreator\\app.config",
-              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\app.config",
-              "RelativeToolTip": "SCADACreator\\app.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-12-08T08:04:33.67Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\App.xaml",
-              "RelativeDocumentMoniker": "SCADACreator\\App.xaml",
-              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\App.xaml",
-              "RelativeToolTip": "SCADACreator\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-12-08T08:03:01.955Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\MainWindow.xaml",
               "RelativeDocumentMoniker": "SCADACreator\\MainWindow.xaml",
@@ -144,28 +373,885 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "TrendViewSettingWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\Trend\\TrendViewSettingWindow.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\Trend\\TrendViewSettingWindow.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\Trend\\TrendViewSettingWindow.xaml",
+              "RelativeToolTip": "SCADACreator\\View\\Trend\\TrendViewSettingWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-05T17:44:34.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TrendViewSettingDetailWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\Trend\\TrendViewSettingDetailWindow.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\Trend\\TrendViewSettingDetailWindow.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\Trend\\TrendViewSettingDetailWindow.xaml",
+              "RelativeToolTip": "SCADACreator\\View\\Trend\\TrendViewSettingDetailWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-05T17:49:04.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TablePageSettingDetailWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\PageSetting\\TablePageSettingDetailWindow.xaml.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\PageSetting\\TablePageSettingDetailWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\PageSetting\\TablePageSettingDetailWindow.xaml.cs",
+              "RelativeToolTip": "SCADACreator\\View\\PageSetting\\TablePageSettingDetailWindow.xaml.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAuwFgAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T10:21:41.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TablePageSettingWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\PageSetting\\TablePageSettingWindow.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\PageSetting\\TablePageSettingWindow.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\PageSetting\\TablePageSettingWindow.xaml",
+              "RelativeToolTip": "SCADACreator\\View\\PageSetting\\TablePageSettingWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-05T10:41:58.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TablePageSettingWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\PageSetting\\TablePageSettingWindow.xaml.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\PageSetting\\TablePageSettingWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\PageSetting\\TablePageSettingWindow.xaml.cs",
+              "RelativeToolTip": "SCADACreator\\View\\PageSetting\\TablePageSettingWindow.xaml.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAWwCkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T10:22:03.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "SCADACreator\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\MainWindow.xaml.cs",
               "RelativeToolTip": "SCADACreator\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAGwBAAAAAAAAAAAMwH4BAABiAAAAAAAAAA==",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAIwIgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-08T08:01:07.945Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
+              "Title": "ItemEventDetailWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\ItemEvent\\ItemEventDetailWindow.xaml.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\ItemEvent\\ItemEventDetailWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\ItemEvent\\ItemEventDetailWindow.xaml.cs",
+              "RelativeToolTip": "SCADACreator\\View\\ItemEvent\\ItemEventDetailWindow.xaml.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAgwGkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T16:33:46.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TablePageTagListWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\PageSetting\\TablePageTagListWindow.xaml.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\PageSetting\\TablePageTagListWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\PageSetting\\TablePageTagListWindow.xaml.cs",
+              "RelativeToolTip": "SCADACreator\\View\\PageSetting\\TablePageTagListWindow.xaml.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAkwDsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T17:45:35.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TablePageTagListWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\PageSetting\\TablePageTagListWindow.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\PageSetting\\TablePageTagListWindow.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\PageSetting\\TablePageTagListWindow.xaml",
+              "RelativeToolTip": "SCADACreator\\View\\PageSetting\\TablePageTagListWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-05T11:41:38.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SCADAPage.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Model\\SCADAPage.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\Model\\SCADAPage.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Model\\SCADAPage.cs",
+              "RelativeToolTip": "SCADACreator\\Model\\SCADAPage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T16:47:21.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BaseSCADAPage.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Model\\BaseSCADAPage.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\Model\\BaseSCADAPage.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Model\\BaseSCADAPage.cs",
+              "RelativeToolTip": "SCADACreator\\Model\\BaseSCADAPage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T16:48:04.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TablePage.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Model\\TablePage.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\Model\\TablePage.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Model\\TablePage.cs",
+              "RelativeToolTip": "SCADACreator\\Model\\TablePage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T10:24:31.269Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "SCADAStationConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Model\\SCADAStationConfiguration.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\Model\\SCADAStationConfiguration.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Model\\SCADAStationConfiguration.cs",
+              "RelativeToolTip": "SCADACreator\\Model\\SCADAStationConfiguration.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowDwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T10:15:39.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "SCADADataProvider.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\DataProvider\\SCADADataProvider.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\DataProvider\\SCADADataProvider.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\DataProvider\\SCADADataProvider.cs",
+              "RelativeToolTip": "SCADACreator\\DataProvider\\SCADADataProvider.cs",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAUwLAAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T15:48:20.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ItemEvent.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Model\\ItemEvent.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\Model\\ItemEvent.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Model\\ItemEvent.cs",
+              "RelativeToolTip": "SCADACreator\\Model\\ItemEvent.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowC0AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T17:00:56.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "DesignPage.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Model\\DesignPage.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\Model\\DesignPage.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Model\\DesignPage.cs",
+              "RelativeToolTip": "SCADACreator\\Model\\DesignPage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T15:48:11.778Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ItemEventDetailWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\ItemEvent\\ItemEventDetailWindow.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\ItemEvent\\ItemEventDetailWindow.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\ItemEvent\\ItemEventDetailWindow.xaml",
+              "RelativeToolTip": "SCADACreator\\View\\ItemEvent\\ItemEventDetailWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-25T16:33:44.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ItemEventListPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\ItemEvent\\ItemEventListPage.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\ItemEvent\\ItemEventListPage.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\ItemEvent\\ItemEventListPage.xaml",
+              "RelativeToolTip": "SCADACreator\\View\\ItemEvent\\ItemEventListPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-29T14:52:55.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ProjectInformation.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Model\\ProjectInformation.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\Model\\ProjectInformation.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Model\\ProjectInformation.cs",
+              "RelativeToolTip": "SCADACreator\\Model\\ProjectInformation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T17:00:56.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "AnimationListPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\Animation\\AnimationListPage.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\Animation\\AnimationListPage.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\Animation\\AnimationListPage.xaml",
+              "RelativeToolTip": "SCADACreator\\View\\Animation\\AnimationListPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-23T16:44:15.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AnimationListPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\Animation\\AnimationListPage.xaml.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\Animation\\AnimationListPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\Animation\\AnimationListPage.xaml.cs",
+              "RelativeToolTip": "SCADACreator\\View\\Animation\\AnimationListPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-06T16:20:43.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "AlarmSettingWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\Alarm\\AlarmSettingWindow.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\Alarm\\AlarmSettingWindow.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\Alarm\\AlarmSettingWindow.xaml",
+              "RelativeToolTip": "SCADACreator\\View\\Alarm\\AlarmSettingWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-15T17:23:30.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "AnimationDetailWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\Animation\\AnimationDetailWindow.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\Animation\\AnimationDetailWindow.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\Animation\\AnimationDetailWindow.xaml",
+              "RelativeToolTip": "SCADACreator\\View\\Animation\\AnimationDetailWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-23T16:44:16.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "TagInfo.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\TagInfo.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\TagInfo.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\TagInfo.cs",
+              "RelativeToolTip": "SCADACreator\\TagInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T16:22:44.049Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "TagListWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\TagInfo\\TagListWindow.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\TagInfo\\TagListWindow.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\TagInfo\\TagListWindow.xaml",
+              "RelativeToolTip": "SCADACreator\\View\\TagInfo\\TagListWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-05T17:44:57.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "PagesSettingWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\PageSetting\\PagesSettingWindow.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\PageSetting\\PagesSettingWindow.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\PageSetting\\PagesSettingWindow.xaml",
+              "RelativeToolTip": "SCADACreator\\View\\PageSetting\\PagesSettingWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-06T15:21:15.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "TagLoggingSettingWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\Trend\\TagLoggingSettingWindow.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\Trend\\TagLoggingSettingWindow.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\Trend\\TagLoggingSettingWindow.xaml",
+              "RelativeToolTip": "SCADACreator\\View\\Trend\\TagLoggingSettingWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-06T15:16:42.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "DeviceListWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\ConnectDevice\\DeviceListWindow.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\ConnectDevice\\DeviceListWindow.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\ConnectDevice\\DeviceListWindow.xaml",
+              "RelativeToolTip": "SCADACreator\\View\\ConnectDevice\\DeviceListWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-25T16:35:15.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "TablePageSettingListWindow.g.i.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\obj\\Debug\\View\\PageSetting\\TablePageSettingListWindow.g.i.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\obj\\Debug\\View\\PageSetting\\TablePageSettingListWindow.g.i.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\obj\\Debug\\View\\PageSetting\\TablePageSettingListWindow.g.i.cs",
+              "RelativeToolTip": "SCADACreator\\obj\\Debug\\View\\PageSetting\\TablePageSettingListWindow.g.i.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAWwD0AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T10:22:05.046Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "TablePageSettingDetailWindow.g.i.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\obj\\Debug\\View\\PageSetting\\TablePageSettingDetailWindow.g.i.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\obj\\Debug\\View\\PageSetting\\TablePageSettingDetailWindow.g.i.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\obj\\Debug\\View\\PageSetting\\TablePageSettingDetailWindow.g.i.cs",
+              "RelativeToolTip": "SCADACreator\\obj\\Debug\\View\\PageSetting\\TablePageSettingDetailWindow.g.i.cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAADwv5MAAABrAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T10:21:44.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "BluetoothSendingView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\BluetoothSendingView.xaml.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\BluetoothSendingView.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\BluetoothSendingView.xaml.cs",
+              "RelativeToolTip": "SCADACreator\\View\\BluetoothSendingView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T16:23:13.183Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "TagInfoDetailWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\TagInfo\\TagInfoDetailWindow.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\TagInfo\\TagInfoDetailWindow.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\TagInfo\\TagInfoDetailWindow.xaml",
+              "RelativeToolTip": "SCADACreator\\View\\TagInfo\\TagInfoDetailWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-12T16:22:58.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "TrendViewSetting.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Model\\TrendViewSetting.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\Model\\TrendViewSetting.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Model\\TrendViewSetting.cs",
+              "RelativeToolTip": "SCADACreator\\Model\\TrendViewSetting.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T17:00:58.33Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "TablePageTagListWindow.g.i.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\obj\\Debug\\View\\PageSetting\\TablePageTagListWindow.g.i.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\obj\\Debug\\View\\PageSetting\\TablePageTagListWindow.g.i.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\obj\\Debug\\View\\PageSetting\\TablePageTagListWindow.g.i.cs",
+              "RelativeToolTip": "SCADACreator\\obj\\Debug\\View\\PageSetting\\TablePageTagListWindow.g.i.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAArwDQAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T17:45:41.919Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "PagesSettingWindowxaml.g.i.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\obj\\Debug\\View\\PageSetting\\PagesSettingWindowxaml.g.i.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\obj\\Debug\\View\\PageSetting\\PagesSettingWindowxaml.g.i.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\obj\\Debug\\View\\PageSetting\\PagesSettingWindowxaml.g.i.cs",
+              "RelativeToolTip": "SCADACreator\\obj\\Debug\\View\\PageSetting\\PagesSettingWindowxaml.g.i.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAADEAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T16:34:51.35Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "PageSettingWindow.g.i.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\obj\\Debug\\View\\PageSetting\\PageSettingWindow.g.i.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\obj\\Debug\\View\\PageSetting\\PageSettingWindow.g.i.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\obj\\Debug\\View\\PageSetting\\PageSettingWindow.g.i.cs",
+              "RelativeToolTip": "SCADACreator\\obj\\Debug\\View\\PageSetting\\PageSettingWindow.g.i.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAawCIAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T16:33:35.53Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "SettingSCADAServerWindow.g.i.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\obj\\Debug\\View\\SettingSCADAServerWindow.g.i.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\obj\\Debug\\View\\SettingSCADAServerWindow.g.i.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\obj\\Debug\\View\\SettingSCADAServerWindow.g.i.cs",
+              "RelativeToolTip": "SCADACreator\\obj\\Debug\\View\\SettingSCADAServerWindow.g.i.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAawCYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T16:24:05.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "FlowChartSymbols.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Stencils\\FlowChartSymbols.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\Stencils\\FlowChartSymbols.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Stencils\\FlowChartSymbols.xaml",
+              "RelativeToolTip": "SCADACreator\\Stencils\\FlowChartSymbols.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-05T09:56:02.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "BasicControl.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Stencils\\BasicControl.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\Stencils\\BasicControl.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Stencils\\BasicControl.xaml",
+              "RelativeToolTip": "SCADACreator\\Stencils\\BasicControl.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-18T17:54:40.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Tooltip.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Resources\\Tooltip.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\Resources\\Tooltip.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Resources\\Tooltip.xaml",
+              "RelativeToolTip": "SCADACreator\\Resources\\Tooltip.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-05T10:00:14.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "RotateThumb.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\ItemMoveResizeClass\\RotateThumb.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\ItemMoveResizeClass\\RotateThumb.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\ItemMoveResizeClass\\RotateThumb.cs",
+              "RelativeToolTip": "SCADACreator\\ItemMoveResizeClass\\RotateThumb.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T09:53:37.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "ZoomBox.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Resources\\ZoomBox.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\Resources\\ZoomBox.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Resources\\ZoomBox.xaml",
+              "RelativeToolTip": "SCADACreator\\Resources\\ZoomBox.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-05T10:00:12.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "BasicShapes.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Stencils\\BasicShapes.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\Stencils\\BasicShapes.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Stencils\\BasicShapes.xaml",
+              "RelativeToolTip": "SCADACreator\\Stencils\\BasicShapes.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-18T17:55:32.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ToolboxItem.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\ItemMoveResizeClass\\ToolboxItem.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\ItemMoveResizeClass\\ToolboxItem.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\ItemMoveResizeClass\\ToolboxItem.cs",
+              "RelativeToolTip": "SCADACreator\\ItemMoveResizeClass\\ToolboxItem.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowCkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-05T09:53:37.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Toolbox.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Resources\\Toolbox.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\Resources\\Toolbox.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Resources\\Toolbox.xaml",
+              "RelativeToolTip": "SCADACreator\\Resources\\Toolbox.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-18T17:53:22.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "SCADAItem.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Resources\\SCADAItem.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\Resources\\SCADAItem.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Resources\\SCADAItem.xaml",
+              "RelativeToolTip": "SCADACreator\\Resources\\SCADAItem.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-27T16:44:00.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "ToolBar.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Resources\\ToolBar.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\Resources\\ToolBar.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Resources\\ToolBar.xaml",
+              "RelativeToolTip": "SCADACreator\\Resources\\ToolBar.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-18T17:53:20.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\App.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\App.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\App.xaml",
+              "RelativeToolTip": "SCADACreator\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-08T08:03:01.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "SymbolStencils.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Stencils\\SymbolStencils.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\Stencils\\SymbolStencils.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Stencils\\SymbolStencils.xaml",
+              "RelativeToolTip": "SCADACreator\\Stencils\\SymbolStencils.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-18T17:55:31.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "RegelungstechnikSymbole.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Stencils\\RegelungstechnikSymbole.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\Stencils\\RegelungstechnikSymbole.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Stencils\\RegelungstechnikSymbole.xaml",
+              "RelativeToolTip": "SCADACreator\\Stencils\\RegelungstechnikSymbole.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-18T17:55:27.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "PropertyPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\PropertyPage.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\PropertyPage.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\PropertyPage.xaml",
+              "RelativeToolTip": "SCADACreator\\View\\PropertyPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-16T17:11:55.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "SCADAServerPATH.txt",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\DataProvider\\SCADAServerPATH.txt",
+              "RelativeDocumentMoniker": "SCADACreator\\DataProvider\\SCADAServerPATH.txt",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\DataProvider\\SCADAServerPATH.txt",
+              "RelativeToolTip": "SCADACreator\\DataProvider\\SCADAServerPATH.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-12-23T15:47:33.272Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\App.xaml.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\App.xaml.cs",
+              "RelativeToolTip": "SCADACreator\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T15:52:01.261Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "Brushes.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Resources\\Brushes.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\Resources\\Brushes.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Resources\\Brushes.xaml",
+              "RelativeToolTip": "SCADACreator\\Resources\\Brushes.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-27T16:44:33.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
               "Title": "SCADACreator",
               "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\SCADACreator.csproj",
               "RelativeDocumentMoniker": "SCADACreator\\SCADACreator.csproj",
               "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\SCADACreator.csproj",
               "RelativeToolTip": "SCADACreator\\SCADACreator.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-11-19T17:02:44.045Z",
+              "WhenOpened": "2024-11-19T17:02:44.045Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "ResizeChrome.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Resources\\ResizeChrome.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\Resources\\ResizeChrome.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Resources\\ResizeChrome.xaml",
+              "RelativeToolTip": "SCADACreator\\Resources\\ResizeChrome.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-27T16:45:20.154Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "SettingSCADAServerWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\SettingSCADAServerWindow.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\SettingSCADAServerWindow.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\SettingSCADAServerWindow.xaml",
+              "RelativeToolTip": "SCADACreator\\View\\SettingSCADAServerWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-23T16:23:46.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "DesignerItem.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Resources\\DesignerItem.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\Resources\\DesignerItem.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Resources\\DesignerItem.xaml",
+              "RelativeToolTip": "SCADACreator\\Resources\\DesignerItem.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-27T16:44:18.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "PagesSettingWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\PageSetting\\PagesSettingWindow.xaml.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\PageSetting\\PagesSettingWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\PageSetting\\PagesSettingWindow.xaml.cs",
+              "RelativeToolTip": "SCADACreator\\View\\PageSetting\\PagesSettingWindow.xaml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAowCIAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T16:34:46.733Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "AlarmSettingWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\Alarm\\AlarmSettingWindow.xaml.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\Alarm\\AlarmSettingWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\Alarm\\AlarmSettingWindow.xaml.cs",
+              "RelativeToolTip": "SCADACreator\\View\\Alarm\\AlarmSettingWindow.xaml.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAjwC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T16:52:57.863Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "SettingSCADAServerWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\SettingSCADAServerWindow.xaml.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\SettingSCADAServerWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\SettingSCADAServerWindow.xaml.cs",
+              "RelativeToolTip": "SCADACreator\\View\\SettingSCADAServerWindow.xaml.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAkwD8AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T16:24:03.325Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "TrendSetting.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Model\\TrendSetting.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\Model\\TrendSetting.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Model\\TrendSetting.cs",
+              "RelativeToolTip": "SCADACreator\\Model\\TrendSetting.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T17:00:54.995Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "AnimationDetailWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\Animation\\AnimationDetailWindow.xaml.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\Animation\\AnimationDetailWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\Animation\\AnimationDetailWindow.xaml.cs",
+              "RelativeToolTip": "SCADACreator\\View\\Animation\\AnimationDetailWindow.xaml.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAewB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T16:44:22.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "BluetoothSendingView.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\BluetoothSendingView.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\BluetoothSendingView.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\BluetoothSendingView.xaml",
+              "RelativeToolTip": "SCADACreator\\View\\BluetoothSendingView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-23T16:22:25.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "TagLoggingSetting.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Model\\TagLoggingSetting.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\Model\\TagLoggingSetting.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Model\\TagLoggingSetting.cs",
+              "RelativeToolTip": "SCADACreator\\Model\\TagLoggingSetting.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA1wA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T17:01:01.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "AlarmSetting.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Model\\AlarmSetting.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\Model\\AlarmSetting.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Model\\AlarmSetting.cs",
+              "RelativeToolTip": "SCADACreator\\Model\\AlarmSetting.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowEQAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T17:01:03.322Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "ConnectDevice.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\ConnectDevice.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\ConnectDevice.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\ConnectDevice.cs",
+              "RelativeToolTip": "SCADACreator\\ConnectDevice.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB4AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T16:44:24.817Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "DesignerCanvas.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\ItemMoveResizeClass\\DesignerCanvas.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\ItemMoveResizeClass\\DesignerCanvas.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\ItemMoveResizeClass\\DesignerCanvas.cs",
+              "RelativeToolTip": "SCADACreator\\ItemMoveResizeClass\\DesignerCanvas.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAiwH0AAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T17:58:57.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "DecimalTextBox.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Utility\\DecimalTextBox.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\Utility\\DecimalTextBox.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\Utility\\DecimalTextBox.cs",
+              "RelativeToolTip": "SCADACreator\\Utility\\DecimalTextBox.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T17:12:05.251Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "ConnectDeviceDetailWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\ConnectDevice\\ConnectDeviceDetailWindow.xaml",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\ConnectDevice\\ConnectDeviceDetailWindow.xaml",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\ConnectDevice\\ConnectDeviceDetailWindow.xaml",
+              "RelativeToolTip": "SCADACreator\\View\\ConnectDevice\\ConnectDeviceDetailWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-15T17:23:16.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "TagInfoDetailWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\TagInfo\\TagInfoDetailWindow.xaml.cs",
+              "RelativeDocumentMoniker": "SCADACreator\\View\\TagInfo\\TagInfoDetailWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\View\\TagInfo\\TagInfoDetailWindow.xaml.cs",
+              "RelativeToolTip": "SCADACreator\\View\\TagInfo\\TagInfoDetailWindow.xaml.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAQwGMAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T16:24:05.788Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "app.config",
+              "DocumentMoniker": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\app.config",
+              "RelativeDocumentMoniker": "SCADACreator\\app.config",
+              "ToolTip": "C:\\Users\\Admin\\Work\\SCADASMaker\\SCADACreator\\app.config",
+              "RelativeToolTip": "SCADACreator\\app.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-12-08T08:04:33.67Z"
             }
           ]
         }

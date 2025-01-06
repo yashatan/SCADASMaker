@@ -44,6 +44,6 @@ namespace SCADACreator
         public ItemActiontype ActionType { get; set; }
         public virtual TagInfo Tag { get; set; }
         public int PageID { get; set; }
-
+        public int PageType { get; set; }
     }
 }

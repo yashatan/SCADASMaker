@@ -134,7 +134,6 @@
                 Click="btnAdd_Click"
                 Background="Transparent">
             <materialDesign:PackIcon Kind="PlusCircle"
-                                     Foreground="Black"
                                      Height="50"
                                      HorizontalAlignment="Center"
                                      Cursor="Hand"
@@ -152,6 +151,13 @@
                             </ControlTemplate>
                         </Setter.Value>
                     </Setter>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Self}}"
+                                     Value="True">
+                            <Setter Property="Foreground"
+                                    Value="Blue" />
+                        </DataTrigger>
+                    </Style.Triggers>
                 </Style>
             </Button.Style>
         </Button>

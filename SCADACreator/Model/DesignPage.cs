@@ -7,21 +7,21 @@ using System.Threading.Tasks;
 
 namespace SCADACreator
 {
-    public class DesignPage
+    public class DesignPage : BaseSCADAPage
     {
         public List<SCADAItem> SCADAItems { get; set; }
         //public List<ControlData> ControlDatas { get; set; }
         public DesignPage()
         {
             SCADAItems = new List<SCADAItem>();
+            PageType = 0;
         }
         public DesignPage(string name)
         {
             SCADAItems = new List<SCADAItem>();
             Name = name;
+            PageType = 0;
         }
-        public int Id { get; set; }
-        public string Name { get; set; }
         public bool IsMainPage { get { return (Id == SCADADataProvider.Instance.ProjectInformation.MainPageId); } }
         public bool IsButtonEnabled => !IsMainPage;
     }

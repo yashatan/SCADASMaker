@@ -18,6 +18,7 @@ namespace SCADACreator
         public List<TagLoggingSetting> TagLoggingSettings; 
         public List<TrendViewSetting> TrendViewSettings; 
         public List<DesignPage> DesignPages; 
+        public List<TablePage> TablePages; 
         public ProjectInformation ProjectInformation;
 
         private static SCADADataProvider instance;
@@ -27,6 +28,7 @@ namespace SCADACreator
         private int nextTagLoggingSettingID;
         private int nextTrendViewSettingID;
         private int nextDesignPageID;
+        private int nextTablePageID;
         // Private constructor to prevent instantiation
         private SCADADataProvider()
         {
@@ -37,6 +39,7 @@ namespace SCADACreator
             TagLoggingSettings = new List<TagLoggingSetting>();
             TrendViewSettings = new List<TrendViewSetting>();
             DesignPages = new List<DesignPage>();
+            TablePages = new List<TablePage>();
             AddDesignPage(new DesignPage("MainPage"));
             //
         }
@@ -87,6 +90,13 @@ namespace SCADACreator
             DesignPages.Clear();
             DesignPages.AddRange(designPages);
             nextDesignPageID = designPages.Max(m => m.Id) + 1;
+        }
+
+        public void AddListTablePages(List<TablePage> tablePages)
+        {
+            TablePages.Clear();
+            TablePages.AddRange(tablePages);
+            nextTablePageID = tablePages.Max(m => m.Id) + 1;
         }
 
         public void AddTagInfo(TagInfo tagInfo)
@@ -146,6 +156,17 @@ namespace SCADACreator
                 DesignPages.Add(designPage);
             }
         }
+
+        public void AddTablePage(TablePage tablePage)
+        {
+            if(tablePage != null)
+            {
+                tablePage.Id = nextTablePageID;
+                nextTablePageID++;
+                TablePages.Add(tablePage);
+            }
+        }
+
         public void Clear()
         {
             TagInfos.Clear();
@@ -154,6 +175,7 @@ namespace SCADACreator
             TagLoggingSettings.Clear();
             TrendViewSettings.Clear();
             DesignPages.Clear();
+            TablePages.Clear();
             AddDesignPage(new DesignPage("MainPage"));
         }
     }

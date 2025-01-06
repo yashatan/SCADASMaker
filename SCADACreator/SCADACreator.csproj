@@ -156,11 +156,13 @@
       <DependentUpon>ModelData.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\AlarmSetting.cs" />
+    <Compile Include="Model\BaseSCADAPage.cs" />
     <Compile Include="Model\DataProvider.cs" />
     <Compile Include="Model\DesignPage.cs" />
     <Compile Include="Model\ProjectInformation.cs" />
     <Compile Include="Model\SCADAPage.cs" />
     <Compile Include="Model\SCADAStationConfiguration.cs" />
+    <Compile Include="Model\TablePage.cs" />
     <Compile Include="Model\TagLoggingSetting.cs" />
     <Compile Include="Model\TrendSetting.cs" />
     <Compile Include="Model\TrendViewSetting.cs" />
@@ -179,14 +181,23 @@
     <Compile Include="View\PageSetting\PagesSettingWindow.xaml.cs">
       <DependentUpon>PagesSettingWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\PageSetting\TablePageSettingWindow.xaml.cs">
+      <DependentUpon>TablePageSettingWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PageSetting\TablePageSettingDetailWindow.xaml.cs">
+      <DependentUpon>TablePageSettingDetailWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PageSetting\TablePageTagListWindow.xaml.cs">
+      <DependentUpon>TablePageTagListWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\SettingSCADAServerWindow.xaml.cs">
       <DependentUpon>SettingSCADAServerWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Trend\TrendViewSettingDetailWindow.xaml.cs">
       <DependentUpon>TrendViewSettingDetailWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Trend\TrendViewSettingWindow .xaml.cs">
-      <DependentUpon>TrendViewSettingWindow .xaml</DependentUpon>
+    <Compile Include="View\Trend\TrendViewSettingWindow.xaml.cs">
+      <DependentUpon>TrendViewSettingWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Trend\TagLoggingSettingWindow.xaml.cs">
       <DependentUpon>TagLoggingSettingWindow.xaml</DependentUpon>
@@ -395,6 +406,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\PageSetting\TablePageSettingWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PageSetting\TablePageSettingDetailWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PageSetting\TablePageTagListWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\PropertyPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -419,7 +442,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Trend\TrendViewSettingWindow .xaml">
+    <Page Include="View\Trend\TrendViewSettingWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
