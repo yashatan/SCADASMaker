@@ -177,12 +177,14 @@ namespace SCADACreator
                 if (content != null)
                 {
                     newItem = new SCADAItem();
+                    newItem.MinHeight = 10;
+                    newItem.MinWidth = 10;
                     newItem.Content = content;
 
                     Point position = e.GetPosition(this);
                     if (content.MinHeight != 0 && content.MinWidth != 0)
                     {
-                        newItem.Width = content.MinWidth * 2; ;
+                        newItem.Width = content.MinWidth * 2;
                         newItem.Height = content.MinHeight * 2;
                     }
                     else

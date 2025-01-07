@@ -71,22 +71,10 @@ namespace SCADACreator.View
         {
             foreach (TagInfo tag in chosenTags)
             {
-                //var listViewItem = lvTags.ItemContainerGenerator.ContainerFromItem(tag) as ListViewItem;
-                //var listViewItemIndex = lvTags.Items.IndexOf(tag);
-                //if (lvTags.Items[listViewItemIndex] != null)
-                //{ // Tìm control bên trong ItemTemplate (Card)
-                //    var item = lvTags.Items[listViewItemIndex];
-                //    var listViewItem = lvTags.ItemContainerGenerator.ContainerFromItem(item) as ListViewItem;
-                //    var card = FindChild<Card>(listViewItem);
-                //    if (card != null)
-                //    {
-                //        card.Background = Brushes.LightGreen;
-                //    }
-                //}
 
                 var listViewItem = lvTags.ItemContainerGenerator.ContainerFromItem(tag) as ListViewItem;
                 if (listViewItem != null)
-                { // Tìm control bên trong ItemTemplate (Card)
+                {
                     var card = FindChild<Card>(listViewItem);
                     if (card != null)
                     {

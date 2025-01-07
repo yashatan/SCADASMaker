@@ -14,9 +14,9 @@
     <Style TargetType="{x:Type s:DesignerItem}"
            >
         <Setter Property="MinHeight"
-                Value="50" />
+                Value="20" />
         <Setter Property="MinWidth"
-                Value="50" />
+                Value="20" />
         <Setter Property="SnapsToDevicePixels"
                 Value="true" />
         <Setter Property="Template">

@@ -39,7 +39,7 @@ namespace SCADACreator.View
 
         private void TablePageDetailWindow_NewApplyEvent(object sender, EventArgs e)
         {
-            tablePagesList.Add(newTablePage);
+            SCADADataProvider.Instance.AddTablePage(newTablePage);
             lvTablePage.Items.Refresh();
         }
 
@@ -55,7 +55,7 @@ namespace SCADACreator.View
         {
             var tablePage = lvTablePage.SelectedItem as TablePage;
             TablePageSettingDetailWindow tablePageDetailWindow = new TablePageSettingDetailWindow(tablePage);
-            tablePageDetailWindow.ApplyEvent += TablePageDetailWindow_EditApplyEvent; ;
+            tablePageDetailWindow.ApplyEvent += TablePageDetailWindow_EditApplyEvent;
             tablePageDetailWindow.ShowDialog();
         }
 

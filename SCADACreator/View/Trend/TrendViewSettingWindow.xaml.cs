@@ -42,7 +42,7 @@ namespace SCADACreator.View
 
         private void TrendViewDetailAdd_ApplyEvent(object sender, EventArgs e)
         {
-            trendSettingsList.Add(newTrendViewSetting);
+            SCADADataProvider.Instance.AddTrendViewSetting(newTrendViewSetting);
             trendlistview.Items.Refresh();
         }
 
