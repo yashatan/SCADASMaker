@@ -135,7 +135,7 @@ namespace SCADACreator
                     {
                         Clipboard.SetText(xmlStringnext);
                     }
-                    catch (Exception ex) { }
+                    catch (Exception) { }
 
                 }
             }

@@ -24,8 +24,8 @@ namespace SCADACreator.View
     public partial class AnimationDetailWindow : Window
     {
         private AnimationSense animation;
-        List<string> animationProperties = new List<string>() { "Visibility", "BackgroundColor", "Height", "Width", "Text" };
-        List<string> visibleList = new List<string>() { "False", "True" };
+        List<string> animationProperties = new List<string>() { "Visibility", "BackgroundColor", "Height", "Width", "Enable", "Text" };
+        List<string> boolList = new List<string>() { "False", "True" };
         List<TagInfo> tagsList = SCADADataProvider.Instance.TagInfos;
         string currentProperty;
         private event EventHandler _ApplyEvent;//event handle when confirm button clicked
@@ -50,7 +50,7 @@ namespace SCADACreator.View
             InitializeComponent();
             this.animation = animation;
             this.cbbProperty.ItemsSource = animationProperties;
-            this.cbbBool.ItemsSource = visibleList;
+            this.cbbBool.ItemsSource = boolList;
             this.cbbTag.ItemsSource = tagsList;
             UpdateAnimationData();
         }
@@ -104,6 +104,7 @@ namespace SCADACreator.View
             switch (currentProperty)
             {
                 case "Visibility":
+                case "Enable":
                     VisibleGroup.Visibility = Visibility.Visible;
                     ColorGroup.Visibility = Visibility.Collapsed;
                     ValueGroup.Visibility = Visibility.Collapsed;
@@ -141,12 +142,13 @@ namespace SCADACreator.View
         {
             animation.Name = txtName.Text;
             animation.Tag = cbbTag.SelectedItem as TagInfo;
-            animation.Tagvaluemax = Convert.ToInt32(txtTagMaxValue.Text);
-            animation.Tagvaluemin = Convert.ToInt32(txtTagMinValue.Text);
+            animation.Tagvaluemax = Convert.ToDouble(txtTagMaxValue.Text);
+            animation.Tagvaluemin = Convert.ToDouble(txtTagMinValue.Text);
             animation.PropertyNeedChange = (PropertyType)cbbProperty.SelectedIndex;
             switch (animation.PropertyNeedChange)
             {
                 case PropertyType.emIsVisible:
+                case PropertyType.emIsEnable:
                     if (cbbBool.Text == "True")
                         animation.PropertyBoolValueWhenTagInRange = true;
                     else animation.PropertyBoolValueWhenTagInRange = false;
@@ -156,7 +158,7 @@ namespace SCADACreator.View
                     animation.ColorWhenTagInRange.G = Convert.ToByte(txtColorG.Text);
                     animation.ColorWhenTagInRange.B = Convert.ToByte(txtColorB.Text);
                     break;
-                case PropertyType.emHeight: 
+                case PropertyType.emHeight:
                     animation.PropertyValueWhenTagInRange = Convert.ToInt32(txtIntValue.Text);
                     break;
                 case PropertyType.emWidth:

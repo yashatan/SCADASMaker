@@ -18,7 +18,7 @@
                    Foreground="Black"
                    Text="Label"
                    FontSize="25"
-                   MinHeight="15"
+                   MinHeight="30"
                    MinWidth="30"
                    VerticalAlignment="Center"
                    ToolTip="Label"></TextBlock>
@@ -26,8 +26,10 @@
                  Text="####"
                  Visibility="Visible"
                  VerticalAlignment="Bottom"
-                 MinHeight="15"
-                 MinWidth="30"
+                 Height="45"
+                 HorizontalAlignment="Stretch"
+                 MinHeight="25"
+                 MinWidth="40"
                  FontSize="25"
                  ToolTip="I/O Field"></TextBox>
     </s:Toolbox>

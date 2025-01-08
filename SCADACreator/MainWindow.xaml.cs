@@ -434,6 +434,7 @@ namespace SCADACreator
             }
             else
             {
+                SaveProject();
                 var SCADAPages = ConvertDesignPageToSCADAPage(SCADADataProvider.Instance.DesignPages);
                 string filename = $"{System.IO.Path.GetDirectoryName(SCADADataProvider.Instance.ProjectInformation.FilePath)}\\{SCADADataProvider.Instance.ProjectInformation.Name}Station.json";
                 CreateSCADAStationFile(SCADAPages, filename);

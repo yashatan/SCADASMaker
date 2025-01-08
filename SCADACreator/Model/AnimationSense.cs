@@ -23,17 +23,17 @@ namespace SCADACreator
             set { _PropertyNeedChange = value; OnPropertyChanged(); }
         }
 
-        private int _Tagvaluemin;
+        private double _Tagvaluemin;
 
-        public int Tagvaluemin
+        public double Tagvaluemin
         {
             get { return _Tagvaluemin; }
             set { _Tagvaluemin = value; OnPropertyChanged(); }
         }
 
-        private int _Tagvaluemax;
+        private double _Tagvaluemax;
 
-        public int Tagvaluemax
+        public double Tagvaluemax
         {
             get { return _Tagvaluemax; }
             set { _Tagvaluemax = value; OnPropertyChanged(); }
@@ -85,6 +85,7 @@ namespace SCADACreator
             emBackgroundColor,
             emHeight,
             emWidth,
+            emIsEnable,
             emText
         }
         public AnimationSense()
