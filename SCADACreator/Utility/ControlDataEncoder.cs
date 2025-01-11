@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FontAwesome.WPF;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -41,6 +42,10 @@ namespace SCADACreator.Utility
             if (content.GetType().Name == "Image")
             {
                 data.ImageSource = (content as Image).Source.ToString();
+            }
+            if (content.GetType().Name == "ImageAwesome")
+            {
+                data.FACode = (char)(content as ImageAwesome).Icon;
             }
             if (content.GetType().Name == "Button")
             {

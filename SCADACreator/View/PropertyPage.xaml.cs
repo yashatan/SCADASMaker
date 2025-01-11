@@ -1,4 +1,5 @@
-﻿using MaterialDesignThemes.Wpf;
+﻿using FontAwesome.WPF;
+using MaterialDesignThemes.Wpf;
 using SCADACreator.Model;
 using SCADACreator.Utility;
 using System;
@@ -246,7 +247,7 @@ namespace SCADACreator.View
         #region ColorGroup
         private void UpdateColorGroupData()
         {
-            if (content.GetType() == typeof(TextBlock) || content.GetType() == typeof(System.Windows.Controls.Button) || content.GetType() == typeof(System.Windows.Controls.TextBox) || content.GetType().IsSubclassOf(typeof(Shape)))
+            if (content.GetType() == typeof(TextBlock) || content.GetType() == typeof(System.Windows.Controls.Button) || content.GetType() == typeof(System.Windows.Controls.TextBox) || content.GetType().IsSubclassOf(typeof(Shape)) || content.GetType() == typeof(ImageAwesome))
             {
                 ColorGroup.Visibility = Visibility.Visible;
                 if (content.GetType().IsSubclassOf(typeof(Shape)))
@@ -271,6 +272,29 @@ namespace SCADACreator.View
                         txtFillG.Text = colorRGB.G.ToString();
                         txtFillB.Text = colorRGB.B.ToString();
                         btnFill.Background = b1;
+                    }
+                }
+                else if (content.GetType() == typeof(ImageAwesome))
+                {
+                    ColorFillGroup.Visibility = Visibility.Collapsed;
+                    ColorFillGroup.Visibility = Visibility.Collapsed;
+                    ColorFillGroup.Visibility = Visibility.Collapsed;
+                    ColorForegroundGroup.Visibility = Visibility.Visible;
+                    ColorForegroundGroup.Visibility = Visibility.Visible;
+                    ColorForegroundGroup.Visibility = Visibility.Visible;
+                    ColorBackgroundGroup.Visibility = Visibility.Collapsed;
+                    ColorBackgroundGroup.Visibility = Visibility.Collapsed;
+                    ColorBackgroundGroup.Visibility = Visibility.Collapsed;
+                    Brush bf = (Brush)content.GetType().GetProperty("Foreground").GetValue(content, null);
+                    if (!(bf is null))
+                    {
+                        Color c1 = ((SolidColorBrush)bf).Color;
+                        var colorRGB = new ColorRGB(c1);
+
+                        txtForegroundR.Text = colorRGB.R.ToString();
+                        txtForegroundG.Text = colorRGB.G.ToString();
+                        txtForegroundB.Text = colorRGB.B.ToString();
+                        btnForeground.Background = bf;
                     }
                 }
                 else

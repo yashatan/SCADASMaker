@@ -24,7 +24,7 @@ namespace SCADACreator.View
     public partial class AnimationDetailWindow : Window
     {
         private AnimationSense animation;
-        List<string> animationProperties = new List<string>() { "Visibility", "BackgroundColor", "Height", "Width", "Enable", "Text" };
+        List<string> animationProperties = new List<string>() { "Visibility", "Color", "Height", "Width", "Enable", "Text" };
         List<string> boolList = new List<string>() { "False", "True" };
         List<TagInfo> tagsList = SCADADataProvider.Instance.TagInfos;
         string currentProperty;
@@ -70,6 +70,7 @@ namespace SCADACreator.View
             txtColorR.Text = animation.ColorWhenTagInRange.R.ToString();
             txtColorG.Text = animation.ColorWhenTagInRange.G.ToString();
             txtColorB.Text = animation.ColorWhenTagInRange.B.ToString();
+            btnBackground.Background = new SolidColorBrush(Color.FromRgb((byte)animation.ColorWhenTagInRange.R, (byte)animation.ColorWhenTagInRange.G, (byte)animation.ColorWhenTagInRange.B));
             txtStringvalue.Text = animation.TextWhenTagInRange.ToString();
             txtIntValue.Text = animation.PropertyValueWhenTagInRange.ToString();
             if (animation.PropertyBoolValueWhenTagInRange)
@@ -110,7 +111,7 @@ namespace SCADACreator.View
                     ValueGroup.Visibility = Visibility.Collapsed;
                     StringGroup.Visibility = Visibility.Collapsed;
                     break;
-                case "BackgroundColor":
+                case "Color":
                     VisibleGroup.Visibility = Visibility.Collapsed;
                     ColorGroup.Visibility = Visibility.Visible;
                     ValueGroup.Visibility = Visibility.Collapsed;

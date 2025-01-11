@@ -212,6 +212,17 @@
                         <Expander Header="Basic Shapes"
                                   Margin="0,1,0,0"
                                   Content="{StaticResource BasicShapesStencils}" />
+                        <Expander Header="Icons"
+                                  Margin="0,1,0,0"
+                                  IsExpanded="True"
+                                  Content="{StaticResource Icon}"/>
+                        <Label Content="&#xf1e2;"
+                               FontSize="40"
+                               Height="50"
+                               Width="50"
+                               MinHeight="25"
+                               MinWidth="25"
+                               FontFamily="./#Font Awesome 6 Free Solid"></Label>
                     </StackPanel>
                 </ScrollViewer>
             </Border>
@@ -241,6 +252,7 @@
                                    Background="White"
                                    NavigationUIVisibility="Hidden"></Frame>
                         </Expander>
+                        
                     </StackPanel>
                 </ScrollViewer>
             </Border>

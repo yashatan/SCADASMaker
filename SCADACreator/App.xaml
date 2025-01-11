@@ -19,6 +19,8 @@
                 <ResourceDictionary Source="Resources/StatusBar.xaml" />
                 <ResourceDictionary Source="Stencils/BasicShapes.xaml"/>
                 <ResourceDictionary Source="Stencils/BasicControl.xaml"/>
+                <ResourceDictionary Source="Stencils/Icon.xaml"/>
+                
                 <ResourceDictionary Source="Stencils/FlowChartSymbols.xaml"/>
                 <ResourceDictionary Source="Stencils/RegelungstechnikSymbole.xaml"/>
                 <ResourceDictionary Source="Stencils/SymbolStencils.xaml"/>
@@ -30,6 +32,7 @@
             </ResourceDictionary.MergedDictionaries>
             <SolidColorBrush x:Key="PrimaryHueMidBrush"
                              Color="Blue" />
+            <FontFamily x:Key="FontAweSome">/Fonts/fontawesome-webfont.ttf#FontAweSome</FontFamily>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
