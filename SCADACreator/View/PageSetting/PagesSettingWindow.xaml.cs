@@ -41,6 +41,7 @@ namespace SCADACreator.View
             var button = sender as Button;
             var chosenPage = button.DataContext as DesignPage;
             OnOpenScreen(chosenPage.Id);
+            this.Close();
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)

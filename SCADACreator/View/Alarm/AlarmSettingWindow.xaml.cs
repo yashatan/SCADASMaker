@@ -55,7 +55,11 @@ namespace SCADACreator.View.Alarm
         {
             var comboBox = sender as ComboBox;
             var chosenAlarmSetting = comboBox.DataContext as AlarmSetting;
-            comboBox.SelectedItem = (comboBox.ItemsSource as List<TagInfo>).FirstOrDefault(m => m.Id == chosenAlarmSetting.TriggerTag.Id);
+            if (chosenAlarmSetting.TriggerTag != null)
+            {
+                comboBox.SelectedItem = (comboBox.ItemsSource as List<TagInfo>).FirstOrDefault(m => m.Id == chosenAlarmSetting.TriggerTag.Id);
+
+            }
         }
     }
 

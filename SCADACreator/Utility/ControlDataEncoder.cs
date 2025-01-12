@@ -7,6 +7,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace SCADACreator.Utility
 {
@@ -28,7 +29,16 @@ namespace SCADACreator.Utility
             data.Width = content.ActualWidth;
             data.Height = content.ActualHeight;
             data.TagConnection = item.TagConnection;
-            RotateTransform rotation = content.RenderTransform as RotateTransform;
+            //RotateTransform rotateTransform = element.LayoutTransform as RotateTransform;
+            //if (rotateTransform == null)
+            //{
+            //    rotateTransform = new RotateTransform();
+            //    element.LayoutTransform = rotateTransform;
+            //}
+            //rotateTransform.Angle = (rotateTransform.Angle + angle) % 360;
+
+
+            RotateTransform rotation = content.LayoutTransform as RotateTransform;
             if (rotation != null) // Make sure the transform is actually a RotateTransform
             {
                 double rotationInDegrees = rotation.Angle;
@@ -41,7 +51,10 @@ namespace SCADACreator.Utility
             }
             if (content.GetType().Name == "Image")
             {
-                data.ImageSource = (content as Image).Source.ToString();
+
+                    data.ImageSource = (content as Image).Source.ToString();
+
+
             }
             if (content.GetType().Name == "ImageAwesome")
             {

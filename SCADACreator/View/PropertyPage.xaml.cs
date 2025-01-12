@@ -160,29 +160,32 @@ namespace SCADACreator.View
 
         private void txtContentSize_LostFocus(object sender, RoutedEventArgs e)
         {
-
-            if (content.GetType() == typeof(System.Windows.Controls.Button))
+            try
             {
-                TextBlock txtContent;
-                txtContent = (TextBlock)(content as System.Windows.Controls.Button).Content;
-                txtContent.FontSize = Convert.ToDouble(txtContentSize.Text);
-            }
-            else if (content.GetType() == typeof(TextBlock))
-            {
-                TextBlock txtContent;
-                txtContent = (content as TextBlock);
-                txtContent.FontSize = Convert.ToDouble(txtContentSize.Text);
-            }
-            else if (content.GetType() == typeof(System.Windows.Controls.TextBox))
-            {
-                System.Windows.Controls.TextBox txtContent;
-                txtContent = (content as System.Windows.Controls.TextBox);
-                try
+                if (content.GetType() == typeof(System.Windows.Controls.Button))
                 {
+                    TextBlock txtContent;
+                    txtContent = (TextBlock)(content as System.Windows.Controls.Button).Content;
                     txtContent.FontSize = Convert.ToDouble(txtContentSize.Text);
                 }
-                catch { }
+                else if (content.GetType() == typeof(TextBlock))
+                {
+                    TextBlock txtContent;
+                    txtContent = (content as TextBlock);
+                    txtContent.FontSize = Convert.ToDouble(txtContentSize.Text);
+                }
+                else if (content.GetType() == typeof(System.Windows.Controls.TextBox))
+                {
+                    System.Windows.Controls.TextBox txtContent;
+                    txtContent = (content as System.Windows.Controls.TextBox);
+                    try
+                    {
+                        txtContent.FontSize = Convert.ToDouble(txtContentSize.Text);
+                    }
+                    catch { }
+                }
             }
+            catch { }
 
         }
 

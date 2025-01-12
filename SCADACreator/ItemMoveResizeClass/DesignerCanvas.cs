@@ -91,8 +91,13 @@ namespace SCADACreator
                 }
                 if (e.Key == Key.C && (Keyboard.Modifiers & ModifierKeys.Control) ==ModifierKeys.Control)
                 {
-                    var xmlString = SerrializeControl();
-                    Clipboard.SetText(xmlString);
+                    try
+                    {
+                        var xmlString = SerrializeControl();
+                        Clipboard.SetText(xmlString);
+                    }
+                    catch { }
+
                 }
                 if (e.Key == Key.X && (Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control)
                 {
@@ -111,28 +116,29 @@ namespace SCADACreator
                 }
                 if (e.Key == Key.V && (Keyboard.Modifiers & ModifierKeys.Control) == ModifierKeys.Control)
                 {
-                    string xmlString = Clipboard.GetText();
-                    XElement parsedElement = XElement.Parse(xmlString);
-                    DeselectAll();
-                    foreach (var itemElement in parsedElement.Elements("SCADAItem"))
-                    {
-                        SCADAItem pasteItem = new SCADAItem();
-                        FrameworkElement content = XamlReader.Parse((string)itemElement.Element("Content")) as FrameworkElement;
-                        pasteItem.Content = content;
-                        pasteItem.Width = (double)itemElement.Element("Width");
-                        pasteItem.Height = (double)itemElement.Element("Height");
-                        pasteItem.TagConnection = JsonSerializer.Deserialize<TagInfo>((string)itemElement.Element("TagConnection"));
-                        pasteItem.AnimationSenses = JsonSerializer.Deserialize<List<AnimationSense>>((string)itemElement.Element("AnimationSenses"));
-                        pasteItem.ItemEvents = JsonSerializer.Deserialize<List<ItemEvent>>((string)itemElement.Element("ItemEvents"));
-                        Canvas.SetLeft(pasteItem, (double)itemElement.Element("Left") + 10.0);
-                        Canvas.SetTop(pasteItem, (double)itemElement.Element("Top") + 10.0);
-                        pasteItem.IsSelected = true;
-                        this.Children.Add(pasteItem);
 
-                    }
-                    var xmlStringnext = SerrializeControl();
                     try
                     {
+                        string xmlString = Clipboard.GetText();
+                        XElement parsedElement = XElement.Parse(xmlString);
+                        DeselectAll();
+                        foreach (var itemElement in parsedElement.Elements("SCADAItem"))
+                        {
+                            SCADAItem pasteItem = new SCADAItem();
+                            FrameworkElement content = XamlReader.Parse((string)itemElement.Element("Content")) as FrameworkElement;
+                            pasteItem.Content = content;
+                            pasteItem.Width = (double)itemElement.Element("Width");
+                            pasteItem.Height = (double)itemElement.Element("Height");
+                            pasteItem.TagConnection = JsonSerializer.Deserialize<TagInfo>((string)itemElement.Element("TagConnection"));
+                            pasteItem.AnimationSenses = JsonSerializer.Deserialize<List<AnimationSense>>((string)itemElement.Element("AnimationSenses"));
+                            pasteItem.ItemEvents = JsonSerializer.Deserialize<List<ItemEvent>>((string)itemElement.Element("ItemEvents"));
+                            Canvas.SetLeft(pasteItem, (double)itemElement.Element("Left") + 10.0);
+                            Canvas.SetTop(pasteItem, (double)itemElement.Element("Top") + 10.0);
+                            pasteItem.IsSelected = true;
+                            this.Children.Add(pasteItem);
+
+                        }
+                        var xmlStringnext = SerrializeControl();
                         Clipboard.SetText(xmlStringnext);
                     }
                     catch (Exception) { }

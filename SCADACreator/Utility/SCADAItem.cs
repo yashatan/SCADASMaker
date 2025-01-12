@@ -35,6 +35,8 @@ namespace SCADACreator.Utility
         {
             AnimationSenses = new List<AnimationSense>();
             ItemEvents = new List<ItemEvent>();
+            this.MinHeight = 5;
+            this.MinWidth = 5;
             this.Loaded += new RoutedEventHandler(this.DesignerItem_Loaded);
         }
         static SCADAItem()

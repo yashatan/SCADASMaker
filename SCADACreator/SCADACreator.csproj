@@ -468,25 +468,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\rt2.png" />
-    <Resource Include="Images\rt1.png" />
-    <Resource Include="Images\rt3.png" />
-    <Resource Include="Images\rt4.png" />
-    <Resource Include="Images\rt5.png" />
-    <Resource Include="Images\rt6.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\attention.png" />
-    <Resource Include="Images\chart1.png" />
-    <Resource Include="Images\chart2.png" />
-    <Resource Include="Images\chart3.png" />
-    <Resource Include="Images\cross.png" />
-    <Resource Include="Images\mail.png" />
-    <Resource Include="Images\nuclear.png" />
-    <Resource Include="Images\plus.png" />
-    <Resource Include="Images\ring.png" />
-    <Resource Include="Images\software.png" />
-    <Resource Include="Images\walk.png" />
     <Resource Include="Images\world.png" />
   </ItemGroup>
   <ItemGroup>
@@ -506,12 +487,9 @@
     <Resource Include="Images\agitator_4.gif" />
     <Resource Include="Images\Direction1.png" />
     <Resource Include="Images\Direction2.png" />
-    <Resource Include="Images\GreenCircle.gif" />
-    <Resource Include="Images\GreyCircle.png" />
     <Resource Include="Images\pipe.png" />
     <Resource Include="Images\pump_side_green.gif" />
     <Resource Include="Images\pump_side_grey.gif" />
-    <Resource Include="Images\RedCircle.png" />
     <Resource Include="Images\screw_1.gif" />
     <Resource Include="Images\screw_2.gif" />
     <Resource Include="Images\screw_3.gif" />
@@ -535,6 +513,32 @@
     <Resource Include="Images\01_logobachkhoasang.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\tag.png" />
+    <Resource Include="Images\Boiler8.png" />
+    <Resource Include="Images\Boilerwithflames.png" />
+    <Resource Include="Images\Commercialbuilding1.png" />
+    <Resource Include="Images\Extendedpusher1.png" />
+    <Resource Include="Images\Factory5.png" />
+    <Resource Include="Images\filenmes.txt" />
+    <Resource Include="Images\Horizontalconveyorwithperspective.png" />
+    <Resource Include="Images\Horizontalpump2.png" />
+    <Resource Include="Images\Horizontalpump2right.png" />
+    <Resource Include="Images\Mixerblade.png" />
+    <Resource Include="Images\Mixerblade_green.png" />
+    <Resource Include="Images\Retractedpusher1.png" />
+    <Resource Include="Images\Tank36.png" />
+    <Resource Include="Images\Tank6.png" />
+    <Resource Include="Images\Tank6_orange.png" />
+    <Resource Include="Images\I3Dredbuttonpressed.png" />
+    <Resource Include="Images\I3Dredbutton_notpressed.png" />
+    <Resource Include="Images\I3DValvewithlongshaft.png" />
+    <Resource Include="Images\I3DValvewithlongshaft_green.png" />
+    <Resource Include="Images\Simplehorizontalconveyor.png" />
+    <Resource Include="Images\I90curve1.png" />
+    <Resource Include="Images\I90curve2.png" />
+    <Resource Include="Images\I90curve3.png" />
+    <Resource Include="Images\I90curve4.png" />
+    <Resource Include="Images\Shorthorizontalflexibletubing.png" />
     <Content Include="ModelData.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ModelData.Context.cs</LastGenOutput>
