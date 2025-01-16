@@ -26,8 +26,8 @@ namespace SCADACreator.Utility
             data.X = Canvas.GetLeft(item);
             data.Y = Canvas.GetTop(item);
             data.ZIndex = Canvas.GetZIndex(item);
-            data.Width = content.ActualWidth;
-            data.Height = content.ActualHeight;
+            data.Width = item.Width;
+            data.Height = item.Height;
             data.TagConnection = item.TagConnection;
             //RotateTransform rotateTransform = element.LayoutTransform as RotateTransform;
             //if (rotateTransform == null)

@@ -455,7 +455,14 @@ namespace SCADACreator
             proc.StartInfo.UseShellExecute = true;
             proc.StartInfo.Verb = "runas";
             proc.StartInfo.Arguments = $"-f {filename}";
-            proc.Start();
+            try
+            {
+                proc.Start();
+            }
+            catch
+            {
+                MessageBox.Show("Please check your SCADA Server Path", "OK");
+            }
         }
         private void CreateSCADAStationFile(List<SCADAPage> scadaPages, string filename)
         {

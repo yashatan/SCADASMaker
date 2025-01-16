@@ -12,13 +12,13 @@ namespace SCADACreator
 {
     public class SCADADataProvider
     {
-        public List<TagInfo> TagInfos; 
-        public List<ConnectDevice> ConnectDevices; 
-        public List<AlarmSetting> AlarmSettings; 
-        public List<TagLoggingSetting> TagLoggingSettings; 
-        public List<TrendViewSetting> TrendViewSettings; 
-        public List<DesignPage> DesignPages; 
-        public List<TablePage> TablePages; 
+        public List<TagInfo> TagInfos;
+        public List<ConnectDevice> ConnectDevices;
+        public List<AlarmSetting> AlarmSettings;
+        public List<TagLoggingSetting> TagLoggingSettings;
+        public List<TrendViewSetting> TrendViewSettings;
+        public List<DesignPage> DesignPages;
+        public List<TablePage> TablePages;
         public ProjectInformation ProjectInformation;
 
         private static SCADADataProvider instance;
@@ -60,7 +60,7 @@ namespace SCADACreator
         public void AddListTagInfos(List<TagInfo> tags)
         {
             TagInfos.AddRange(tags);
-            nextTagID = TagInfos.Max(m => m.Id) +1;
+            nextTagID = TagInfos.Max(m => m.Id) + 1;
         }
 
         public void AddListConnectDevices(List<ConnectDevice> connectDevices)
@@ -111,7 +111,7 @@ namespace SCADACreator
         }
         public void AddConnectDevice(ConnectDevice connectDevice)
         {
-            if(connectDevice != null)
+            if (connectDevice != null)
             {
                 connectDevice.Id = nextDeviceID;
                 nextDeviceID++;
@@ -159,7 +159,7 @@ namespace SCADACreator
 
         public void AddTablePage(TablePage tablePage)
         {
-            if(tablePage != null)
+            if (tablePage != null)
             {
                 tablePage.Id = nextTablePageID;
                 nextTablePageID++;
@@ -167,6 +167,16 @@ namespace SCADACreator
             }
         }
 
+        public void ResetAllIDs()
+        {
+            nextTagID = 0;
+            nextDeviceID = 0;
+            nextAlarmSettingID = 0;
+            nextTagLoggingSettingID = 0;
+            nextTrendViewSettingID = 0;
+            nextDesignPageID = 0;
+            nextTablePageID = 0;
+        }
         public void Clear()
         {
             TagInfos.Clear();
@@ -176,6 +186,7 @@ namespace SCADACreator
             TrendViewSettings.Clear();
             DesignPages.Clear();
             TablePages.Clear();
+            ResetAllIDs();
             AddDesignPage(new DesignPage("MainPage"));
         }
     }

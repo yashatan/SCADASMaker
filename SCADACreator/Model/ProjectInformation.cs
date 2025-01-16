@@ -19,6 +19,7 @@ namespace SCADACreator
             this.IsNewProject = true;
             this.Name = "NewSCADAProject";
             this.FilePath = "";
+            MainPageId = 0;
         }
         public string GetDBPath()
         {
